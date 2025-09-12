@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Career from './pages/Career';
 import OurTeam from './pages/OurTeam';
+import Products from './pages/Products';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -39,7 +40,7 @@ function App() {
       case 'portfolio':
         return <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold">Portfolio - Coming Soon</h1></div>;
       case 'products':
-        return <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold">Products - Coming Soon</h1></div>;
+        return <Products />;
       case 'contact':
         return <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold">Contact - Coming Soon</h1></div>;
       default:
@@ -49,16 +50,16 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header 
-        currentPage={currentPage} 
+      <Header
+        currentPage={currentPage}
         onPageChange={handlePageChange}
         onGetConnected={handleGetConnected}
       />
       {renderPage()}
       <Footer />
-      <GetConnectedModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
+      <GetConnectedModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
       />
     </div>
   );
