@@ -12,11 +12,6 @@ import Portfolio from './pages/Portfolio';
 import Software from './pages/Software';
 import Hardware from './pages/Hardware';
 import Marketing from './pages/Marketing';
-import Contact from './pages/Contact';
-
-
-
-
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -51,7 +46,7 @@ function App() {
       case 'products':
         return <Products />;
       case 'contact':
-        return <Contact />;
+        return <h1></h1>;
       default:
         return <Home onGetConnected={handleGetConnected} />;
     }
