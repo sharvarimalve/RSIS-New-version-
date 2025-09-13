@@ -1,235 +1,235 @@
-import React from 'react';
-import { Briefcase, Users, TrendingUp, Heart, MapPin, Clock, DollarSign } from 'lucide-react';
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import {
+  Users,
+  Award,
+  TrendingUp,
+  Coffee,
+  Monitor,
+  Code2,
+  Cloud,
+  Lock,
+  Lightbulb,
+} from "lucide-react";
 
 const Career: React.FC = () => {
-  const jobOpenings = [
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false, offset: 100 });
+  }, []);
+
+  const benefits = [
     {
-      title: "Senior Full Stack Developer",
-      department: "Engineering",
-      location: "Mumbai, Maharashtra",
-      type: "Full-time",
-      experience: "3-5 years",
-      salary: "₹8-15 LPA"
+      icon: <Monitor size={60} strokeWidth={2.5} />,
+      title: "Cutting-Edge Projects",
+      description:
+        "Work with the latest web, mobile, and cloud technologies to build impactful solutions.",
     },
     {
-      title: "Digital Marketing Specialist",
-      department: "Marketing",
-      location: "Mumbai, Maharashtra",
-      type: "Full-time",
-      experience: "2-4 years",
-      salary: "₹5-10 LPA"
+      icon: <Code2 size={60} strokeWidth={2.5} />,
+      title: "Learn & Grow",
+      description:
+        "Sharpen your coding skills through continuous learning, mentorship, and knowledge sharing.",
     },
     {
-      title: "Hardware Engineer",
-      department: "Hardware Solutions",
-      location: "Mumbai, Maharashtra",
-      type: "Full-time",
-      experience: "2-3 years",
-      salary: "₹6-12 LPA"
+      icon: <Cloud size={60} strokeWidth={2.5} />,
+      title: "Modern Infrastructure",
+      description:
+        "Leverage robust DevOps pipelines and cloud platforms for smooth, scalable deployments.",
     },
     {
-      title: "UI/UX Designer",
-      department: "Design",
-      location: "Mumbai, Maharashtra",
-      type: "Full-time",
-      experience: "1-3 years",
-      salary: "₹4-8 LPA"
+      icon: <Lock size={60} strokeWidth={2.5} />,
+      title: "Security-First Mindset",
+      description:
+        "Develop solutions with strong focus on privacy, data safety, and compliance.",
     },
     {
-      title: "Project Manager",
-      department: "Management",
-      location: "Mumbai, Maharashtra",
-      type: "Full-time",
-      experience: "4-6 years",
-      salary: "₹10-18 LPA"
-    }
+      icon: <Users size={60} strokeWidth={2.5} />,
+      title: "Collaborative Culture",
+      description:
+        "Join supportive peers who value teamwork, open discussions, and collective success.",
+    },
+    {
+      icon: <Award size={60} strokeWidth={2.5} />,
+      title: "Recognition & Rewards",
+      description:
+        "Get acknowledged for creativity, dedication, and delivering high-quality results.",
+    },
+    {
+      icon: <Lightbulb size={60} strokeWidth={2.5} />,
+      title: "Innovation at Heart",
+      description:
+        "Bring your ideas to life in hackathons, R&D sprints, and continuous improvement sessions.",
+    },
+    {
+      icon: <TrendingUp size={60} strokeWidth={2.5} />,
+      title: "Career Advancement",
+      description:
+        "Grow your career path with clear progression, training programs, and leadership tracks.",
+    },
+  ];
+
+  const processSteps = [
+    {
+      step: 1,
+      title: "Apply Online",
+      desc: "Submit your application through our career portal with your resume and cover letter",
+    },
+    {
+      step: 2,
+      title: "Initial Screening",
+      desc: "Our HR team reviews your application and conducts an initial phone screening",
+    },
+    {
+      step: 3,
+      title: "Technical Interview",
+      desc: "Meet with our technical team to discuss your skills and experience in detail",
+    },
+    {
+      step: 4,
+      title: "Final Interview",
+      desc: "Final discussion with the hiring manager and team leads about role fit and expectations",
+    },
+    {
+      step: 5,
+      title: "Welcome Aboard",
+      desc: "Receive your offer letter and join our comprehensive onboarding program",
+    },
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Join Our Team</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Build your career with us and be part of a dynamic team that's shaping the future of technology
+    <div className="overflow-x-hidden">
+      {/* ===== Hero Section ===== */}
+      <section
+        className="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+        style={{ backgroundImage: "url('/career1.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center text-center px-4">
+          <div data-aos="fade-up" className="text-white">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4">
+              Build Your Career With Us
+            </h1>
+            <p className="max-w-xl mx-auto text-base md:text-lg">
+              Join a passionate team, work on exciting projects, and grow your
+              skills with industry experts.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Why Work With Us */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Work With Us?
-            </h2>
-            <p className="text-xl text-gray-600">
-              Discover what makes Right Serve Infotech a great place to work
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="h-8 w-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Growth Opportunities</h3>
-              <p className="text-gray-600">
-                Continuous learning and career advancement opportunities
+      {/* ===== Company Culture ===== */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                Our Company Culture
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-8">
+                At Right Serve Infotech Systems, we believe that great
+                technology comes from great people. Our culture is built on
+                collaboration, innovation, and mutual respect. We foster an
+                environment where every team member can thrive, learn, and
+                contribute to meaningful projects.
               </p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-green-100 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Great Team</h3>
-              <p className="text-gray-600">
-                Work with talented professionals in a collaborative environment
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-purple-100 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Heart className="h-8 w-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Work-Life Balance</h3>
-              <p className="text-gray-600">
-                Flexible working hours and comprehensive benefits package
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-orange-100 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Briefcase className="h-8 w-8 text-orange-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Exciting Projects</h3>
-              <p className="text-gray-600">
-                Work on cutting-edge technologies and innovative solutions
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Current Openings */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Current Openings
-            </h2>
-            <p className="text-xl text-gray-600">
-              Find your perfect role and start your journey with us
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            {jobOpenings.map((job, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{job.title}</h3>
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-4">
-                      <div className="flex items-center">
-                        <Briefcase className="h-4 w-4 mr-1" />
-                        {job.department}
-                      </div>
-                      <div className="flex items-center">
-                        <MapPin className="h-4 w-4 mr-1" />
-                        {job.location}
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="h-4 w-4 mr-1" />
-                        {job.type}
-                      </div>
-                      <div className="flex items-center">
-                        <Users className="h-4 w-4 mr-1" />
-                        {job.experience}
-                      </div>
-                      <div className="flex items-center">
-                        <DollarSign className="h-4 w-4 mr-1" />
-                        {job.salary}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex space-x-4">
-                    <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                      Apply Now
-                    </button>
-                    <button className="border border-gray-300 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-50 transition-colors">
-                      View Details
-                    </button>
-                  </div>
+              <div className="grid gap-4">
+                <div className="flex items-center gap-3 text-gray-700 font-medium">
+                  <Users size={20} className="text-blue-900" />
+                  <span>Collaborative Team Environment</span>
                 </div>
+                <div className="flex items-center gap-3 text-gray-700 font-medium">
+                  <TrendingUp size={20} className="text-blue-900" />
+                  <span>Continuous Learning Opportunities</span>
+                </div>
+                <div className="flex items-center gap-3 text-gray-700 font-medium">
+                  <Award size={20} className="text-blue-900" />
+                  <span>Merit-Based Recognition</span>
+                </div>
+                <div className="flex items-center gap-3 text-gray-700 font-medium">
+                  <Coffee size={20} className="text-blue-900" />
+                  <span>Flexible Work Arrangements</span>
+                </div>
+              </div>
+            </div>
+
+            <div data-aos="fade-left">
+              <img
+                src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Team Culture"
+                className="w-full h-96 object-cover rounded-xl shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Benefits Section ===== */}
+      <section className="bg-gradient-to-b from-blue-950 to-blue-900 text-white py-20 rounded-t-[60px] text-center">
+        <div className="max-w-6xl mx-auto px-4">
+          <div data-aos="fade-up" className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Why Work With <span className="text-white">Us?</span>
+            </h2>
+            <p className="text-cyan-100 mt-3 max-w-2xl mx-auto">
+              Quick & Easy Capital Empowering Bold & Ambitious Businesses To
+              Fuel Their eCommerce Growth
+            </p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {benefits.map((benefit, idx) => (
+              <div
+                key={idx}
+                data-aos="zoom-in"
+                data-aos-delay={idx * 150}
+                className="bg-blue-50 text-blue-900 rounded-2xl p-8 shadow hover:shadow-2xl transition flex flex-col items-center text-center"
+              >
+                <div className="text-amber-500 mb-4">{benefit.icon}</div>
+                <h4 className="font-semibold mb-2 text-lg">{benefit.title}</h4>
+                <p className="font-bold text-gray-900">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Employee Benefits
+      {/* ===== Application Process ===== */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div
+            data-aos="fade-up"
+            className="text-center mb-12 text-blue-900"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Application Process
             </h2>
-            <p className="text-xl text-gray-600">
-              We care about our employees' well-being and success
+            <p className="text-blue-900/80">
+              Our streamlined hiring process designed to find the right fit
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Health & Wellness</h3>
-              <ul className="text-gray-600 space-y-2">
-                <li>• Comprehensive health insurance</li>
-                <li>• Annual health check-ups</li>
-                <li>• Mental health support</li>
-                <li>• Gym membership reimbursement</li>
-              </ul>
-            </div>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+            {processSteps.map((item, idx) => (
+              <React.Fragment key={idx}>
+                <div
+                  className="text-center max-w-[160px] mx-auto"
+                  data-aos="zoom-in"
+                >
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-sky-500 to-sky-300 text-white flex items-center justify-center font-bold text-lg mx-auto mb-4">
+                    {item.step}
+                  </div>
+                  <h4 className="font-semibold mb-1">{item.title}</h4>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </div>
 
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Professional Development</h3>
-              <ul className="text-gray-600 space-y-2">
-                <li>• Training and certification programs</li>
-                <li>• Conference attendance</li>
-                <li>• Skill development workshops</li>
-                <li>• Career mentorship</li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Work-Life Balance</h3>
-              <ul className="text-gray-600 space-y-2">
-                <li>• Flexible working hours</li>
-                <li>• Remote work options</li>
-                <li>• Paid time off</li>
-                <li>• Team outings and events</li>
-              </ul>
-            </div>
+                {idx < processSteps.length - 1 && (
+                  <div className="hidden md:block text-3xl font-bold text-sky-500">
+                    →
+                  </div>
+                )}
+              </React.Fragment>
+            ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Join Our Team?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Don't see a position that fits? Send us your resume anyway. 
-            We're always looking for talented individuals.
-          </p>
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg">
-            Send Your Resume
-          </button>
         </div>
       </section>
     </div>

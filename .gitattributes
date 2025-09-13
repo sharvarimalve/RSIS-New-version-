@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+public/team.jpg filter=lfs diff=lfs merge=lfs -text
+public/vision.jpg filter=lfs diff=lfs merge=lfs -text
+=======
 *.jpeg filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
+>>>>>>> 9d3215769e65887826359ace859074c8296d4760
