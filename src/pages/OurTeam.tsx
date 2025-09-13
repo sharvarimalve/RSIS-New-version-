@@ -1,222 +1,175 @@
-import React from 'react';
-import { Linkedin, Twitter, Mail } from 'lucide-react';
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { Linkedin, Twitter, Mail } from "lucide-react";
 
 const OurTeam: React.FC = () => {
-  const teamMembers = [
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true, offset: 100 });
+  }, []);
+
+  const leaders = [
     {
-      name: "Rajesh Kumar",
-      position: "CEO & Founder",
-      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300",
-      bio: "Visionary leader with 15+ years in IT industry, driving innovation and growth.",
-      linkedin: "#",
-      twitter: "#",
-      email: "rajesh@rightserveinfotech.com"
+      name: "Rahul Singh Chaudhari",
+      position: "Director",
+      image: "/rahul_chaudhari.jpeg",
+      bio: "Leading with vision, expertise, and dedication to drive continuous innovation and company growth.",
     },
     {
-      name: "Priya Sharma",
-      position: "CTO",
-      image: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=300",
-      bio: "Technology expert specializing in software architecture and emerging technologies.",
-      linkedin: "#",
-      twitter: "#",
-      email: "priya@rightserveinfotech.com"
+      name: "Piyush Pandey",
+      position: "Director",
+      image: "/piyush_pandey.jpg",
+      bio: "Focused on strategic innovation and excellence, driving growth and inspiring success.",
     },
     {
-      name: "Amit Patel",
-      position: "Head of Development",
-      image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300",
-      bio: "Full-stack developer with expertise in modern web technologies and team leadership.",
-      linkedin: "#",
-      twitter: "#",
-      email: "amit@rightserveinfotech.com"
+      name: "Saurabh Jagthap",
+      position: "Director",
+      image: "/saurabh_jagthap.jpg",
+      bio: "Shaping our future with vision, bold strategies, and a passion for technological advancement.",
     },
     {
-      name: "Sneha Gupta",
-      position: "Marketing Director",
-      image: "https://images.pexels.com/photos/3756681/pexels-photo-3756681.jpeg?auto=compress&cs=tinysrgb&w=300",
-      bio: "Digital marketing strategist with proven track record in brand building and growth.",
-      linkedin: "#",
-      twitter: "#",
-      email: "sneha@rightserveinfotech.com"
+      name: "Roshan Arikar",
+      position: "Team Lead",
+      image: "/roshan_arikar.jpeg",
+      bio: "Combining technical expertise with visionary leadership to drive success and strategic growth.",
     },
     {
-      name: "Vikram Singh",
-      position: "Hardware Solutions Lead",
-      image: "https://images.pexels.com/photos/2182975/pexels-photo-2182975.jpeg?auto=compress&cs=tinysrgb&w=300",
-      bio: "Infrastructure expert with deep knowledge in networking and hardware solutions.",
-      linkedin: "#",
-      twitter: "#",
-      email: "vikram@rightserveinfotech.com"
+      name: "Sonam Chaudhari",
+      position: "CFO",
+      image: "/sonam chaudhari.jpeg",
+      bio: "Driving financial strategy with insight, precision, and dedication to organizational success.",
     },
     {
-      name: "Kavya Reddy",
-      position: "UI/UX Design Lead",
-      image: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=300",
-      bio: "Creative designer focused on user experience and innovative design solutions.",
-      linkedin: "#",
-      twitter: "#",
-      email: "kavya@rightserveinfotech.com"
+      name: "M. A. Kadir",
+      position: "Software Engineer",
+      image: "/qadir.jpg",
+      bio: "AI & ML expert, creating intelligent solutions with advanced algorithms and data-driven insights.",
     },
     {
-      name: "Arjun Mehta",
-      position: "Project Manager",
-      image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=300",
-      bio: "Agile project management expert ensuring timely delivery and client satisfaction.",
-      linkedin: "#",
-      twitter: "#",
-      email: "arjun@rightserveinfotech.com"
+      name: "Rajwal Jambhule",
+      position: "Software Engineer",
+      image: "/rajwal_jambhule.jpg",
+      bio: "Innovative problem-solver, crafting robust solutions and ensuring code quality and efficiency.",
     },
     {
-      name: "Ritu Agarwal",
-      position: "Quality Assurance Lead",
-      image: "https://images.pexels.com/photos/3756681/pexels-photo-3756681.jpeg?auto=compress&cs=tinysrgb&w=300",
-      bio: "QA specialist committed to delivering bug-free, high-quality software solutions.",
-      linkedin: "#",
-      twitter: "#",
-      email: "ritu@rightserveinfotech.com"
-    }
+      name: "Abhishek Tijare",
+      position: "Software Engineer",
+      image: "/abhishek_tijare.jpeg",
+      bio: "Driving financial strategy with insight, precision, and dedication to organizational success.",
+    },
+    {
+      name: "Sakshi Wankhede",
+      position: "Software Engineer",
+      image: "/sakshi_wankhede.jpg",
+      bio: "Focused on developing cutting-edge software and optimizing performance for user satisfaction.",
+    },
+    {
+      name: "Jayshree Bawankar",
+      position: "Software Engineer",
+      image: "/jayshree-Bawankar.jpg",
+      bio: "Passionate coder, dedicated to creating elegant solutions and driving technological innovation.",
+    },
+    {
+      name: "Aarya Pandey",
+      position: "Graphics Designer",
+      image: "/aarya_pandey.jpg",
+      bio: "Crafting visually stunning designs that captivate and communicate brand essence effectively.",
+    },
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Team</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Meet the talented professionals who make Right Serve Infotech a success
+    <div className="bg-white">
+      {/* ===== Hero Section ===== */}
+      <section
+        className="relative h-[60vh] bg-cover bg-center"
+        style={{ backgroundImage: 'url("/team1.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+          <div className="text-center text-white px-6" data-aos="fade-up">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Meet Our Amazing Team
+            </h1>
+            <p className="text-lg max-w-2xl mx-auto">
+              The talented individuals behind Right Serve Infotech Systems'
+              success
             </p>
           </div>
         </div>
       </section>
 
-      {/* Team Introduction */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              The People Behind Our Success
+      {/* ===== Leadership Section ===== */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12" data-aos="fade-up">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+              Leadership Team
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Our diverse team of experts brings together years of experience, innovative thinking, 
-              and a passion for technology. Each member contributes unique skills and perspectives 
-              that drive our company's mission forward.
-            </p>
+            <p className="text-gray-600 mt-2">Meet the experts behind our success</p>
           </div>
-        </div>
-      </section>
 
-      {/* Team Members Grid */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="aspect-square overflow-hidden">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {leaders.map((leader, idx) => (
+              <div
+                key={idx}
+                className="relative bg-white rounded-2xl shadow-md border border-gray-100 p-6 pt-10 text-center transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2"
+                data-aos="zoom-in-up"
+                data-aos-delay={idx * 150}
+                data-aos-duration="800"
+              >
+                {/* Gradient bar */}
+                <div className="absolute top-0 left-0 w-full h-1 rounded-t-2xl bg-gradient-to-r from-blue-900 to-cyan-600"></div>
+
+                {/* Profile Image */}
+                <div className="w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden border-4 border-gray-100 shadow-md">
+                  <img
+                    src={leader.image}
+                    alt={leader.name}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
-                  <p className="text-blue-600 font-semibold mb-3">{member.position}</p>
-                  <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
-                  
-                  <div className="flex space-x-3">
-                    <a 
-                      href={member.linkedin}
-                      className="text-gray-400 hover:text-blue-600 transition-colors"
-                      aria-label={`${member.name} LinkedIn`}
-                    >
-                      <Linkedin className="h-5 w-5" />
-                    </a>
-                    <a 
-                      href={member.twitter}
-                      className="text-gray-400 hover:text-blue-400 transition-colors"
-                      aria-label={`${member.name} Twitter`}
-                    >
-                      <Twitter className="h-5 w-5" />
-                    </a>
-                    <a 
-                      href={`mailto:${member.email}`}
-                      className="text-gray-400 hover:text-green-600 transition-colors"
-                      aria-label={`Email ${member.name}`}
-                    >
-                      <Mail className="h-5 w-5" />
-                    </a>
-                  </div>
+
+                {/* Name */}
+                <h3 className="text-xl font-bold text-[#001f4d] mb-1">
+                  {leader.name}
+                </h3>
+
+                {/* Position */}
+                <p className="text-sm font-medium text-gray-500 mb-3">
+                  {leader.position}
+                </p>
+
+                {/* Bio */}
+                <p className="text-sm text-black leading-relaxed mb-5">
+                  {leader.bio}
+                </p>
+
+                {/* Social Icons */}
+                <div className="flex justify-center gap-5 text-[#001f4d]">
+                  <a
+                    href="#"
+                    aria-label="LinkedIn"
+                    className="hover:text-blue-800 transition-colors duration-300"
+                  >
+                    <Linkedin size={22} />
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="Twitter"
+                    className="hover:text-blue-800 transition-colors duration-300"
+                  >
+                    <Twitter size={22} />
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="Mail"
+                    className="hover:text-blue-800 transition-colors duration-300"
+                  >
+                    <Mail size={22} />
+                  </a>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Team Values */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              What Unites Us
-            </h2>
-            <p className="text-xl text-gray-600">
-              Our shared values and commitment to excellence
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-blue-600">🚀</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Innovation First</h3>
-              <p className="text-gray-600">
-                We constantly push boundaries and explore new technologies to deliver 
-                cutting-edge solutions for our clients.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-green-600">🤝</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Collaboration</h3>
-              <p className="text-gray-600">
-                We believe in the power of teamwork and open communication to achieve 
-                extraordinary results together.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-purple-600">⭐</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Excellence</h3>
-              <p className="text-gray-600">
-                We maintain the highest standards in everything we do, from code quality 
-                to customer service and project delivery.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Join Our Team CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Want to Join Our Amazing Team?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            We're always looking for talented individuals who share our passion 
-            for technology and innovation.
-          </p>
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg">
-            View Open Positions
-          </button>
         </div>
       </section>
     </div>
