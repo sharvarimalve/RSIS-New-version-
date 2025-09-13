@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
     return (
         <div className="overflow-x-hidden">
             {/* ===== Hero ===== */}
-            <section
+            <section 
                 className="relative bg-cover bg-center h-[60vh] flex items-center justify-center"
                 style={{
                     backgroundImage:
