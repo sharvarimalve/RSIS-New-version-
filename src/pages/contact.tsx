@@ -20,7 +20,7 @@ const Contact: React.FC = () => {
         message: "",
     });
 
-    // ✅ single handleChange
+    // single handleChange
     const handleChange = (
         e: React.ChangeEvent<
             HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement

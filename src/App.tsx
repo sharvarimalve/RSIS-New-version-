@@ -67,6 +67,7 @@ function App() {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
+
     </div>
   );
 }
