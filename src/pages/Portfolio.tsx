@@ -45,7 +45,7 @@ const Portfolio: React.FC = () => {
         {
             id: 4,
             title: "Mobile Banking App",
-            category: "Mobile Development",
+            category: "App Development",
             description:
                 "Secure mobile banking application with biometric authentication, real-time transactions, and budget tracking features.",
             image:
@@ -87,7 +87,7 @@ const Portfolio: React.FC = () => {
         "All",
         "Web Development",
         "Software Development",
-        "Mobile Development",
+        "App Development",
         "Digital Marketing",
         "Hardware Solutions",
     ];
@@ -109,7 +109,7 @@ const Portfolio: React.FC = () => {
         <div className="overflow-x-hidden">
             {/* Hero */}
             <section className="relative bg-gradient-to-r from-blue-900/80 to-cyan-700/80 py-24 text-white text-center bg-cover bg-center bg-no-repeat bg-blend-overlay"
-                style={{ backgroundImage: "url('/portfolio1.jpg')" }}
+                style={{ backgroundImage: "url('/portfolio.jpg')" }}
             >
                 <div className="container mx-auto px-4">
                     <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Portfolio</h1>
@@ -133,7 +133,7 @@ const Portfolio: React.FC = () => {
             <section className="py-16 bg-gray-100">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center text-blue-900 mb-10">
-                        Filter Projects
+
                     </h2>
                     <div className="flex flex-wrap justify-center gap-4">
                         {categories.map((category) => (
@@ -235,21 +235,21 @@ const Portfolio: React.FC = () => {
                         {[
                             {
                                 text: `"Right Serve Infotech delivered an exceptional e-commerce platform that exceeded our expectations. Their attention to detail and commitment to quality is outstanding."`,
-                                author: "John Smith",
-                                role: "CEO, RetailMax Solutions",
-                                img: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100",
+                                author: "Saurabh Jagthap",
+                                role: "Director",
+                                img: "/saurabh_jagthap.jpg",
                             },
                             {
                                 text: `"The healthcare management system they developed has revolutionized our operations. Patient satisfaction has improved significantly, and our staff is more efficient."`,
-                                author: "Dr. Sarah Johnson",
-                                role: "Director, MediCare Plus",
-                                img: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=100",
+                                author: "Piyush Pandey",
+                                role: "Director",
+                                img: "/piyush_pandey.jpg",
                             },
                             {
                                 text: `"Their digital marketing expertise helped us achieve a 300% increase in website traffic. The ROI on our marketing investment has been phenomenal."`,
-                                author: "Michael Chen",
+                                author: "Rahul Chaudhari",
                                 role: "Marketing Director, TechStart Innovations",
-                                img: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=100",
+                                img: "/rahul_chaudhari.jpeg",
                             },
                         ].map((t) => (
                             <div

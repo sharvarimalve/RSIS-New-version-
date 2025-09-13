@@ -431,7 +431,7 @@ const Products: React.FC = () => {
                 <div className="absolute inset-0 bg-black/40" />
                 <div className="relative z-10 text-center px-4">
                     <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                        Our Software Products
+                        Our  Products
                     </h1>
                     <p className="max-w-2xl mx-auto mb-10 text-lg">
                         Powerful, reliable, and user-friendly software solutions designed to
@@ -616,24 +616,26 @@ const Products: React.FC = () => {
             </section>
 
             {/* CTA */}
-            <section className="bg-gradient-to-r from-blue-600 to-blue-800 py-20 text-white">
+            <section className="bg-[#e4e7ea] to-gray-700 py-20 text-white">
                 <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#001f4d]">
                         Ready to Get Started?
                     </h2>
-                    <p className="mb-8 text-lg">
+                    <p className="mb-8 text-lg text-[#001f4d]">
                         Explore our products and find the perfect solution for your business
                         needs.
                     </p>
+
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <button className="bg-white text-blue-800 font-semibold px-6 py-3 rounded-full hover:bg-transparent hover:text-white border border-white transition">
+                        <button className="bg-[#001f4d] text-[#fff] font-semibold px-6 py-3 rounded-full   border border-white transition">
                             Browse All Products
                         </button>
-                        <button className="bg-transparent border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition">
+                        <button className="bg-[#001f4d] text-[#fff] border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-[#001f4d] transition">
                             Contact Sales Team
                         </button>
                     </div>
                 </div>
+
             </section>
         </div>
     );
