@@ -3,21 +3,21 @@ import ImageCarousel from "../components/ImageCarousel";
 
 const Home: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-400">
       {/* Image Carousel */}
       <div className="relative w-full h-screen flex items-center justify-center">
         <ImageCarousel />
       </div>
 
       {/* About Section */}
-      <section className="bg-white py-20">
+      <section className="bg-gray-400 py-20">
   <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
     {/* Left Image */}
     <div className="flex justify-center">
       <img
         src="https://www.cyberoptik.net/wp-content/uploads/2023/08/design-marketing.svg"
         alt="SEO Strategy"
-        className="w-[1100px] h-[750px]" // 👈 yahan height aur width badhayi
+        className="w-[1400px] h-[800px]" 
       />
     </div>
 
@@ -202,7 +202,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-400 py-20">
   <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
     {/* Heading */}
     <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
@@ -292,7 +292,7 @@ const Home: React.FC = () => {
 
 
       {/* Testimonial Section */}
-      <section className="bg-white py-20">
+      <section className="bg-gray-400 py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
             What Our Clients Say
