@@ -13,7 +13,7 @@ const Products: React.FC = () => {
         // -------- Business Software --------
         {
             id: 1,
-            name: "RSIS CRM Pro",
+            name: "Secure Build",
             category: "Business Software",
             price: "₹4,999",
             rating: 4.8,
@@ -33,7 +33,7 @@ const Products: React.FC = () => {
         },
         {
             id: 2,
-            name: "Inventory Master",
+            name: "Trajecctoryfy",
             category: "Business Software",
             price: "₹2,999",
             rating: 4.6,
@@ -52,7 +52,7 @@ const Products: React.FC = () => {
         },
         {
             id: 3,
-            name: "ProjectFlow Manager",
+            name: "DoseCare",
             category: "Business Software",
             price: "₹3,499",
             rating: 4.7,
@@ -71,7 +71,7 @@ const Products: React.FC = () => {
         },
         {
             id: 4,
-            name: "DataViz Analytics",
+            name: "TubeMonitise",
             category: "Business Software",
             price: "₹5,499",
             rating: 4.5,
@@ -89,7 +89,7 @@ const Products: React.FC = () => {
         },
         {
             id: 5,
-            name: "TaskHero",
+            name: "Shikhya Sutra",
             category: "Business Software",
             price: "₹1,999",
             rating: 4.3,
@@ -102,7 +102,7 @@ const Products: React.FC = () => {
         },
         {
             id: 6,
-            name: "SecureMail",
+            name: "Email System",
             category: "Business Software",
             price: "₹3,299",
             rating: 4.4,
@@ -115,244 +115,245 @@ const Products: React.FC = () => {
         },
 
         // -------- Business Hardware --------
-        {
-            id: 7,
-            name: "ProDesk Station",
-            category: "Business Hardware",
-            price: "₹25,999",
-            rating: 4.8,
-            reviews: 340,
-            description:
-                "High-performance desktop workstation for demanding business tasks.",
-            features: ["Intel i7 CPU", "16GB RAM", "1TB SSD", "Dual Monitors"],
-            image:
-                "https://images.pexels.com/photos/374777/pexels-photo-374777.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            id: 8,
-            name: "UltraBook Pro",
-            category: "Business Hardware",
-            price: "₹54,999",
-            rating: 4.6,
-            reviews: 220,
-            description:
-                "Lightweight and powerful business laptop with excellent battery life.",
-            features: ["14-inch Display", "i7 Processor", "512GB SSD", "Fingerprint Login"],
-            image:
-                "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            id: 9,
-            name: "SmartPrinter 4000",
-            category: "Business Hardware",
-            price: "₹8,499",
-            rating: 4.4,
-            reviews: 90,
-            description:
-                "Wireless all-in-one printer designed for offices and co-working spaces.",
-            features: ["Print/Scan/Copy", "Duplex Printing", "Wi-Fi Direct"],
-            image:
-                "https://images.pexels.com/photos/267569/pexels-photo-267569.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            id: 10,
-            name: "ServerMax 12U",
-            category: "Business Hardware",
-            price: "₹1,20,000",
-            rating: 4.7,
-            reviews: 67,
-            description:
-                "Compact server rack solution for small and medium-sized businesses.",
-            features: ["12U Rack", "Cooling Fans", "Lockable Doors"],
-            image:
-                "https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            id: 11,
-            name: "BoardRoom Display",
-            category: "Business Hardware",
-            price: "₹45,000",
-            rating: 4.5,
-            reviews: 50,
-            description:
-                "Large 4K display for meeting rooms and presentations.",
-            features: ["4K Resolution", "HDMI & Wireless", "Slim Design"],
-            image:
-                "https://images.pexels.com/photos/132700/pexels-photo-132700.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            id: 12,
-            name: "NetPro Router",
-            category: "Business Hardware",
-            price: "₹9,999",
-            rating: 4.3,
-            reviews: 130,
-            description:
-                "High-speed enterprise router with advanced security protocols.",
-            features: ["Gigabit Ports", "Firewall", "VPN Support"],
-            image:
-                "https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
+        // {
+        //     id: 7,
+        //     name: "ProDesk Station",
+        //     category: "Business Hardware",
+        //     price: "₹25,999",
+        //     rating: 4.8,
+        //     reviews: 340,
+        //     description:
+        //         "High-performance desktop workstation for demanding business tasks.",
+        //     features: ["Intel i7 CPU", "16GB RAM", "1TB SSD", "Dual Monitors"],
+        //     image:
+        //         "https://images.pexels.com/photos/374777/pexels-photo-374777.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
+        // {
+        //     id: 8,
+        //     name: "UltraBook Pro",
+        //     category: "Business Hardware",
+        //     price: "₹54,999",
+        //     rating: 4.6,
+        //     reviews: 220,
+        //     description:
+        //         "Lightweight and powerful business laptop with excellent battery life.",
+        //     features: ["14-inch Display", "i7 Processor", "512GB SSD", "Fingerprint Login"],
+        //     image:
+        //         "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
+        // },
+        // {
+        //     id: 9,
+        //     name: "SmartPrinter 4000",
+        //     category: "Business Hardware",
+        //     price: "₹8,499",
+        //     rating: 4.4,
+        //     reviews: 90,
+        //     description:
+        //         "Wireless all-in-one printer designed for offices and co-working spaces.",
+        //     features: ["Print/Scan/Copy", "Duplex Printing", "Wi-Fi Direct"],
+        //     image:
+        //         "https://images.pexels.com/photos/267569/pexels-photo-267569.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
+        // {
+        //     id: 10,
+        //     name: "ServerMax 12U",
+        //     category: "Business Hardware",
+        //     price: "₹1,20,000",
+        //     rating: 4.7,
+        //     reviews: 67,
+        //     description:
+        //         "Compact server rack solution for small and medium-sized businesses.",
+        //     features: ["12U Rack", "Cooling Fans", "Lockable Doors"],
+        //     image:
+        //         "https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
+        // {
+        //     id: 11,
+        //     name: "BoardRoom Display",
+        //     category: "Business Hardware",
+        //     price: "₹45,000",
+        //     rating: 4.5,
+        //     reviews: 50,
+        //     description:
+        //         "Large 4K display for meeting rooms and presentations.",
+        //     features: ["4K Resolution", "HDMI & Wireless", "Slim Design"],
+        //     image:
+        //         "https://images.pexels.com/photos/132700/pexels-photo-132700.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
+        // {
+        //     id: 12,
+        //     name: "NetPro Router",
+        //     category: "Business Hardware",
+        //     price: "₹9,999",
+        //     rating: 4.3,
+        //     reviews: 130,
+        //     description:
+        //         "High-speed enterprise router with advanced security protocols.",
+        //     features: ["Gigabit Ports", "Firewall", "VPN Support"],
+        //     image:
+        //         "https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
 
         // -------- Marketing --------
-        {
-            id: 13,
-            name: "AdBoost",
-            category: "Marketing",
-            price: "₹3,999",
-            rating: 4.7,
-            reviews: 80,
-            description:
-                "Run and manage social media ad campaigns from one platform.",
-            features: ["Multi-platform Ads", "Performance Tracking", "Smart Bidding"],
-            image:
-                "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            id: 14,
-            name: "SEO Wizard",
-            category: "Marketing",
-            price: "₹2,499",
-            rating: 4.5,
-            reviews: 60,
-            description:
-                "Optimize your website with advanced SEO tools and reports.",
-            features: ["Keyword Analysis", "Backlink Checker", "Site Audit"],
-            image:
-                "https://images.pexels.com/photos/445842/pexels-photo-445842.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            id: 15,
-            name: "MailMaster",
-            category: "Marketing",
-            price: "₹1,999",
-            rating: 4.4,
-            reviews: 48,
-            description:
-                "Email marketing tool with templates and automation features.",
-            features: ["Templates", "Scheduling", "Analytics"],
-            image:
-                "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            id: 16,
-            name: "BrandVision",
-            category: "Marketing",
-            price: "₹5,499",
-            rating: 4.6,
-            reviews: 72,
-            description:
-                "Creative brand strategy toolkit for marketing teams.",
-            features: ["Logo Generator", "Color Palettes", "Brand Guide"],
-            image:
-                "https://images.pexels.com/photos/3153201/pexels-photo-3153201.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            id: 17,
-            name: "LeadTracker",
-            category: "Marketing",
-            price: "₹3,199",
-            rating: 4.5,
-            reviews: 66,
-            description:
-                "Manage leads and track conversions effectively.",
-            features: ["Lead Scoring", "CRM Sync", "Pipeline View"],
-            image:
-                "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            id: 18,
-            name: "ContentFlow",
-            category: "Marketing",
-            price: "₹2,999",
-            rating: 4.3,
-            reviews: 40,
-            description:
-                "Plan and publish your content calendar effortlessly.",
-            features: ["Calendar", "Approvals", "Multi-channel Posting"],
-            image:
-                "https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
+        // {
+        //     id: 13,
+        //     name: "AdBoost",
+        //     category: "Marketing",
+        //     price: "₹3,999",
+        //     rating: 4.7,
+        //     reviews: 80,
+        //     description:
+        //         "Run and manage social media ad campaigns from one platform.",
+        //     features: ["Multi-platform Ads", "Performance Tracking", "Smart Bidding"],
+        //     image:
+        //         "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
+        // {
+        //     id: 14,
+        //     name: "SEO Wizard",
+        //     category: "Marketing",
+        //     price: "₹2,499",
+        //     rating: 4.5,
+        //     reviews: 60,
+        //     description:
+        //         "Optimize your website with advanced SEO tools and reports.",
+        //     features: ["Keyword Analysis", "Backlink Checker", "Site Audit"],
+        //     image:
+        //         "https://images.pexels.com/photos/445842/pexels-photo-445842.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
+        // {
+        //     id: 15,
+        //     name: "MailMaster",
+        //     category: "Marketing",
+        //     price: "₹1,999",
+        //     rating: 4.4,
+        //     reviews: 48,
+        //     description:
+        //         "Email marketing tool with templates and automation features.",
+        //     features: ["Templates", "Scheduling", "Analytics"],
+        //     image:
+        //         "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
+        // {
+        //     id: 16,
+        //     name: "BrandVision",
+        //     category: "Marketing",
+        //     price: "₹5,499",
+        //     rating: 4.6,
+        //     reviews: 72,
+        //     description:
+        //         "Creative brand strategy toolkit for marketing teams.",
+        //     features: ["Logo Generator", "Color Palettes", "Brand Guide"],
+        //     image:
+        //         "https://images.pexels.com/photos/3153201/pexels-photo-3153201.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
+        // {
+        //     id: 17,
+        //     name: "LeadTracker",
+        //     category: "Marketing",
+        //     price: "₹3,199",
+        //     rating: 4.5,
+        //     reviews: 66,
+        //     description:
+        //         "Manage leads and track conversions effectively.",
+        //     features: ["Lead Scoring", "CRM Sync", "Pipeline View"],
+        //     image:
+        //         "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
+        // {
+        //     id: 18,
+        //     name: "ContentFlow",
+        //     category: "Marketing",
+        //     price: "₹2,999",
+        //     rating: 4.3,
+        //     reviews: 40,
+        //     description:
+        //         "Plan and publish your content calendar effortlessly.",
+        //     features: ["Calendar", "Approvals", "Multi-channel Posting"],
+        //     image:
+        //         "https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
 
         // -------- Backup Solutions --------
-        {
-            id: 19,
-            name: "CloudVault",
-            category: "Backup Solutions",
-            price: "₹2,999",
-            rating: 4.7,
-            reviews: 85,
-            description:
-                "Secure cloud-based backup service for businesses of all sizes.",
-            features: ["Automatic Backups", "Data Encryption", "Version History"],
-            image:
-                "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            id: 20,
-            name: "SafeDrive",
-            category: "Backup Solutions",
-            price: "₹3,499",
-            rating: 4.6,
-            reviews: 72,
-            description:
-                "Portable encrypted storage drive for offline backups.",
-            features: ["AES Encryption", "Portable", "Plug & Play"],
-            image:
-                "https://images.pexels.com/photos/267447/pexels-photo-267447.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            id: 21,
-            name: "VaultBox",
-            category: "Backup Solutions",
-            price: "₹4,199",
-            rating: 4.5,
-            reviews: 63,
-            description:
-                "On-premise backup server with hybrid cloud support.",
-            features: ["Hybrid Storage", "Snapshots", "RAID Support"],
-            image:
-                "https://images.pexels.com/photos/267447/pexels-photo-267447.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            id: 22,
-            name: "TimeShield",
-            category: "Backup Solutions",
-            price: "₹2,299",
-            rating: 4.4,
-            reviews: 59,
-            description:
-                "Automatic backup scheduler for critical business data.",
-            features: ["Scheduled Backups", "Compression", "Alerts"],
-            image:
-                "https://images.pexels.com/photos/37347/office-computer-apple-macintosh-37347.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            id: 23,
-            name: "BackupPro",
-            category: "Backup Solutions",
-            price: "₹3,799",
-            rating: 4.5,
-            reviews: 88,
-            description:
-                "Professional backup suite for databases and servers.",
-            features: ["Database Support", "Cloud Sync", "Reports"],
-            image:
-                "https://images.pexels.com/photos/267502/pexels-photo-267502.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            id: 24,
-            name: "RestoreX",
-            category: "Backup Solutions",
-            price: "₹3,099",
-            rating: 4.3,
-            reviews: 44,
-            description:
-                "Quick recovery tool for accidental file deletions.",
-            features: ["Point-in-Time Restore", "Preview", "Cross-platform"],
-            image:
-                "https://images.pexels.com/photos/267505/pexels-photo-267505.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
+        // {
+        //     id: 19,
+        //     name: "CloudVault",
+        //     category: "Backup Solutions",
+        //     price: "₹2,999",
+        //     rating: 4.7,
+        //     reviews: 85,
+        //     description:
+        //         "Secure cloud-based backup service for businesses of all sizes.",
+        //     features: ["Automatic Backups", "Data Encryption", "Version History"],
+        //     image:
+        //         "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
+        // {
+        //     id: 20,
+        //     name: "SafeDrive",
+        //     category: "Backup Solutions",
+        //     price: "₹3,499",
+        //     rating: 4.6,
+        //     reviews: 72,
+        //     description:
+        //         "Portable encrypted storage drive for offline backups.",
+        //     features: ["AES Encryption", "Portable", "Plug & Play"],
+        //     image:
+        //         "https://images.pexels.com/photos/267447/pexels-photo-267447.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
+        // {
+        //     id: 21,
+        //     name: "VaultBox",
+        //     category: "Backup Solutions",
+        //     price: "₹4,199",
+        //     rating: 4.5,
+        //     reviews: 63,
+        //     description:
+        //         "On-premise backup server with hybrid cloud support.",
+        //     features: ["Hybrid Storage", "Snapshots", "RAID Support"],
+        //     image:
+        //         "https://images.pexels.com/photos/267447/pexels-photo-267447.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
+        // {
+        //     id: 22,
+        //     name: "TimeShield",
+        //     category: "Backup Solutions",
+        //     price: "₹2,299",
+        //     rating: 4.4,
+        //     reviews: 59,
+        //     description:
+        //         "Automatic backup scheduler for critical business data.",
+        //     features: ["Scheduled Backups", "Compression", "Alerts"],
+        //     image:
+        //         "https://images.pexels.com/photos/37347/office-computer-apple-macintosh-37347.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
+        // {
+        //     id: 23,
+        //     name: "BackupPro",
+        //     category: "Backup Solutions",
+        //     price: "₹3,799",
+        //     rating: 4.5,
+        //     reviews: 88,
+        //     description:
+        //         "Professional backup suite for databases and servers.",
+        //     features: ["Database Support", "Cloud Sync", "Reports"],
+        //     image:
+        //         "https://images.pexels.com/photos/267502/pexels-photo-267502.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
+        // {
+        //     id: 24,
+        //     name: "RestoreX",
+        //     category: "Backup Solutions",
+        //     price: "₹3,099",
+        //     rating: 4.3,
+        //     reviews: 44,
+        //     description:
+        //         "Quick recovery tool for accidental file deletions.",
+        //     features: ["Point-in-Time Restore", "Preview", "Cross-platform"],
+        //     image:
+        //         "https://images.pexels.com/photos/267505/pexels-photo-267505.jpeg?auto=compress&cs=tinysrgb&w=600",
+        // },
+
     ];
 
 
@@ -462,7 +463,7 @@ const Products: React.FC = () => {
             <section className="py-12 bg-gray-100">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl font-bold mb-8 text-gray-800">
-                        Browse Products by Category
+                        Our Products by Category
                     </h2>
                     <div className="flex flex-wrap justify-center gap-4">
                         {categories.map((cat) => (
