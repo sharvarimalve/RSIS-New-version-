@@ -3,45 +3,70 @@ import ImageCarousel from "../components/ImageCarousel";
 
 const Home: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-400">
-      {/* Image Carousel */}
-      <div className="relative w-full h-screen flex items-center justify-center">
-        <ImageCarousel />
+    <div className="min-h-screen bg-White">
+      {/* Hero Video Section */}
+      <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Video */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          src="/HOME-page-vide0.mp4"  
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        {/* Text on Video */}
+        <div className="relative z-10 text-center px-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Welcome to Right Serve Infotech system Pvt.Ltd
+          </h1>
+          <p className="text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
+            Empowering businesses with software, hardware, and marketing solutions
+          </p>
+          <button className="px-8 py-3 bg-green-600 text-white text-lg rounded-lg shadow-md hover:bg-green-500 transition">
+            Get Started
+          </button>
+        </div>
       </div>
 
-      {/* About Section */}
-      <section className="bg-gray-400 py-20">
-  <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-    {/* Left Image */}
-    <div className="flex justify-center">
-      <img
-        src="https://www.cyberoptik.net/wp-content/uploads/2023/08/design-marketing.svg"
-        alt="SEO Strategy"
-        className="w-[1400px] h-[800px]" 
-      />
-    </div>
 
-    {/* Right Content */}
-    <div>
-      <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-8">
-        About Us
-      </h2>
-      <p className="text-gray-600 mb-8 leading-relaxed text-justify font-semibold text-lg">
-        Right Serve Infotech Systems Private Limited is a leading provider
-        of comprehensive software and hardware solutions, dedicated to
-        empowering businesses across diverse industries. We've grown into a
-        trusted name, offering both custom-tailored and product-based
-        solutions to meet the unique needs of our clients. With a focus on
-        innovation, quality, and customer satisfaction, we are committed to
-        delivering reliable and efficient technology solutions that drive
-        growth and enhance operational efficiency.
-      </p>
-      <button className="px-8 py-3 bg-blue-900 text-white text-lg rounded-lg shadow-md hover:bg-blue-800 transition">
-        Read More
-      </button>
-    </div>
-  </div>
-</section>
+      {/* About Section */}
+      <section className="bg-White py-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Left Image */}
+          <div className="flex justify-center">
+            <img
+              src="https://www.cyberoptik.net/wp-content/uploads/2023/08/design-marketing.svg"
+              alt="SEO Strategy"
+              className="w-[1400px] h-[800px]"
+            />
+          </div>
+
+          {/* Right Content */}
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-8">
+              About Us
+            </h2>
+            <p className="text-gray-600 mb-8 leading-relaxed text-justify font-semibold text-lg">
+              Right Serve Infotech Systems Private Limited is a leading provider
+              of comprehensive software and hardware solutions, dedicated to
+              empowering businesses across diverse industries. We've grown into a
+              trusted name, offering both custom-tailored and product-based
+              solutions to meet the unique needs of our clients. With a focus on
+              innovation, quality, and customer satisfaction, we are committed to
+              delivering reliable and efficient technology solutions that drive
+              growth and enhance operational efficiency.
+            </p>
+            <button className="px-8 py-3 bg-blue-900 text-white text-lg rounded-lg shadow-md hover:bg-blue-800 transition">
+              Read More
+            </button>
+          </div>
+        </div>
+      </section>
 
 
       {/* Services / Cards Section */}
@@ -100,7 +125,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Industry Section (like screenshot) */}
-      <section className="bg-blue-950  mb-20 ">
+      <section className="bg-blue-950 rounded-bl-[80px] rounded-br-[80px]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Web Design for Every Industry
@@ -110,7 +135,7 @@ const Home: React.FC = () => {
             regardless of which industry you’re in.
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 text-center ">
             {/* Industry Cards */}
             <div>
               <img
@@ -202,97 +227,97 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-gray-400 py-20">
-  <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-    {/* Heading */}
-    <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-      Where are you in the website process?
-    </h2>
-    <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-      Not sure where to start? We can help you at any step of the process from getting you online 
-      to keeping your site thriving!
-    </p>
-
-    {/* Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {/* Card 1 */}
-      <div className="bg-white rounded-xl shadow p-6 text-left flex gap-4 items-start">
-        <img
-          src="https://www.svgrepo.com/show/503144/rocket-launch.svg"
-          alt="Getting Started"
-          className="w-12 h-12 text-green-600"
-        />
-        <div>
-          <h3 className="text-lg font-bold text-blue-900 mb-2">Getting Started</h3>
-          <p className="text-gray-600 mb-2">
-            I need help with the entire website process.
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+          {/* Heading */}
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
+            Where are you in the website process?
+          </h2>
+          <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+            Not sure where to start? We can help you at any step of the process from getting you online
+            to keeping your site thriving!
           </p>
-          <a href="#" className="text-green-600 font-medium hover:underline">
-            How It Works →
-          </a>
-        </div>
-      </div>
 
-      {/* Card 2 */}
-      <div className="bg-white rounded-xl shadow p-6 text-left flex gap-4 items-start">
-        <img
-          src="https://www.svgrepo.com/show/530439/web.svg"
-          alt="Have a Design"
-          className="w-12 h-12 text-green-600"
-        />
-        <div>
-          <h3 className="text-lg font-bold text-blue-900 mb-2">Have a Design</h3>
-          <p className="text-gray-600 mb-2">
-            I have a design and need to bring it to life.
-          </p>
-          <a href="#" className="text-green-600 font-medium hover:underline">
-            Let’s Talk →
-          </a>
-        </div>
-      </div>
+          {/* Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Card 1 */}
+            <div className="bg-white rounded-xl shadow p-6 text-left flex gap-4 items-start">
+              <img
+                src="https://www.svgrepo.com/show/503144/rocket-launch.svg"
+                alt="Getting Started"
+                className="w-12 h-12 text-green-600"
+              />
+              <div>
+                <h3 className="text-lg font-bold text-blue-900 mb-2">Getting Started</h3>
+                <p className="text-gray-600 mb-2">
+                  I need help with the entire website process.
+                </p>
+                <a href="#" className="text-green-600 font-medium hover:underline">
+                  How It Works →
+                </a>
+              </div>
+            </div>
 
-      {/* Card 3 */}
-      <div className="bg-white rounded-xl shadow p-6 text-left flex gap-4 items-start">
-        <img
-          src="https://www.svgrepo.com/show/493680/tools.svg"
-          alt="Need Changes"
-          className="w-12 h-12 text-green-600"
-        />
-        <div>
-          <h3 className="text-lg font-bold text-blue-900 mb-2">Need Changes</h3>
-          <p className="text-gray-600 mb-2">
-            My existing website needs some help.
-          </p>
-          <a href="#" className="text-green-600 font-medium hover:underline">
-            Let’s Talk →
-          </a>
-        </div>
-      </div>
+            {/* Card 2 */}
+            <div className="bg-white rounded-xl shadow p-6 text-left flex gap-4 items-start">
+              <img
+                src="https://www.svgrepo.com/show/530439/web.svg"
+                alt="Have a Design"
+                className="w-12 h-12 text-green-600"
+              />
+              <div>
+                <h3 className="text-lg font-bold text-blue-900 mb-2">Have a Design</h3>
+                <p className="text-gray-600 mb-2">
+                  I have a design and need to bring it to life.
+                </p>
+                <a href="#" className="text-green-600 font-medium hover:underline">
+                  Let’s Talk →
+                </a>
+              </div>
+            </div>
 
-      {/* Card 4 */}
-      <div className="bg-white rounded-xl shadow p-6 text-left flex gap-4 items-start">
-        <img
-          src="https://www.svgrepo.com/show/532499/settings.svg"
-          alt="Ongoing Support"
-          className="w-12 h-12 text-green-600"
-        />
-        <div>
-          <h3 className="text-lg font-bold text-blue-900 mb-2">Ongoing Support</h3>
-          <p className="text-gray-600 mb-2">
-            My site is good but I need monthly upkeep.
-          </p>
-          <a href="#" className="text-green-600 font-medium hover:underline">
-            Learn More →
-          </a>
+            {/* Card 3 */}
+            <div className="bg-white rounded-xl shadow p-6 text-left flex gap-4 items-start">
+              <img
+                src="https://www.svgrepo.com/show/493680/tools.svg"
+                alt="Need Changes"
+                className="w-12 h-12 text-green-600"
+              />
+              <div>
+                <h3 className="text-lg font-bold text-blue-900 mb-2">Need Changes</h3>
+                <p className="text-gray-600 mb-2">
+                  My existing website needs some help.
+                </p>
+                <a href="#" className="text-green-600 font-medium hover:underline">
+                  Let’s Talk →
+                </a>
+              </div>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white rounded-xl shadow p-6 text-left flex gap-4 items-start">
+              <img
+                src="https://www.svgrepo.com/show/532499/settings.svg"
+                alt="Ongoing Support"
+                className="w-12 h-12 text-green-600"
+              />
+              <div>
+                <h3 className="text-lg font-bold text-blue-900 mb-2">Ongoing Support</h3>
+                <p className="text-gray-600 mb-2">
+                  My site is good but I need monthly upkeep.
+                </p>
+                <a href="#" className="text-green-600 font-medium hover:underline">
+                  Learn More →
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
       {/* Testimonial Section */}
-      <section className="bg-gray-400 py-20">
+      <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
             What Our Clients Say
