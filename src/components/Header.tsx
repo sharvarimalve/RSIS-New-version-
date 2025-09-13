@@ -77,8 +77,8 @@ const Header: React.FC<HeaderProps> = ({
                 currentPage === "home"
                   ? "text-[#17385b]"
                   : isScrolled
-                  ? "text-[#17385b] hover:text-green-600"
-                  : "text-white hover:text-green-400"
+                  ? "text-[#17385b] hover:text-gray-200"
+                  : "text-white hover:text-gray-200"
               }`}
             >
               Home
@@ -93,8 +93,8 @@ const Header: React.FC<HeaderProps> = ({
                   ["about-us", "career", "our-team"].includes(currentPage)
                     ? "text-[#17385b]"
                     : isScrolled
-                    ? "text-[#17385b] hover:text-green-600"
-                    : "text-white hover:text-green-400"
+                    ? "text-[#17385b] hover:text-gray-200"
+                    : "text-white hover:text-gray-200"
                 }`}
               >
                 About <ChevronDown className="ml-1 h-4 w-4" />
@@ -136,8 +136,8 @@ const Header: React.FC<HeaderProps> = ({
                   ["software", "hardware", "marketing"].includes(currentPage)
                     ? "text-[#17385b]"
                     : isScrolled
-                    ? "text-[#17385b] hover:text-green-600"
-                    : "text-white hover:text-green-400"
+                    ? "text-[#17385b] hover:text-gray-200"
+                    : "text-white hover:text-gray-200"
                 }`}
               >
                 Services <ChevronDown className="ml-1 h-4 w-4" />
@@ -176,8 +176,8 @@ const Header: React.FC<HeaderProps> = ({
                 currentPage === "portfolio"
                   ? "text-[#17385b]"
                   : isScrolled
-                  ? "text-[#17385b] hover:text-green-600"
-                  : "text-white hover:text-green-400"
+                  ? "text-[#17385b] hover:text-gray-200"
+                  : "text-white hover:text-gray-200"
               }`}
             >
               Portfolio
@@ -189,8 +189,8 @@ const Header: React.FC<HeaderProps> = ({
                 currentPage === "products"
                   ? "text-[#17385b]"
                   : isScrolled
-                  ? "text-[#17385b] hover:text-green-600"
-                  : "text-white hover:text-green-400"
+                  ? "text-[#17385b] hover:text-gray-200"
+                  : "text-white hover:text-gray-200"
               }`}
             >
               Products
@@ -202,8 +202,8 @@ const Header: React.FC<HeaderProps> = ({
                 currentPage === "contact"
                   ? "text-[#17385b]"
                   : isScrolled
-                  ? "text-[#17385b] hover:text-green-600"
-                  : "text-white hover:text-green-400"
+                  ? "text-[#17385b] hover:text-gray-200"
+                  : "text-white hover:text-gray-200"
               }`}
             >
               Contact
@@ -213,8 +213,8 @@ const Header: React.FC<HeaderProps> = ({
               onClick={onGetConnected}
               className={`px-6 py-2 rounded-[30px] transition-colors text-xl font-bold ${
                 isScrolled
-                  ? "bg-[#17385b] text-white hover:bg-green-600"
-                  : "bg-[#17385b] text-white hover:bg-green-500"
+                  ? "bg-[#17385b] text-white hover:bg-[#17385b]"
+                  : "bg-[#17385b] text-white hover:bg-[#17385b]"
               }`}
             >
               Get Connected

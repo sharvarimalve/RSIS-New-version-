@@ -52,17 +52,17 @@ const Contact: React.FC = () => {
         {
             icon: <MapPin className="w-6 h-6 text-cyan-600" />,
             title: "Our Address",
-            details: ["123 Tech Street, IT Park", "New Delhi, India - 110001"],
+            details: ["10, Saurabh Nagar-2, Besa Rd, near Hanuman Mandir, Saubhagya Nagar, Ghogali, Nagpur, Maharashtra 440034"],
         },
         {
             icon: <Phone className="w-6 h-6 text-cyan-600" />,
             title: "Phone Numbers",
-            details: ["+91 98765 43210", "+91 87654 32109"],
+            details: ["+91 7972192831", "+91 8669308288"],
         },
         {
             icon: <Mail className="w-6 h-6 text-cyan-600" />,
             title: "Email Addresses",
-            details: ["info@rightserveinfotech.com", "support@rightserveinfotech.com"],
+            details: ["rightserveinfotechsystems@gmail.com"],
         },
         {
             icon: <Clock className="w-6 h-6 text-cyan-600" />,
@@ -71,32 +71,7 @@ const Contact: React.FC = () => {
         },
     ];
 
-    const offices = [
-        {
-            city: "New Delhi",
-            address: "123 Tech Street, IT Park, New Delhi - 110001",
-            phone: "+91 98765 43210",
-            email: "delhi@rightserveinfotech.com",
-            image:
-                "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            city: "Mumbai",
-            address: "456 Business Center, Andheri East, Mumbai - 400069",
-            phone: "+91 87654 32109",
-            email: "mumbai@rightserveinfotech.com",
-            image:
-                "https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-        {
-            city: "Bangalore",
-            address: "789 Innovation Hub, Electronic City, Bangalore - 560100",
-            phone: "+91 76543 21098",
-            email: "bangalore@rightserveinfotech.com",
-            image:
-                "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600",
-        },
-    ];
+
 
     const faqs = [
         {
@@ -142,6 +117,7 @@ const Contact: React.FC = () => {
             </section>
 
             {/* ===== Contact Info ===== */}
+            {/* ===== Contact Info ===== */}
             <section className="py-16">
                 <div className="container mx-auto px-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {contactInfo.map((info, idx) => (
@@ -153,32 +129,77 @@ const Contact: React.FC = () => {
                             <h3 className="font-semibold text-lg text-slate-800 mb-2">
                                 {info.title}
                             </h3>
-                            {info.details.map((d, i) => (
-                                <p key={i} className="text-gray-600 text-sm">
-                                    {d}
-                                </p>
-                            ))}
+                            {info.details.map((d, i) => {
+                                let content = d;
+
+                                // Address → Google Maps link
+                                if (info.title === "Our Address") {
+                                    return (
+                                        <p key={i} className="text-gray-600 text-sm">
+                                            <a
+                                                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                                                    d
+                                                )}`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="hover:text-cyan-600"
+                                            >
+                                                {d}
+                                            </a>
+                                        </p>
+                                    );
+                                }
+
+                                // Phone → tel link
+                                if (info.title === "Phone Numbers") {
+                                    return (
+                                        <p key={i} className="text-gray-600 text-sm">
+                                            <a href={`tel:${d}`} className="hover:text-cyan-600">
+                                                {d}
+                                            </a>
+                                        </p>
+                                    );
+                                }
+
+                                // Email → mailto link
+                                if (info.title === "Email Addresses") {
+                                    return (
+                                        <p key={i} className="text-gray-600 text-sm">
+                                            <a href={`mailto:${d}`} className="hover:text-cyan-600">
+                                                {d}
+                                            </a>
+                                        </p>
+                                    );
+                                }
+
+                                // Default (like Business Hours)
+                                return (
+                                    <p key={i} className="text-gray-600 text-sm">
+                                        {d}
+                                    </p>
+                                );
+                            })}
                         </div>
                     ))}
                 </div>
             </section>
 
             {/* ===== Contact Form ===== */}
-            <section className="relative py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-black">
-                <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/7130499/pexels-photo-7130499.jpeg?auto=compress&cs=tinysrgb&w=1600')] bg-cover bg-center opacity-30" />
+            <section className="relative py-20  via-slate-900 to-black">
+                <div className="absolute inset-0  bg-cover bg-center opacity-30" />
 
                 <div className="relative container mx-auto px-4 grid lg:grid-cols-2 gap-12">
                     {/* ===== Left: Glass Contact Form ===== */}
-                    <div className="backdrop-blur-xl bg-white/10 rounded-2xl shadow-2xl p-8 text-white">
-                        <h2 className="text-3xl font-bold mb-3">Get in Touch</h2>
-                        <p className="text-gray-300 mb-8">
+                    <div className="backdrop-blur-xl bg-[#e5e7eb] rounded-2xl shadow-2xl p-8 ">
+                        <h2 className="text-3xl font-bold mb-3 text-blue-900">Get in Touch</h2>
+                        <p className=" mb-8 text-blue-900">
                             We'd love to hear from you! Fill in the form and we’ll get back shortly.
                         </p>
 
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label className="block mb-1 text-gray-200">
+                                    <label className="block mb-1 text-blue-900 ">
                                         Full Name *
                                     </label>
                                     <input
@@ -186,12 +207,12 @@ const Contact: React.FC = () => {
                                         value={formData.name}
                                         onChange={handleChange}
                                         required
-                                        className="w-full rounded-md bg-white/20 border border-white/30 px-4 py-2 placeholder-gray-300 text-white focus:border-cyan-400 focus:ring focus:ring-cyan-600"
+                                        className="w-full rounded-md  border border-white/30 px-4 py-2 placeholder-gray-300 text-white focus:border-cyan-400 focus:ring focus:ring-cyan-600"
                                         placeholder="Your Name"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block mb-1 text-gray-200">
+                                    <label className="block mb-1 text-blue-900">
                                         Email *
                                     </label>
                                     <input
@@ -200,7 +221,7 @@ const Contact: React.FC = () => {
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        className="w-full rounded-md bg-white/20 border border-white/30 px-4 py-2 placeholder-gray-300 text-white focus:border-cyan-400 focus:ring focus:ring-cyan-600"
+                                        className="w-full rounded-md  border border-white/30 px-4 py-2 placeholder-gray-300 text-white focus:border-cyan-400 focus:ring focus:ring-cyan-600"
                                         placeholder="you@email.com"
                                     />
                                 </div>
@@ -208,33 +229,33 @@ const Contact: React.FC = () => {
 
                             <div className="grid sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label className="block mb-1 text-gray-200">
+                                    <label className="block mb-1 text-blue-900">
                                         Phone
                                     </label>
                                     <input
                                         name="phone"
                                         value={formData.phone}
                                         onChange={handleChange}
-                                        className="w-full rounded-md bg-white/20 border border-white/30 px-4 py-2 placeholder-gray-300 text-white focus:border-cyan-400"
+                                        className="w-full rounded-md  border border-white/30 px-4 py-2 placeholder-gray-300 text-white focus:border-cyan-400"
                                         placeholder="+91 9876543210"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block mb-1 text-gray-200">
+                                    <label className="block mb-1 text-blue-900">
                                         Company
                                     </label>
                                     <input
                                         name="company"
                                         value={formData.company}
                                         onChange={handleChange}
-                                        className="w-full rounded-md bg-white/20 border border-white/30 px-4 py-2 placeholder-gray-300 text-white focus:border-cyan-400"
+                                        className="w-full rounded-md border border-white/30 px-4 py-2 placeholder-gray-300 text-white focus:border-cyan-400"
                                         placeholder="Your Company"
                                     />
                                 </div>
                             </div>
 
                             <div>
-                                <label className="block mb-1 text-gray-200">
+                                <label className="block mb-1 text-blue-900">
                                     Subject *
                                 </label>
                                 <select
@@ -242,7 +263,7 @@ const Contact: React.FC = () => {
                                     value={formData.subject}
                                     onChange={handleChange}
                                     required
-                                    className="w-full rounded-md bg-white/20 border border-white/30 px-4 py-2 text-white focus:border-cyan-400"
+                                    className="w-full rounded-md  border border-white/30 px-4 py-2 text-gray-200 focus:border-cyan-400"
                                 >
                                     <option value="">Choose a topic</option>
                                     <option>Software Development</option>
@@ -254,7 +275,7 @@ const Contact: React.FC = () => {
                             </div>
 
                             <div>
-                                <label className="block mb-1 text-gray-200">
+                                <label className="block mb-1 text-blue-900">
                                     Message *
                                 </label>
                                 <textarea
@@ -263,14 +284,14 @@ const Contact: React.FC = () => {
                                     value={formData.message}
                                     onChange={handleChange}
                                     required
-                                    className="w-full rounded-md bg-white/20 border border-white/30 px-4 py-2 placeholder-gray-300 text-white focus:border-cyan-400 resize-none"
+                                    className="w-full rounded-md  border border-white/30 px-4 py-2 placeholder-gray-300 text-white focus:border-cyan-400 resize-none"
                                     placeholder="Write your message..."
                                 />
                             </div>
 
                             <button
                                 type="submit"
-                                className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition w-full sm:w-auto"
+                                className="bg-blue-900 hover:bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold transition w-full sm:w-auto"
                             >
                                 Send Message
                             </button>
@@ -287,7 +308,7 @@ const Contact: React.FC = () => {
                             allowFullScreen
                             loading="lazy"
                         />
-                        <div className="absolute -bottom-10 left-4 right-4 bg-white rounded-xl shadow-xl p-6 grid grid-cols-3 gap-4 text-center">
+                        <div className="absolute -bottom-10 left-4 right-4 bg-white rounded-xl shadow-xl p-6 grid grid-cols-3 gap-4 text-center mb-20">
                             <div>
                                 <div className="text-2xl font-bold text-cyan-600">24hrs</div>
                                 <p className="text-sm text-gray-600">Response Time</p>
@@ -312,10 +333,10 @@ const Contact: React.FC = () => {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left Side (Gray info block) */}
                         <div className="bg-[#e5e7eb] rounded-2xl shadow-lg w-full h-full min-h-[400px] pl-10 pr-24 py-16">
-                            <h4 className="text-3xl md:text-4xl font-bold text-[#003366] leading-snug">
+                            <h4 className="text-3xl md:text-4xl font-bold text-blue-900 leading-snug">
                                 RightServe Knowledge Hub
                             </h4>
-                            <p className="text-gray-700 mt-6 text-lg text-justify mr-16">
+                            <p className="text-blue-900 mt-6 text-lg text-justify mr-16">
                                 Explore our curated insights about website design, development, and support.
                                 These answers reflect{" "}
                                 <span className="font-semibold">RightServe’s</span> commitment to clarity,
