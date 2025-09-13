@@ -8,6 +8,15 @@ import AboutUs from './pages/AboutUs';
 import Career from './pages/Career';
 import OurTeam from './pages/OurTeam';
 import Products from './pages/Products';
+import Portfolio from './pages/Portfolio';
+import Software from './pages/Software';
+import Hardware from './pages/Hardware';
+import Marketing from './pages/Marketing';
+import Contact from './pages/Contact';
+
+
+
+
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -32,17 +41,17 @@ function App() {
       case 'our-team':
         return <OurTeam />;
       case 'software':
-        return <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold">Software Development - Coming Soon</h1></div>;
+        return <Software />;
       case 'hardware':
-        return <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold">Hardware Solutions - Coming Soon</h1></div>;
+        return <Hardware />;
       case 'marketing':
-        return <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold">Digital Marketing - Coming Soon</h1></div>;
+        return <Marketing />;
       case 'portfolio':
-        return <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold">Portfolio - Coming Soon</h1></div>;
+        return <Portfolio />;
       case 'products':
         return <Products />;
       case 'contact':
-        return <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold">Contact - Coming Soon</h1></div>;
+        return <Contact />;
       default:
         return <Home onGetConnected={handleGetConnected} />;
     }
