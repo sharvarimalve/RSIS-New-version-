@@ -1,37 +1,11 @@
 import React from "react";
-import ImageCarousel from "../components/ImageCarousel";
+import HeroSlider from "../components/heroslider";
 
 const Home: React.FC = () => {
   return (
     <div className="min-h-screen bg-White">
-      {/* Hero Video Section */}
-      <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Video */}
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          src="/HOME-page-vide0.mp4"  
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
-
-        {/* Text on Video */}
-        <div className="relative z-10 text-center px-6">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Welcome to Right Serve Infotech system Pvt.Ltd
-          </h1>
-          <p className="text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
-            Empowering businesses with software, hardware, and marketing solutions
-          </p>
-          <button className="px-8 py-3 bg-green-600 text-white text-lg rounded-lg shadow-md hover:bg-green-500 transition">
-            Get Started
-          </button>
-        </div>
-      </div>
+     
+      <HeroSlider />
 
 
       {/* About Section */}
@@ -70,16 +44,16 @@ const Home: React.FC = () => {
 
 
       {/* Services / Cards Section */}
-      <section className="bg-blue-950 py-20 rounded-tl-[80px] rounded-tr-[80px]">
+      <section className="bg-blue-950 py-20 rounded-tl-[80px] rounded-tr-[80px] ml-20 mr-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-40">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-60">
             {/* Card 1 */}
             <div className="rounded-2xl shadow-lg p-6 bg-white text-center">
               <div className="flex justify-center mb-4">
                 <img
-                  src="https://www.cyberoptik.net/wp-content/uploads/2023/08/icon-paid-search.svg"
+                  src="/software.jpg"
                   alt="Paid Search"
-                  className="w-16 h-16"
+                  className="w-[40] h-[40]  object-cover"
                 />
               </div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">Software</h3>
@@ -93,9 +67,9 @@ const Home: React.FC = () => {
             <div className="rounded-2xl shadow-lg p-6 bg-white text-center">
               <div className="flex justify-center mb-4">
                 <img
-                  src="https://www.cyberoptik.net/wp-content/uploads/2023/08/icon-seo-copywriting.svg"
+                  src="/hardware.jpg"
                   alt="SEO Copywriting"
-                  className="w-16 h-16"
+                  className="w-[40] h-[40]"
                 />
               </div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">Hardware</h3>
@@ -109,9 +83,9 @@ const Home: React.FC = () => {
             <div className="rounded-2xl shadow-lg p-6 bg-white text-center">
               <div className="flex justify-center mb-4">
                 <img
-                  src="https://www.cyberoptik.net/wp-content/uploads/2023/08/icon-technical-seo.svg"
+                  src="/marketing .jpg"
                   alt="Technical SEO"
-                  className="w-16 h-16"
+                  className="w-[40] h-[40]"
                 />
               </div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">Marketing</h3>
@@ -125,7 +99,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Industry Section (like screenshot) */}
-      <section className="bg-blue-950 rounded-bl-[80px] rounded-br-[80px]">
+      <section className="bg-blue-950 rounded-bl-[80px] rounded-br-[80px] ml-20 mr-20 ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Web Design for Every Industry
@@ -139,87 +113,53 @@ const Home: React.FC = () => {
             {/* Industry Cards */}
             <div>
               <img
-                src="https://www.cyberoptik.net/wp-content/uploads/2023/08/icon-law.svg"
+                src="/lowfirm.jpg"
                 alt="Attorneys"
-                className="mx-auto mb-4 w-12 h-12"
+                className="mx-auto mb-4 w-50 h-30"
               />
               <p className="text-white font-semibold">Attorneys & Law Firms</p>
             </div>
 
             <div>
               <img
-                src="https://www.cyberoptik.net/wp-content/uploads/2023/08/icon-construction.svg"
+                src="/construction.jpg"
                 alt="Construction"
-                className="mx-auto mb-4 w-12 h-12"
+                className="mx-auto mb-4 w-50 h-30"
               />
               <p className="text-white font-semibold">Construction</p>
             </div>
 
             <div>
               <img
-                src="https://www.cyberoptik.net/wp-content/uploads/2023/08/icon-it.svg"
+                src="/IT .jpg"
                 alt="IT MSP"
-                className="mx-auto mb-4 w-12 h-12"
+                className="mx-auto mb-4 w-50 h-30"
               />
               <p className="text-white font-semibold">IT & MSP</p>
             </div>
 
             <div>
               <img
-                src="https://www.cyberoptik.net/wp-content/uploads/2023/08/icon-library.svg"
+                src="/library.jpg"
                 alt="Libraries"
-                className="mx-auto mb-4 w-12 h-12"
+                className="mx-auto mb-4 w-50 h-30"
               />
               <p className="text-white font-semibold">Libraries</p>
             </div>
 
             <div>
               <img
-                src="https://www.cyberoptik.net/wp-content/uploads/2023/08/icon-manufacturing.svg"
+                src="/Manufacturing.jpg"
                 alt="Manufacturers"
-                className="mx-auto mb-4 w-12 h-12"
+                className="mx-auto mb-4 w-50 h-30"
               />
               <p className="text-white font-semibold">Manufacturers</p>
             </div>
 
-            <div>
-              <img
-                src="https://www.cyberoptik.net/wp-content/uploads/2023/08/icon-nonprofit.svg"
-                alt="Nonprofits"
-                className="mx-auto mb-4 w-12 h-12"
-              />
-              <p className="text-white font-semibold">Nonprofits</p>
-            </div>
+           
 
             <div>
-              <img
-                src="https://www.cyberoptik.net/wp-content/uploads/2023/08/icon-therapy.svg"
-                alt="Therapists"
-                className="mx-auto mb-4 w-12 h-12"
-              />
-              <p className="text-white font-semibold">Therapists</p>
-            </div>
-
-            <div>
-              <img
-                src="https://www.cyberoptik.net/wp-content/uploads/2023/08/icon-transport.svg"
-                alt="Transportation"
-                className="mx-auto mb-4 w-12 h-12"
-              />
-              <p className="text-white font-semibold">Transportation</p>
-            </div>
-
-            <div>
-              <img
-                src="https://www.cyberoptik.net/wp-content/uploads/2023/08/icon-travel.svg"
-                alt="Travel"
-                className="mx-auto mb-4 w-12 h-12"
-              />
-              <p className="text-white font-semibold">Travel & Tourism</p>
-            </div>
-
-            <div>
-              <button className="px-5 py-2 border border-green-500 text-green-500 rounded-lg hover:bg-green-500 hover:text-white transition">
+              <button className="px-5 py-2  mb-14  border border-[#e5e7eb] text-[#e5e7eb] rounded-lg hover:bg-green-500 hover:text-white transition">
                 All Industries
               </button>
             </div>
@@ -241,74 +181,66 @@ const Home: React.FC = () => {
           {/* Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Card 1 */}
-            <div className="bg-white rounded-xl shadow p-6 text-left flex gap-4 items-start">
+            <div className="bg-[#e5e7eb] rounded-xl shadow p-6 text-left flex gap-4 items-start">
               <img
-                src="https://www.svgrepo.com/show/503144/rocket-launch.svg"
+                src="/start.jpg"
                 alt="Getting Started"
-                className="w-12 h-12 text-green-600"
+                className="w-12 h-12 text-green-600 rounded-full"
               />
               <div>
                 <h3 className="text-lg font-bold text-blue-900 mb-2">Getting Started</h3>
                 <p className="text-gray-600 mb-2">
                   I need help with the entire website process.
                 </p>
-                <a href="#" className="text-green-600 font-medium hover:underline">
-                  How It Works →
-                </a>
+                
               </div>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white rounded-xl shadow p-6 text-left flex gap-4 items-start">
+            <div className="bg-[#e5e7eb] rounded-xl shadow p-6 text-left flex gap-4 items-start">
               <img
-                src="https://www.svgrepo.com/show/530439/web.svg"
+                src="/design.jpg"
                 alt="Have a Design"
-                className="w-12 h-12 text-green-600"
+                className="w-12 h-12 text-green-600 rounded-full"
               />
               <div>
                 <h3 className="text-lg font-bold text-blue-900 mb-2">Have a Design</h3>
                 <p className="text-gray-600 mb-2">
                   I have a design and need to bring it to life.
                 </p>
-                <a href="#" className="text-green-600 font-medium hover:underline">
-                  Let’s Talk →
-                </a>
+               
               </div>
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white rounded-xl shadow p-6 text-left flex gap-4 items-start">
+            <div className="bg-[#e5e7eb] rounded-xl shadow p-6 text-left flex gap-4 items-start">
               <img
-                src="https://www.svgrepo.com/show/493680/tools.svg"
+                src="/restart.jpg"
                 alt="Need Changes"
-                className="w-12 h-12 text-green-600"
+                className="w-12 h-12 text-green-600 rounded-full"
               />
               <div>
                 <h3 className="text-lg font-bold text-blue-900 mb-2">Need Changes</h3>
                 <p className="text-gray-600 mb-2">
                   My existing website needs some help.
                 </p>
-                <a href="#" className="text-green-600 font-medium hover:underline">
-                  Let’s Talk →
-                </a>
+                
               </div>
             </div>
 
             {/* Card 4 */}
-            <div className="bg-white rounded-xl shadow p-6 text-left flex gap-4 items-start">
+            <div className="bg-[#e5e7eb] rounded-xl shadow p-6 text-left flex gap-4 items-start">
               <img
-                src="https://www.svgrepo.com/show/532499/settings.svg"
+                src="/ongoing.jpg"
                 alt="Ongoing Support"
-                className="w-12 h-12 text-green-600"
+                className="w-12 h-12 text-blue-900 rounded-full"
               />
               <div>
                 <h3 className="text-lg font-bold text-blue-900 mb-2">Ongoing Support</h3>
                 <p className="text-gray-600 mb-2">
                   My site is good but I need monthly upkeep.
                 </p>
-                <a href="#" className="text-green-600 font-medium hover:underline">
-                  Learn More →
-                </a>
+              
               </div>
             </div>
           </div>
@@ -320,7 +252,7 @@ const Home: React.FC = () => {
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-            What Our Clients Say
+           Testimonials
           </h2>
           <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
             Don’t just take our word for it – here’s what our clients have to say
