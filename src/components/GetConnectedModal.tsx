@@ -18,7 +18,6 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({ isOpen, onClose }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
     alert('Thank you for your interest! We will get back to you soon.');
     setFormData({
@@ -32,7 +31,9 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({ isOpen, onClose }
     onClose();
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -42,22 +43,25 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({ isOpen, onClose }
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
-        <div className="flex items-center justify-between p-6 border-b">
-          <h2 className="text-2xl font-bold text-gray-900">Get Connected</h2>
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto transform transition-all duration-300 scale-100 animate-fadeIn">
+        {/* Header */}
+        <div className="flex items-center justify-between p-6 rounded-t-2xl bg-gradient-to-r from-blue-600 to-indigo-700">
+          <h2 className="text-2xl font-bold text-white">Get Connected</h2>
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-gray-600 transition-colors"
+            className="text-white/80 hover:text-white transition-colors"
           >
             <X className="h-6 w-6" />
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-6 space-y-4">
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="p-6 space-y-5">
+          {/* Name */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              <User className="inline h-4 w-4 mr-1" />
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
+              <User className="inline h-4 w-4 mr-1 text-blue-600" />
               Full Name *
             </label>
             <input
@@ -66,14 +70,15 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({ isOpen, onClose }
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Enter your full name"
             />
           </div>
 
+          {/* Email */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              <Mail className="inline h-4 w-4 mr-1" />
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
+              <Mail className="inline h-4 w-4 mr-1 text-blue-600" />
               Email Address *
             </label>
             <input
@@ -82,14 +87,15 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({ isOpen, onClose }
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Enter your email address"
             />
           </div>
 
+          {/* Phone */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              <Phone className="inline h-4 w-4 mr-1" />
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
+              <Phone className="inline h-4 w-4 mr-1 text-blue-600" />
               Phone Number *
             </label>
             <input
@@ -98,14 +104,15 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({ isOpen, onClose }
               value={formData.phone}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Enter your phone number"
             />
           </div>
 
+          {/* Company */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              <Building className="inline h-4 w-4 mr-1" />
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
+              <Building className="inline h-4 w-4 mr-1 text-blue-600" />
               Company Name
             </label>
             <input
@@ -113,20 +120,21 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({ isOpen, onClose }
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Enter your company name"
             />
           </div>
 
+          {/* Service */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
               Service Interest
             </label>
             <select
               name="service"
               value={formData.service}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="">Select a service</option>
               <option value="software">Software Development</option>
@@ -137,9 +145,10 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({ isOpen, onClose }
             </select>
           </div>
 
+          {/* Message */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              <MessageSquare className="inline h-4 w-4 mr-1" />
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
+              <MessageSquare className="inline h-4 w-4 mr-1 text-blue-600" />
               Message
             </label>
             <textarea
@@ -147,22 +156,23 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({ isOpen, onClose }
               value={formData.message}
               onChange={handleChange}
               rows={4}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Tell us about your project or requirements..."
             />
           </div>
 
+          {/* Buttons */}
           <div className="flex space-x-4 pt-4">
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors"
+              className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+              className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg shadow-md hover:shadow-lg hover:scale-[1.02] transform transition-all"
             >
               Submit
             </button>

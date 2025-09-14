@@ -1,10 +1,10 @@
 import React from "react";
-import HeroSlider from "../components/heroslider";
+import HeroSlider from "../components/Heroslider";
 
 const Home: React.FC = () => {
   return (
     <div className="min-h-screen bg-White">
-     
+
       <HeroSlider />
 
 
@@ -44,7 +44,11 @@ const Home: React.FC = () => {
 
 
       {/* Services / Cards Section */}
+      <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-40 text-center">
+        We Provide This Services
+      </h2>
       <section className="bg-blue-950 py-20 rounded-tl-[80px] rounded-tr-[80px] ml-20 mr-20">
+
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-60">
             {/* Card 1 */}
@@ -156,7 +160,7 @@ const Home: React.FC = () => {
               <p className="text-white font-semibold">Manufacturers</p>
             </div>
 
-           
+
 
             <div>
               <button className="px-5 py-2  mb-14  border border-[#e5e7eb] text-[#e5e7eb] rounded-lg hover:bg-green-500 hover:text-white transition">
@@ -192,7 +196,7 @@ const Home: React.FC = () => {
                 <p className="text-gray-600 mb-2">
                   I need help with the entire website process.
                 </p>
-                
+
               </div>
             </div>
 
@@ -208,7 +212,7 @@ const Home: React.FC = () => {
                 <p className="text-gray-600 mb-2">
                   I have a design and need to bring it to life.
                 </p>
-               
+
               </div>
             </div>
 
@@ -224,7 +228,7 @@ const Home: React.FC = () => {
                 <p className="text-gray-600 mb-2">
                   My existing website needs some help.
                 </p>
-                
+
               </div>
             </div>
 
@@ -240,7 +244,7 @@ const Home: React.FC = () => {
                 <p className="text-gray-600 mb-2">
                   My site is good but I need monthly upkeep.
                 </p>
-              
+
               </div>
             </div>
           </div>
@@ -252,7 +256,7 @@ const Home: React.FC = () => {
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-           Testimonials
+            Testimonials
           </h2>
           <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
             Don’t just take our word for it – here’s what our clients have to say
