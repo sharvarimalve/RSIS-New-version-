@@ -7,11 +7,11 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Career from './pages/Career';
 import OurTeam from './pages/OurTeam';
-import Products from './pages/Products';
-import Portfolio from './pages/Portfolio';
 import Software from './pages/Software';
 import Hardware from './pages/Hardware';
 import Marketing from './pages/Marketing';
+import Products from './pages/Products';
+import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 
 
