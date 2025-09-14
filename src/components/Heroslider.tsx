@@ -60,6 +60,21 @@ const HeroSlider: React.FC = () => {
           />
         ))}
       </div>
+
+      {/* Curved Bottom */}
+      <div className="absolute bottom-0 w-full overflow-hidden leading-none z-10">
+        <svg
+          className="relative block w-full h-32"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#ffffff"   // 👈 background color (change as per your section bg)
+            d="M0,224L60,197.3C120,171,240,117,360,117.3C480,117,600,171,720,197.3C840,224,960,224,1080,208C1200,192,1320,160,1380,144L1440,128V320H0Z"
+          ></path>
+        </svg>
+      </div>
     </div>
   );
 };
