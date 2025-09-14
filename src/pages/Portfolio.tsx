@@ -157,7 +157,7 @@ const Portfolio: React.FC = () => {
             {/* Hero */}
             <section
                 className="relative bg-gradient-to-r from-blue-900/80 to-cyan-700/80 py-24 text-white text-center bg-cover bg-center bg-no-repeat bg-blend-overlay"
-                style={{ backgroundImage: "url('/portfolio3.jpg')" }}
+                style={{ backgroundImage: "url('public/portfolio9.jfif')" }}
             >
                 <div className="container mx-auto px-4">
                     <h1
@@ -176,7 +176,7 @@ const Portfolio: React.FC = () => {
                         clients across various industries
                     </p>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+                    {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
                         {stats.map((stat) => (
                             <div key={stat.label} className="text-center">
                                 <p className="text-3xl font-bold text-[#001F54]">
@@ -185,7 +185,7 @@ const Portfolio: React.FC = () => {
                                 <p className="text-sm text-[#001F54]">{stat.label}</p>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
                 </div>
             </section>
 
@@ -217,13 +217,10 @@ const Portfolio: React.FC = () => {
                 <div className="container mx-auto px-4">
                     <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
                         {filteredProjects.map((project, idx) => (
-                            <motion.div
+                            <div
                                 key={project.id}
-                                whileHover={{ scale: 1.03 }}
-                                whileTap={{ scale: 0.97 }}
-                                initial={{ opacity: 0, y: 40 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: idx * 0.05 }}
+                                data-aos="zoom-in-up"
+                                data-aos-delay={idx * 100}
                                 className="group bg-white rounded-2xl shadow hover:shadow-2xl hover:border-2 hover:border-[#001F54] transition duration-300 overflow-hidden cursor-pointer"
                             >
                                 <div className="relative h-56">
@@ -267,11 +264,12 @@ const Portfolio: React.FC = () => {
                                         Client: {project.client}
                                     </div>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
                 </div>
             </section>
+
 
             {/* Testimonials */}
             {/* <section className="py-20 bg-gray-50">
@@ -329,6 +327,8 @@ const Portfolio: React.FC = () => {
                     </div>
                 </div>
             </section> */}
+
+
             <section className="relative py-5 bg-[#001F54] rounded-2xl">
                 <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 px-4">
                     {/* Left Side - Rocket Image */}
@@ -373,10 +373,6 @@ const Portfolio: React.FC = () => {
                     </div>
                 </div>
             </section>
-
-
-
-
 
 
             {/* Metrics */}
@@ -426,6 +422,48 @@ const Portfolio: React.FC = () => {
                             alt="Success Metrics"
                             className="rounded-2xl shadow-lg w-full h-96 object-cover"
                         />
+                    </div>
+                </div>
+            </section>
+            <section className="relative h-screen flex items-center justify-center text-white text-center overflow-hidden">
+                {/* Video background */}
+                <video
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                    src="/public/video.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                />
+
+                {/* Gradient overlay */}
+                <div className="absolute " />
+
+                {/* Content */}
+                <div className="relative z-10 px-4">
+                    <h1
+                        className="text-4xl md:text-5xl font-bold mb-6"
+                        data-aos="fade-up"
+                        data-aos-duration="800"
+                    >
+                        Our Portfolio
+                    </h1>
+                    <p
+                        className="text-lg font-bold max-w-2xl mx-auto mb-12"
+                        data-aos="fade-up"
+                        data-aos-duration="800"
+                    >
+                        Showcasing our successful projects and the impact we've made for our
+                        clients across various industries
+                    </p>
+
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+                        {stats.map((stat) => (
+                            <div key={stat.label} className="text-center">
+                                <p className="text-3xl font-bold text-[#fff]">{stat.number}</p>
+                                <p className="text-sm text-[#fff]">{stat.label}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

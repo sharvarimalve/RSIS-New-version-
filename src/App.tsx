@@ -12,7 +12,7 @@ import Hardware from './pages/Hardware';
 import Marketing from './pages/Marketing';
 import Products from './pages/Products';
 import Portfolio from './pages/Portfolio';
-import Contact from './pages/Contact';
+// import Contact from './pages/Contact';
 
 
 function App() {
@@ -48,7 +48,7 @@ function App() {
       case 'products':
         return <Products />;
       case 'contact':
-        return <Contact />;
+        return <h1>jdsh</h1>
       default:
         return <Home onGetConnected={handleGetConnected} />;
     }

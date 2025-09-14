@@ -47,9 +47,9 @@ const AboutUs: React.FC = () => {
   const heroImages = [
     '/about1.jpg',
     '/about4.jpg',
-    '/about3.jpg',
-    '/about7.jpg',
-    '/about6.jpg',
+    // '/about3.jpg',
+    // '/about7.jpg',
+    // '/about6.jpg',
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -93,7 +93,7 @@ const AboutUs: React.FC = () => {
   return (
     <div className="bg-white text-gray-800">
       {/* Hero Section */}
-      <section className="relative h-[620px] overflow-hidden">
+      <section className="relative h-[420px] overflow-hidden">
         {heroImages.map((image, index) => (
           <div
             key={index}
@@ -261,34 +261,54 @@ const AboutUs: React.FC = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#0b2e5b] text-white rounded-xl p-8 sm:p-12 lg:p-16 flex flex-col md:flex-row items-center gap-10 lg:gap-20">
-            <div className="flex-1 md:w-1/2" data-aos="fade-right">
-              <img
-                src="https://www.cyberoptik.net/wp-content/uploads/2023/08/rocket.svg"
-                alt="Rocket Launch"
-                className="w-full max-w-lg mx-auto md:mx-0 transform hover:-translate-y-2 transition-transform duration-500"
-              />
-            </div>
-            <div className="flex-1 text-center md:text-left md:w-1/2" data-aos="fade-left">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Need a reliable website partner for your business?</h2>
-              <p className="text-lg mb-6">
-                For the very best in web design, branding, and digital marketing,
-                call <strong className="font-semibold">Right Serve Infotech System</strong> at
-                <a href="tel:6302966932" className="call-link text-[#3278cd] ml-1 font-bold">(630) 296-6932</a>.
-              </p>
-              <a href="/contact">
-                <button className="bg-[#3278cd] text-white px-8 py-3 rounded-full text-lg font-bold transition-all duration-300 hover:scale-105 hover:bg-[#004aad]">
-                  Get A Proposal
-                </button>
+      <section className="relative py-5 bg-[#001F54] rounded-2xl">
+        <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 px-4">
+          {/* Left Side - Rocket Image */}
+          <div
+            className="relative w-full lg:w-1/2 flex justify-center h-80 lg:h-96 overflow-visible"
+            data-aos="fade-right"
+            data-aos-duration="800"
+          >
+            <img
+              src="https://www.cyberoptik.net/wp-content/uploads/2023/08/rocket.svg"
+              alt="Rocket Launch"
+              className="absolute bottom-0 h-[22rem] lg:h-[28rem] object-contain"
+            />
+
+          </div>
+
+          {/* Right Side - Text */}
+          <div
+            className="w-full lg:w-1/2 text-center lg:text-left text-white"
+            data-aos="fade-left"
+            data-aos-duration="800"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Need a reliable website partner for your business?
+            </h2>
+            <p className="mb-6">
+              For the very best in web design, branding, and digital marketing, call{" "}
+              <strong>Right Serve Infotech System</strong> at{" "}
+              <a
+                href="tel:6302966932"
+                className="text-cyan-300 hover:text-cyan-200 font-semibold"
+              >
+                (630) 296-6932
               </a>
-            </div>
+              .
+            </p>
+            <a href="/contact">
+              <button className="px-6 py-3 bg-white text-[#001F54] font-semibold rounded-full hover:bg-cyan-100 transition">
+                Get A Proposal
+              </button>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
+
+
+      {/* Why Choose rsis */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
