@@ -594,4 +594,33 @@ body {
     }
 }
 
+.marquee {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+ 
+}
+
+.marquee-content {
+  display: flex;
+    white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee.reverse .marquee-content {
+  animation: marquee-reverse 20s linear infinite;
+}
+
+/* Left → Right */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Right → Left */
+@keyframes marquee-reverse {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
 
