@@ -12,7 +12,7 @@ import Hardware from './pages/Hardware';
 import Marketing from './pages/Marketing';
 import Products from './pages/Products';
 import Portfolio from './pages/Portfolio';
-// import Contact from './pages/Contact';
+import Contact from './pages/Contact';
 
 
 function App() {
@@ -48,7 +48,7 @@ function App() {
       case 'products':
         return <Products />;
       case 'contact':
-        return <h1>jdsh</h1>
+        return <Contact />;
       default:
         return <Home onGetConnected={handleGetConnected} />;
     }
@@ -62,7 +62,7 @@ function App() {
         onGetConnected={handleGetConnected}
       />
       {renderPage()}
-      <Footer />
+  <Footer onPageChange={handlePageChange} />
       <GetConnectedModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
