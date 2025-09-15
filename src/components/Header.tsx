@@ -40,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <div
             className="flex items-center justify-start cursor-pointer"
@@ -49,7 +49,7 @@ const Header: React.FC<HeaderProps> = ({
             <img
               src="/logo-trajectoryfy.jpg"
               alt="Right Serve Infotech Systems"
-              className="h-14 w-14 rounded-full mr-3"
+              className="h-10 w-10 md:h-14 md:w-14 rounded-full mr-3"
             />
             <div className="hidden sm:block">
               <h1
@@ -227,6 +227,8 @@ const Header: React.FC<HeaderProps> = ({
             className={`md:hidden p-2 ${
               isScrolled ? "text-[#17385b]" : "text-white"
             }`}
+            aria-label="Toggle navigation"
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
               <X className="h-6 w-6" />
@@ -236,6 +238,34 @@ const Header: React.FC<HeaderProps> = ({
           </button>
         </div>
       </div>
+      {/* Mobile Navigation Panel */}
+      {isMobileMenuOpen && (
+        <div className={`md:hidden ${isScrolled ? "bg-white" : "bg-[#17385b]"} shadow-lg`}>
+          <nav className="px-4 py-3 space-y-2">
+            <button onClick={() => handlePageChange("home")} className={`block w-full text-left py-2 ${isScrolled ? "text-[#17385b]" : "text-white"}`}>Home</button>
+            <details>
+              <summary className={`py-2 cursor-pointer ${isScrolled ? "text-[#17385b]" : "text-white"}`}>About</summary>
+              <div className="pl-4 space-y-1">
+                <button onClick={() => handlePageChange("about-us")} className="block w-full text-left py-1 text-gray-700">About Us</button>
+                <button onClick={() => handlePageChange("career")} className="block w-full text-left py-1 text-gray-700">Career</button>
+                <button onClick={() => handlePageChange("our-team")} className="block w-full text-left py-1 text-gray-700">Our Team</button>
+              </div>
+            </details>
+            <details>
+              <summary className={`py-2 cursor-pointer ${isScrolled ? "text-[#17385b]" : "text-white"}`}>Services</summary>
+              <div className="pl-4 space-y-1">
+                <button onClick={() => handlePageChange("software")} className="block w-full text-left py-1 text-gray-700">Software Development</button>
+                <button onClick={() => handlePageChange("hardware")} className="block w-full text-left py-1 text-gray-700">Hardware Solutions</button>
+                <button onClick={() => handlePageChange("marketing")} className="block w-full text-left py-1 text-gray-700">Digital Marketing</button>
+              </div>
+            </details>
+            <button onClick={() => handlePageChange("portfolio")} className={`block w-full text-left py-2 ${isScrolled ? "text-[#17385b]" : "text-white"}`}>Portfolio</button>
+            <button onClick={() => handlePageChange("products")} className={`block w-full text-left py-2 ${isScrolled ? "text-[#17385b]" : "text-white"}`}>Products</button>
+            <button onClick={() => handlePageChange("contact")} className={`block w-full text-left py-2 ${isScrolled ? "text-[#17385b]" : "text-white"}`}>Contact</button>
+            <button onClick={onGetConnected} className="w-full mt-2 px-4 py-2 rounded-[30px] bg-[#17385b] text-white">Get Connected</button>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };

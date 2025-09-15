@@ -3,29 +3,29 @@ import HeroSlider from "../components/Heroslider";
 
 const Home: React.FC = () => {
   return (
-    <div className="min-h-screen bg-White">
+    <div className="min-h-screen bg-white">
 
       <HeroSlider />
 
 
      {/* About Section */}
-<section className="bg-white  md:py-14">   {/* 👈 space kam kiya */}
-  <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<section className="bg-white py-10 md:py-14">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
     {/* Left Image */}
     <div className="flex justify-center">
       <img
         src="https://www.cyberoptik.net/wp-content/uploads/2023/08/design-marketing.svg"
         alt="SEO Strategy"
-        className="w-[1000px] h-[600px]"  
+        className="w-full max-w-xl h-auto"
       />
     </div>
 
     {/* Right Content */}
     <div>
-      <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 mb-4 md:mb-6">
         About Us
       </h2>
-      <p className="text-gray-600 mb-6 leading-relaxed text-justify font-semibold text-lg">
+      <p className="text-gray-600 mb-6 leading-relaxed text-justify font-medium text-base md:text-lg">
         Right Serve Infotech Systems Private Limited is a leading provider
         of comprehensive software and hardware solutions, dedicated to
         empowering businesses across diverse industries. We've grown into a
@@ -35,7 +35,7 @@ const Home: React.FC = () => {
         delivering reliable and efficient technology solutions that drive
         growth and enhance operational efficiency.
       </p>
-      <button className="px-8 py-3 bg-blue-900 text-white text-lg rounded-lg shadow-md hover:bg-blue-800 transition">
+      <button className="px-6 md:px-8 py-3 bg-blue-900 text-white text-base md:text-lg rounded-lg shadow-md hover:bg-blue-800 transition">
         Read More
       </button>
     </div>
@@ -44,21 +44,17 @@ const Home: React.FC = () => {
 
 
       {/* Services / Cards Section */}
-      <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-40 text-center">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 mb-12 md:mb-40 text-center px-4">
       Technology and industry expertise.
       </h2>
-      <section className="bg-blue-950 py-20 rounded-tl-[80px] rounded-tr-[80px] ml-20 mr-20">
+      <section className="bg-blue-950 py-12 md:py-20 rounded-tl-[40px] rounded-tr-[40px] md:rounded-tl-[80px] md:rounded-tr-[80px] mx-4 sm:mx-8 md:mx-12 lg:mx-20">
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-60">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 -mt-20 md:-mt-60">
             {/* Card 1 */}
             <div className="rounded-2xl shadow-lg p-6 bg-white text-center">
               <div className="flex justify-center mb-4">
-                <img
-                  src="/software.jpg"
-                  alt="Paid Search"
-                  className="w-[40] h-[40]  object-cover"
-                />
+                <img src="/software.jpg" alt="Paid Search" className="w-12 h-12 object-cover" />
               </div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">Software</h3>
               <p className="text-gray-600">
@@ -70,11 +66,7 @@ const Home: React.FC = () => {
             {/* Card 2 */}
             <div className="rounded-2xl shadow-lg p-6 bg-white text-center">
               <div className="flex justify-center mb-4">
-                <img
-                  src="/hardware.jpg"
-                  alt="SEO Copywriting"
-                  className="w-[40] h-[40]"
-                />
+                <img src="/hardware.jpg" alt="SEO Copywriting" className="w-12 h-12" />
               </div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">Hardware</h3>
               <p className="text-gray-600">
@@ -86,11 +78,7 @@ const Home: React.FC = () => {
             {/* Card 3 */}
             <div className="rounded-2xl shadow-lg p-6 bg-white text-center">
               <div className="flex justify-center mb-4">
-                <img
-                  src="/marketing .jpg"
-                  alt="Technical SEO"
-                  className="w-[40] h-[40]"
-                />
+                <img src="/marketing .jpg" alt="Technical SEO" className="w-12 h-12" />
               </div>
               <h3 className="text-xl font-bold text-blue-900 mb-3">Marketing</h3>
               <p className="text-gray-600">
@@ -103,7 +91,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Industry Section (like screenshot) */}
-      <section className="bg-blue-950 rounded-bl-[80px] rounded-br-[80px] ml-20 mr-20 ">
+      <section className="bg-blue-950 rounded-bl-[40px] rounded-br-[40px] md:rounded-bl-[80px] md:rounded-br-[80px] mx-4 sm:mx-8 md:mx-12 lg:mx-20 ">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Web Design for Every Industry
@@ -113,57 +101,37 @@ const Home: React.FC = () => {
             regardless of which industry you’re in.
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 text-center ">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-10 text-center ">
             {/* Industry Cards */}
             <div>
-              <img
-                src="/lowfirm.jpg"
-                alt="Attorneys"
-                className="mx-auto mb-4 w-50 h-30"
-              />
+              <img src="/lowfirm.jpg" alt="Attorneys" className="mx-auto mb-4 max-w-[160px] w-full h-auto" />
               <p className="text-white font-semibold">Attorneys & Law Firms</p>
             </div>
 
             <div>
-              <img
-                src="/construction.jpg"
-                alt="Construction"
-                className="mx-auto mb-4 w-50 h-30"
-              />
+              <img src="/construction.jpg" alt="Construction" className="mx-auto mb-4 max-w-[160px] w-full h-auto" />
               <p className="text-white font-semibold">Construction</p>
             </div>
 
             <div>
-              <img
-                src="/IT .jpg"
-                alt="IT MSP"
-                className="mx-auto mb-4 w-50 h-30"
-              />
+              <img src="/IT .jpg" alt="IT MSP" className="mx-auto mb-4 max-w-[160px] w-full h-auto" />
               <p className="text-white font-semibold">IT & MSP</p>
             </div>
 
             <div>
-              <img
-                src="/library.jpg"
-                alt="Libraries"
-                className="mx-auto mb-4 w-50 h-30"
-              />
+              <img src="/library.jpg" alt="Libraries" className="mx-auto mb-4 max-w-[160px] w-full h-auto" />
               <p className="text-white font-semibold">Libraries</p>
             </div>
 
             <div>
-              <img
-                src="/Manufacturing.jpg"
-                alt="Manufacturers"
-                className="mx-auto mb-4 w-50 h-30"
-              />
+              <img src="/Manufacturing.jpg" alt="Manufacturers" className="mx-auto mb-4 max-w-[160px] w-full h-auto" />
               <p className="text-white font-semibold">Manufacturers</p>
             </div>
 
 
 
-            <div>
-              <button className="px-5 py-2  mb-14  border border-[#e5e7eb] text-[#e5e7eb] rounded-lg hover:bg-green-500 hover:text-white transition">
+            <div className="col-span-2 sm:col-span-3 lg:col-span-5">
+              <button className="px-5 py-2 mb-10 md:mb-14 border border-[#e5e7eb] text-[#e5e7eb] rounded-lg hover:bg-green-500 hover:text-white transition">
                 All Industries
               </button>
             </div>
@@ -171,8 +139,8 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <section className="bg-white py-12 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
             Where are you in the website process?
@@ -183,13 +151,13 @@ const Home: React.FC = () => {
           </p>
 
           {/* Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {/* Card 1 */}
             <div className="bg-[#e5e7eb] rounded-xl shadow p-6 text-left flex gap-4 items-start">
               <img
                 src="/start.jpg"
                 alt="Getting Started"
-                className="w-12 h-12 text-green-600 rounded-full"
+                className="w-10 h-10 md:w-12 md:h-12 text-green-600 rounded-full"
               />
               <div>
                 <h3 className="text-lg font-bold text-blue-900 mb-2">Getting Started</h3>
@@ -205,7 +173,7 @@ const Home: React.FC = () => {
               <img
                 src="/design.jpg"
                 alt="Have a Design"
-                className="w-12 h-12 text-green-600 rounded-full"
+                className="w-10 h-10 md:w-12 md:h-12 text-green-600 rounded-full"
               />
               <div>
                 <h3 className="text-lg font-bold text-blue-900 mb-2">Have a Design</h3>
@@ -221,7 +189,7 @@ const Home: React.FC = () => {
               <img
                 src="/restart.jpg"
                 alt="Need Changes"
-                className="w-12 h-12 text-green-600 rounded-full"
+                className="w-10 h-10 md:w-12 md:h-12 text-green-600 rounded-full"
               />
               <div>
                 <h3 className="text-lg font-bold text-blue-900 mb-2">Need Changes</h3>
@@ -237,7 +205,7 @@ const Home: React.FC = () => {
               <img
                 src="/ongoing.jpg"
                 alt="Ongoing Support"
-                className="w-12 h-12 text-blue-900 rounded-full"
+                className="w-10 h-10 md:w-12 md:h-12 text-blue-900 rounded-full"
               />
               <div>
                 <h3 className="text-lg font-bold text-blue-900 mb-2">Ongoing Support</h3>
