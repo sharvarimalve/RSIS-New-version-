@@ -8,44 +8,41 @@ const Home: React.FC = () => {
       <HeroSlider />
 
 
-     {/* About Section */}
-<section className="bg-white  md:py-14">   {/* 👈 space kam kiya */}
-  <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-    {/* Left Image */}
-    <div className="flex justify-center">
-      <img
-        src="https://www.cyberoptik.net/wp-content/uploads/2023/08/design-marketing.svg"
-        alt="SEO Strategy"
-        className="w-[1000px] h-[600px]"  
-      />
-    </div>
+      {/* About Section */}
+      <section className="bg-white py-10 md:py-14">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
+          {/* Text */}
+          <div className="order-1 md:order-1">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+              About Us
+            </h2>
+            <p className="text-gray-600 mb-6 leading-relaxed text-justify font-semibold text-base sm:text-lg">
+              Right Serve Infotech Systems Private Limited is a leading provider
+              of comprehensive software and hardware solutions, dedicated to
+              empowering businesses across diverse industries. We've grown into a
+              trusted name, offering both custom-tailored and product-based
+              solutions to meet the unique needs of our clients.
+            </p>
+            <button className="px-6 sm:px-8 py-2 sm:py-3 bg-blue-900 text-white text-base sm:text-lg rounded-lg shadow-md hover:bg-blue-800 transition">
+              Read More
+            </button>
+          </div>
 
-    {/* Right Content */}
-    <div>
-      <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
-        About Us
-      </h2>
-      <p className="text-gray-600 mb-6 leading-relaxed text-justify font-semibold text-lg">
-        Right Serve Infotech Systems Private Limited is a leading provider
-        of comprehensive software and hardware solutions, dedicated to
-        empowering businesses across diverse industries. We've grown into a
-        trusted name, offering both custom-tailored and product-based
-        solutions to meet the unique needs of our clients. With a focus on
-        innovation, quality, and customer satisfaction, we are committed to
-        delivering reliable and efficient technology solutions that drive
-        growth and enhance operational efficiency.
-      </p>
-      <button className="px-8 py-3 bg-blue-900 text-white text-lg rounded-lg shadow-md hover:bg-blue-800 transition">
-        Read More
-      </button>
-    </div>
-  </div>
-</section>
+          {/* Image */}
+          <div className="flex justify-center order-2 md:order-2">
+            <img
+              src="https://www.cyberoptik.net/wp-content/uploads/2023/08/design-marketing.svg"
+              alt="SEO Strategy"
+              className="w-full max-w-md md:max-w-xl lg:max-w-2xl h-auto"
+            />
+          </div>
+        </div>
+      </section>
 
 
       {/* Services / Cards Section */}
       <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-40 text-center">
-      Technology and industry expertise.
+        Technology and industry expertise.
       </h2>
       <section className="bg-blue-950 py-20 rounded-tl-[80px] rounded-tr-[80px] ml-20 mr-20">
 
@@ -250,47 +247,47 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-       <section className="bg-gray-50 py-12">
-  <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-    <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-8">
-     Provided Technology 
-    </h2>
+      <section className="bg-gray-50 py-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-8">
+            Provided Technology
+          </h2>
 
-    {/* Right → Left */}
-    <div className="overflow-hidden relative mb-10">
-      <div className="flex w-max animate-marquee space-x-12">
-        {/* group A */}
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
+          {/* Right → Left */}
+          <div className="overflow-hidden relative mb-10">
+            <div className="flex w-max animate-marquee space-x-12">
+              {/* group A */}
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
 
-        {/* duplicate group B */}
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
-      </div>
-    </div>
+              {/* duplicate group B */}
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
+            </div>
+          </div>
 
-    {/* Left → Right */}
-    <div className="overflow-hidden relative">
-      <div className="flex w-max animate-marqueeReverse space-x-12">
-        {/* group A */}
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
+          {/* Left → Right */}
+          <div className="overflow-hidden relative">
+            <div className="flex w-max animate-marqueeReverse space-x-12">
+              {/* group A */}
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
 
-        {/* duplicate group B */}
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
-      </div>
-    </div>
-  </div>
-</section>
+              {/* duplicate group B */}
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       {/* Testimonial Section */}

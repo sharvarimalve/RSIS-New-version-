@@ -40,7 +40,7 @@ body {
 }
 
 /* ================aboutus===================== */
-.about-us-page {
+/* .about-us-page {
     overflow-x: hidden;
 }
 
@@ -98,7 +98,7 @@ body {
     }
 }
 
-/* New animation for image slide down effect */
+
 @keyframes slideInFromTop {
     from {
         opacity: 0;
@@ -123,19 +123,15 @@ body {
     animation: fadeInRight 0.8s ease-out forwards;
 }
 
-/* Hero Section - Gokwik Style */
+
 .about-hero.gokwik-style {
     padding: 80px 0 0;
-    /* Adjust padding to make space for the wave and align content */
     background-color: var(--gokwik-orange);
     position: relative;
     overflow: hidden;
-    /* Important for containing wave and image */
     min-height: 500px;
-    /* Minimum height for the hero section */
     display: flex;
     align-items: center;
-    /* Vertically center content */
 }
 
 .hero-container-gokwik {
@@ -145,15 +141,12 @@ body {
     align-items: center;
     position: relative;
     z-index: 2;
-    /* Ensure text and image are above wave */
 }
 
 .about-hero-text {
     text-align: left;
     color: var(--white);
-    /* White text for contrast on orange background */
     padding-bottom: 80px;
-    /* Space for wave at the bottom */
 }
 
 .hero-pre-title {
@@ -170,7 +163,6 @@ body {
     line-height: 1.1;
     color: var(--white);
     animation: slideInFromTop 1s ease-out forwards;
-    /* Up-to-down animation for title */
 }
 
 .hero-description {
@@ -179,29 +171,22 @@ body {
     max-width: 500px;
     color: rgba(255, 255, 255, 0.9);
     animation: slideInFromTop 1.2s ease-out forwards;
-    /* Up-to-down animation for description */
     animation-delay: 0.2s;
-    /* Slight delay for description */
 }
 
 .about-hero-image-wrapper {
     position: relative;
     padding-bottom: 100px;
-    /* Space for image to extend below hero boundary */
 }
 
 .about-hero-image {
     width: 100%;
     height: 450px;
-    /* Fixed height for image */
     object-fit: cover;
     border-radius: 16px;
-    /* Slightly rounded corners */
     box-shadow: var(--shadow-lg);
     animation: fadeIn 1.5s ease-out forwards, slideInFromTop 1.5s ease-out forwards;
-    /* Combined fade and slide for image */
     animation-delay: 0.5s;
-    /* Delay for image animation */
 }
 
 .hero-wave {
@@ -211,11 +196,8 @@ body {
     width: 100%;
     height: auto;
     z-index: 1;
-    /* Keep wave below text and image */
-    /* Remove waveAnimation if you prefer a static wave for this style */
 }
 
-/* Other sections remain mostly the same */
 .overview-grid,
 .why-choose-grid {
     display: grid;
@@ -261,7 +243,6 @@ body {
 
 .stat-icon {
     color: var(--gokwik-orange);
-    /* Using orange for icons */
     margin-bottom: 12px;
 }
 
@@ -289,7 +270,6 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
-/* Mission & Vision Section */
 .mission-vision-grid {
     display: flex;
     justify-content: center;
@@ -373,7 +353,6 @@ body {
 }
 
 
-/* Values Section */
 .values-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -407,7 +386,6 @@ body {
     line-height: 1.6;
 }
 
-/* Timeline Section */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -486,7 +464,6 @@ body {
     box-shadow: var(--shadow-md);
 }
 
-/* Why Choose Us Section */
 .why-choose-content h3 {
     font-size: 1.5rem;
     font-weight: 600;
@@ -517,7 +494,7 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
-/* Responsive Styles */
+
 @media (max-width: 968px) {
     .hero-container-gokwik {
         grid-template-columns: 1fr;
@@ -594,33 +571,42 @@ body {
     }
 }
 
-.marquee {
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
- 
+*/ .marquee {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
 }
 
 .marquee-content {
-  display: flex;
+    display: flex;
     white-space: nowrap;
-  animation: marquee 20s linear infinite;
+    animation: marquee 20s linear infinite;
 }
 
 .marquee.reverse .marquee-content {
-  animation: marquee-reverse 20s linear infinite;
+    animation: marquee-reverse 20s linear infinite;
 }
 
 /* Left → Right */
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /* Right → Left */
 @keyframes marquee-reverse {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(0); }
-}
+    0% {
+        transform: translateX(-100%);
+    }
 
+    100% {
+        transform: translateX(0);
+    }
+}

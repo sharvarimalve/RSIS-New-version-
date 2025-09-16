@@ -1,23 +1,26 @@
-import React from 'react';
-import { useState } from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import GetConnectedModal from './components/GetConnectedModal';
-import Home from './pages/Home';
-import AboutUs from './pages/AboutUs';
-import Career from './pages/Career';
-import OurTeam from './pages/OurTeam';
-import Software from './pages/Software';
-import Hardware from './pages/Hardware';
-import Marketing from './pages/Marketing';
-import Products from './pages/Products';
-import Portfolio from './pages/Portfolio';
-import Contact from './pages/Contact';
-
+import React, { useState, useEffect } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import GetConnectedModal from "./components/GetConnectedModal";
+import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
+import Career from "./pages/Career";
+import OurTeam from "./pages/OurTeam";
+import Software from "./pages/Software";
+import Hardware from "./pages/Hardware";
+import Marketing from "./pages/Marketing";
+import Products from "./pages/Products";
+import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState("home");
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // 👉 whenever currentPage changes, scroll to the top
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [currentPage]);
 
   const handlePageChange = (page: string) => {
     setCurrentPage(page);
@@ -29,25 +32,25 @@ function App() {
 
   const renderPage = () => {
     switch (currentPage) {
-      case 'home':
+      case "home":
         return <Home onGetConnected={handleGetConnected} />;
-      case 'about-us':
+      case "about-us":
         return <AboutUs />;
-      case 'career':
+      case "career":
         return <Career />;
-      case 'our-team':
+      case "our-team":
         return <OurTeam />;
-      case 'software':
+      case "software":
         return <Software />;
-      case 'hardware':
+      case "hardware":
         return <Hardware />;
-      case 'marketing':
+      case "marketing":
         return <Marketing />;
-      case 'portfolio':
+      case "portfolio":
         return <Portfolio />;
-      case 'products':
+      case "products":
         return <Products />;
-      case 'contact':
+      case "contact":
         return <Contact />;
       default:
         return <Home onGetConnected={handleGetConnected} />;
@@ -62,12 +65,11 @@ function App() {
         onGetConnected={handleGetConnected}
       />
       {renderPage()}
-  <Footer onPageChange={handlePageChange} />
+      <Footer onPageChange={handlePageChange} />
       <GetConnectedModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
-
     </div>
   );
 }
