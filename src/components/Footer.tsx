@@ -68,7 +68,6 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
           <div className="md:col-span-2">
             <h4 className="text-base font-semibold mb-3">Quick Links</h4>
 
-            {/* 👇 added gap-x-8 to increase horizontal space */}
             <div className="flex gap-x-8">
               {/* column 1 */}
               <ul className="flex flex-col space-y-1">
@@ -102,9 +101,9 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
             </div>
           </div>
 
-
           {/* ===== Contact Info ===== */}
-          <div className="md:col-span-1">
+          {/* ===== Contact Info ===== */}
+          <div className="md:col-span-1 -ml-8">
             <h4 className="text-base font-semibold mb-3">Contact Info</h4>
             <div className="space-y-2 text-sm">
               {/* Address */}
@@ -144,6 +143,9 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               </div>
             </div>
           </div>
+
+
+
         </div>
 
         <div className="border-t border-gray-800 mt-6 pt-4 text-center text-xs text-gray-400">
