@@ -1,7 +1,23 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail as MailIcon , Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  onPageChange?: (page: string) => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
+  const quickLinks = [
+    { label: 'Home', page: 'home' },
+    { label: 'About Us', page: 'about-us' },
+    { label: 'Career', page: 'career' },
+    { label: 'Hardware', page: 'hardware' },
+    { label: 'Marketing', page: 'marketing' },
+    { label: 'Our Team', page: 'our-team' },
+    { label: 'Portfolio', page: 'portfolio' },
+    { label: 'Products', page: 'products' },
+    { label: 'Software', page: 'software' },
+    { label: 'Contact', page: 'contact' },
+  ];
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -35,12 +51,17 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About </a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Service</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Product</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              {quickLinks.map((link) => (
+                <li key={link.page}>
+                  <button
+                    className="text-gray-400 hover:text-white transition-colors bg-transparent border-none outline-none cursor-pointer"
+                    onClick={() => onPageChange && onPageChange(link.page)}
+                    type="button"
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -48,8 +69,8 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3">
-             <div className="contact-item flex items-center gap-3">
-                  <MapPin size={50} />
+             <div className="contact-item flex  gap-3">
+                  <MapPin size={60} className="text-gray-400"/>
                   <a
                     href="https://www.google.com/maps?q=10,+Saurabh+Nagar-2,+Besa+Rd,+near+Hanuman+Mandir,+Saubhagya+Nagar,+Ghogali,+Nagpur,+Maharashtra+440034"
                     target="_blank"
@@ -61,7 +82,7 @@ const Footer: React.FC = () => {
                   </a>
                 </div>
                <div className="contact-item flex items-center gap-3">
-                  <Phone size={16} />
+                  <Phone size={20} className="text-gray-400"/>
                   <a
                     href="tel:+917972192831"
                   
@@ -70,7 +91,7 @@ const Footer: React.FC = () => {
                   </a>
                 </div>
               <div className="contact-item flex items-center gap-3">
-                  <Mail size={16} />
+                  <MailIcon size={20} className="text-red-500" />
                   <a
                     href="mailto:rightserveinfotechsystems@gmail.com"
                     
@@ -80,6 +101,8 @@ const Footer: React.FC = () => {
                 </div>
             </div>
           </div>
+
+
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
