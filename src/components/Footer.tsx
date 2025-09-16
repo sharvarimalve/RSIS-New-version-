@@ -68,8 +68,9 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
           <div className="md:col-span-2">
             <h4 className="text-base font-semibold mb-3">Quick Links</h4>
 
-            <div className="flex">
-              {/* column 1*/}
+            {/* 👇 added gap-x-8 to increase horizontal space */}
+            <div className="flex gap-x-8">
+              {/* column 1 */}
               <ul className="flex flex-col space-y-1">
                 {quickLinks.slice(0, Math.ceil(quickLinks.length / 2)).map((link) => (
                   <li key={link.page}>
@@ -84,8 +85,8 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
                 ))}
               </ul>
 
-              {/* column 2*/}
-              <ul className="flex flex-col space-y-1 ml-3">
+              {/* column 2 */}
+              <ul className="flex flex-col space-y-1">
                 {quickLinks.slice(Math.ceil(quickLinks.length / 2)).map((link) => (
                   <li key={link.page}>
                     <button
@@ -100,9 +101,6 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               </ul>
             </div>
           </div>
-
-
-
 
 
           {/* ===== Contact Info ===== */}
