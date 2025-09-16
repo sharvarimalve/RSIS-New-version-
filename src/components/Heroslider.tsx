@@ -17,45 +17,44 @@ const HeroSlider: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden flex items-center justify-center">
+    <div className="relative w-full h-[70vh] sm:h-[80vh] md:h-screen overflow-hidden flex items-center justify-center">
       {/* Slides */}
       {images.map((img, index) => (
         <div
           key={index}
-          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${
-            index === current ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${index === current ? "opacity-100" : "opacity-0"
+            }`}
         >
           <img
             src={img}
             alt={`Slide ${index}`}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-black/40" />
         </div>
       ))}
 
       {/* Text */}
-      <div className="relative z-10 text-center px-6">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          Welcome to Right Serve Infotech system Pvt.Ltd
+      <div className="relative z-10 text-center px-4 sm:px-6 md:px-10">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+          Welcome to Right Serve Infotech System Pvt. Ltd
         </h1>
-        <p className="text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
+        <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-gray-200 max-w-xl sm:max-w-2xl md:max-w-3xl mx-auto mb-6 sm:mb-8">
           Empowering businesses with software, hardware, and marketing solutions
         </p>
-        <button className="px-8 py-3 bg-gradient-to-br from-blue-900 via-gray-200 to-white text-blue-900 font-bold text-lg rounded-lg shadow-md hover:bg-green-500 transition">
+        {/* Optional button */}
+        {/* <button className="px-6 sm:px-8 py-2 sm:py-3 bg-gradient-to-br from-blue-900 via-gray-200 to-white text-blue-900 font-bold text-sm sm:text-lg rounded-lg shadow-md hover:bg-green-500 transition">
           Get Started
-        </button>
+        </button> */}
       </div>
 
       {/* Dots */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
+      <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 sm:space-x-3 z-10">
         {images.map((_, idx) => (
           <button
             key={idx}
-            className={`w-3 h-3 rounded-full ${
-              idx === current ? "bg-white" : "bg-gray-400"
-            }`}
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${idx === current ? "bg-white" : "bg-gray-400/70"
+              }`}
             onClick={() => setCurrent(idx)}
           />
         ))}
@@ -64,15 +63,15 @@ const HeroSlider: React.FC = () => {
       {/* Curved Bottom */}
       <div className="absolute bottom-0 w-full overflow-hidden leading-none z-10">
         <svg
-          className="relative block w-full h-32"
+          className="relative block w-full h-16 sm:h-24 md:h-32"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
           preserveAspectRatio="none"
         >
           <path
-            fill="#ffffff"   // 👈 background color (change as per your section bg)
+            fill="#ffffff"
             d="M0,224L60,197.3C120,171,240,117,360,117.3C480,117,600,171,720,197.3C840,224,960,224,1080,208C1200,192,1320,160,1380,144L1440,128V320H0Z"
-          ></path>
+          />
         </svg>
       </div>
     </div>
