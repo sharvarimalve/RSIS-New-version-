@@ -10,72 +10,105 @@ import {
 } from "lucide-react";
 
 interface FooterProps {
+  currentPage?: string;
   onPageChange?: (page: string) => void;
 }
 
-const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
+const Footer: React.FC<FooterProps> = ({ currentPage, onPageChange }) => {
   const quickLinks = [
     { label: "Home", page: "home" },
     { label: "About Us", page: "about-us" },
     { label: "Career", page: "career" },
     { label: "Hardware", page: "hardware" },
     { label: "Marketing", page: "marketing" },
-    { label: "Our Team", page: "our-team" },
+    { label: "Team", page: "our-team" },
     { label: "Portfolio", page: "portfolio" },
     { label: "Products", page: "products" },
     { label: "Software", page: "software" },
     { label: "Contact", page: "contact" },
   ];
 
+  const services = [
+    { label: "Software", page: "software" },
+    { label: "Hardware", page: "hardware" },
+    { label: "Marketing", page: "marketing" },
+  ];
+
+  const linkClass = (page: string) =>
+    `relative text-sm px-2 py-1 transition-all duration-300 rounded
+    ${currentPage === page
+      ? "text-white font-semibold border-b-2 border-blue-500 rounded-b-md shadow-[0_2px_4px_rgba(59,130,246,0.4)]"
+      : "text-gray-400 hover:text-white hover:border-b hover:border-gray-500"
+    }`;
+
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        {/* Grid with 5 columns on md+ screens */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-          {/* ===== Company Info (पहला section) ===== */}
-          <div className="md:col-span-2">
-            <div className="flex items-center mb-3">
+    <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* ===== Grid for sections ===== */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          {/* ===== Company Info ===== */}
+          <div className="md:col-span-1 lg:col-span-2">
+            <div className="flex items-center mb-4">
               <img
                 src="/logo-trajectoryfy.jpg"
                 alt="Right Serve Infotech Systems"
-                className="h-10 w-10 rounded-full mr-3"
+                className="h-12 w-12 rounded-full mr-3 shadow-lg"
               />
               <div>
-                <h3 className="text-lg font-bold">Right Serve Infotech</h3>
+                <h3 className="text-xl font-bold">Right Serve Infotech</h3>
                 <p className="text-sm text-gray-400">Systems Pvt. Ltd.</p>
               </div>
             </div>
-            <p className="text-gray-400 mb-3 text-sm leading-relaxed">
+
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
               Leading IT solutions provider specializing in software development,
-              hardware solutions, and digital marketing services. We help
-              businesses transform digitally with innovative technology solutions.
+              hardware solutions, and digital marketing. We help businesses grow
+              through innovative technology solutions.
             </p>
-            <div className="flex space-x-4 mt-2">
+
+            {/* Social Icons */}
+            <div className="flex space-x-3">
               <a
                 href="https://www.facebook.com/RightServe"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="p-2 bg-gray-800 rounded-full hover:bg-blue-600 transition"
               >
-                <Facebook className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
+                <Facebook size={18} />
               </a>
-              <Twitter className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Linkedin className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Instagram className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
+              <a
+                href="https://x.com/company/rsinfotechsys"
+                className="p-2 bg-gray-800 rounded-full hover:bg-sky-500 transition"
+              >
+                <Twitter size={18} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/rsinfotechsys"
+                className="p-2 bg-gray-800 rounded-full hover:bg-blue-700 transition"
+              >
+                <Linkedin size={18} />
+              </a>
+              <a
+                href="https://www.facebook.com/RightServe"
+                className="p-2 bg-gray-800 rounded-full hover:bg-pink-600 transition"
+              >
+                <Instagram size={18} />
+              </a>
             </div>
           </div>
 
           {/* ===== Quick Links ===== */}
-          <div className="md:col-span-2">
-            <h4 className="text-base font-semibold mb-3">Quick Links</h4>
-
-            <div className="flex gap-x-8">
-              {/* column 1 */}
-              <ul className="flex flex-col space-y-1">
+          <div className="sm:mt-6 md:mt-0">
+            <h4 className="text-lg font-semibold mb-3 border-b border-gray-700 pb-1">
+              Quick Links
+            </h4>
+            <div className="flex gap-x-6 sm:gap-x-8">
+              <ul className="space-y-2">
                 {quickLinks.slice(0, Math.ceil(quickLinks.length / 2)).map((link) => (
                   <li key={link.page}>
                     <button
                       type="button"
-                      className="text-gray-400 hover:text-white text-sm bg-transparent border-none outline-none cursor-pointer text-left"
+                      className={linkClass(link.page)}
                       onClick={() => onPageChange && onPageChange(link.page)}
                     >
                       {link.label}
@@ -83,14 +116,12 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
                   </li>
                 ))}
               </ul>
-
-              {/* column 2 */}
-              <ul className="flex flex-col space-y-1">
+              <ul className="space-y-2">
                 {quickLinks.slice(Math.ceil(quickLinks.length / 2)).map((link) => (
                   <li key={link.page}>
                     <button
                       type="button"
-                      className="text-gray-400 hover:text-white text-sm bg-transparent border-none outline-none cursor-pointer text-left"
+                      className={linkClass(link.page)}
                       onClick={() => onPageChange && onPageChange(link.page)}
                     >
                       {link.label}
@@ -101,55 +132,69 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
             </div>
           </div>
 
+          {/* ===== Our Services ===== */}
+          <div className="sm:mt-6 md:mt-0">
+            <h4 className="text-lg font-semibold mb-3 border-b border-gray-700 pb-1">
+              Our Services
+            </h4>
+            <ul className="space-y-2">
+              {services.map((service) => (
+                <li key={service.page}>
+                  <button
+                    type="button"
+                    className={linkClass(service.page)}
+                    onClick={() => onPageChange && onPageChange(service.page)}
+                  >
+                    {service.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* ===== Contact Info ===== */}
-          {/* ===== Contact Info ===== */}
-          <div className="md:col-span-1 -ml-8">
-            <h4 className="text-base font-semibold mb-3">Contact Info</h4>
-            <div className="space-y-2 text-sm">
-              {/* Address */}
+          <div className="sm:mt-6 md:mt-0">
+            <h4 className="text-lg font-semibold mb-3 border-b border-gray-700 pb-1">
+              Contact Info
+            </h4>
+            <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2">
                 <MapPin size={18} className="text-gray-400 flex-shrink-0" />
                 <a
                   href="https://www.google.com/maps?q=10,+Saurabh+Nagar-2,+Besa+Rd,+near+Hanuman+Mandir,+Saubhagya+Nagar,+Ghogali,+Nagpur,+Maharashtra+440034"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-gray-300 text-xs sm:text-sm"
+                  className="text-gray-300 text-xs sm:text-sm"
                 >
-                  10, Saurabh Nagar-2, Besa Rd, near Hanuman Mandir, Saubhagya
-                  Nagar, Ghogali, Nagpur, Maharashtra 440034
+                  10, Saurabh Nagar-2, Besa Rd, near Hanuman Mandir,
+                  Saubhagya Nagar, Ghogali, Nagpur, Maharashtra 440034
                 </a>
               </div>
 
-              {/* Phone */}
               <div className="flex items-center gap-2">
                 <Phone size={16} className="text-gray-400" />
-                <a
-                  href="tel:+917972192831"
-                  className="hover:underline text-gray-300 text-xs sm:text-sm"
-                >
+                <a href="tel:+917972192831" className="text-gray-300 text-xs sm:text-sm">
                   +91 7972192831
                 </a>
               </div>
 
-              {/* Email */}
               <div className="flex items-center gap-2">
                 <MailIcon size={16} className="text-gray-400 flex-shrink-0" />
                 <a
                   href="mailto:rightserveinfotechsystems@gmail.com"
-                  className="hover:underline text-gray-300 text-xs sm:text-sm break-words"
+                  className="text-gray-300 text-xs sm:text-sm flex-1 break-all"
                 >
-                  rightservehinfosys@gmail.com
+                  rightserveinfotechsystems@gmail.com
                 </a>
               </div>
             </div>
           </div>
-
-
-
         </div>
 
-        <div className="border-t border-gray-800 mt-6 pt-4 text-center text-xs text-gray-400">
-          © 2025 RIGHT SERVE INFOTECH SYSTEMS PVT. LTD. All rights reserved.
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-6 pt-3 text-center text-xs text-gray-400">
+          © {new Date().getFullYear()} RIGHT SERVE INFOTECH SYSTEMS PVT. LTD. All
+          rights reserved.
         </div>
       </div>
     </footer>
