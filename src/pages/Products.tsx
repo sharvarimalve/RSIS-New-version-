@@ -175,13 +175,13 @@ const Products: React.FC = () => {
             {/* HERO */}
             <section
                 className="relative bg-cover bg-center py-24 text-white"
-                style={{ backgroundImage: "url('/product2.jpg')" }}
+                style={{ backgroundImage: "url('/producthero.jpg')" }}
             >
-                <div className="absolute inset-0 bg-black/40" />
-                <div className="relative z-10 text-center px-4">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up"
+                <div className="absolute inset-0 bg-black/40"  />
+                <div className="relative z-10 text-center px-4 ">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6 pt-10" data-aos="fade-up"
                         data-aos-duration="800">Our Products</h1>
-                    <p className="max-w-2xl mx-auto mb-10 text-lg" data-aos="fade-up"
+                    <p className="max-w-2xl mx-auto mb-10 text-lg " data-aos="fade-up"
                         data-aos-duration="800">
                         Powerful, reliable, and user-friendly software solutions designed to
                         streamline your business operations.

@@ -90,8 +90,7 @@ const AboutUs: React.FC = () => {
         {heroImages.map((img, i) => (
           <div
             key={i}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${i === currentImage ? "opacity-100 z-10" : "opacity-0"
-              }`}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 "opacity-100 z-10" : "opacity-0"`}
             style={{ backgroundImage: `url(${img})` }}
           />
         ))}
