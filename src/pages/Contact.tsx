@@ -236,68 +236,67 @@ const Contact: React.FC = () => {
       </section>
 
       {/* ===== FAQ ===== */}
-      <section className="py-16 sm:py-20 bg-gray-50">
-        <div className="container mx-auto px-4 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Left Side */}
-            <div className="bg-[#e5e7eb] rounded-2xl shadow-lg w-full h-full min-h-[300px] sm:min-h-[400px] px-6 sm:px-10 py-10 sm:py-16">
-              <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 leading-snug">
-                RightServe Knowledge Hub
-              </h4>
-              <p className="text-blue-900 mt-4 sm:mt-6 text-base sm:text-lg text-justify">
-                Explore our curated insights about website design, development,
-                and support. These answers reflect{" "}
-                <span className="font-semibold">RightServe’s</span> commitment
-                to clarity, innovation, and building digital solutions that grow
-                with your business.
-              </p>
-            </div>
+      {/* ===== FAQ ===== */}
+<section className="py-20 bg-gray-50">
+  <div className="container mx-auto px-4 relative">
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
+      
+      {/* Left Side (Gray info block) */}
+      <div className="bg-[#e5e7eb] rounded-2xl shadow-lg w-full h-full min-h-[400px] pl-10 pr-24 py-16">
+        <h4 className="text-3xl md:text-4xl font-bold text-blue-900 leading-snug">
+          RightServe Knowledge Hub
+        </h4>
+        <p className="text-blue-900 mt-6 text-lg text-justify mr-16">
+          Explore our curated insights about website design, development, and support. These answers reflect{" "}
+          <span className="font-semibold">RightServe’s</span> commitment to clarity, innovation, and building digital solutions that grow with your business.
+        </p>
+      </div>
 
-            {/* Right Side */}
-            <div className="w-full lg:w-[70%] space-y-4">
-              {faqs.map((faq, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-xl shadow p-4 sm:p-5 cursor-pointer transition hover:shadow-md"
-                  onClick={() => toggle(idx)}
-                >
-                  <div className="flex items-center justify-between">
-                    <h4
-                      className={`text-sm sm:text-base md:text-lg font-semibold ${
-                        openIndex === idx ? "text-[#003366]" : "text-slate-800"
-                      }`}
-                    >
-                      {faq.question}
-                    </h4>
-                    <svg
-                      className={`w-4 sm:w-5 h-4 sm:h-5 transition-transform ${
-                        openIndex === idx
-                          ? "rotate-90 text-[#003366]"
-                          : "text-gray-500"
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </div>
-                  {openIndex === idx && (
-                    <p className="text-gray-600 mt-2 text-sm sm:text-base">
-                      {faq.answer}
-                    </p>
-                  )}
-                </div>
-              ))}
+      {/* Right Side (FAQ list) */}
+      <div className="lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 w-full lg:w-[60%] space-y-4">
+        {faqs.map((faq, idx) => (
+          <div
+            key={idx}
+            className="bg-white rounded-xl shadow p-5 cursor-pointer transition hover:shadow-md"
+            onClick={() => toggle(idx)}
+          >
+            <div className="flex items-center justify-between">
+              <h4
+                className={`text-base md:text-lg font-semibold ${
+                  openIndex === idx ? "text-[#003366]" : "text-slate-800"
+                }`}
+              >
+                {faq.question}
+              </h4>
+              <svg
+                className={`w-5 h-5 transition-transform ${
+                  openIndex === idx ? "rotate-90 text-[#003366]" : "text-gray-500"
+                }`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
             </div>
+            {openIndex === idx && (
+              <p className="text-gray-600 mt-2 text-sm md:text-base">
+                {faq.answer}
+              </p>
+            )}
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };
