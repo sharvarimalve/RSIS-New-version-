@@ -39,28 +39,35 @@ body {
     ;
 }
 
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 10px;
+    /* scrollbar ki width */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* track ka background */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #002147;
+    /* NEAVY BLUE thumb */
+    border-radius: 6px;
+    /* rounded corners */
+    border: 2px solid #f1f1f1;
+    /* thumb ke aas-paas thoda space */
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    /* slim scrollbar */
+    scrollbar-color: #002147 #f1f1f1;
+    /* thumb color | track color */
+}
+
 /* ================aboutus===================== */
-/* .about-us-page {
-    overflow-x: hidden;
-}
-
-.section {
-    padding: 80px 0;
-}
-
-.section-alt {
-    background: var(--gokwik-light-gray);
-}
-
-.section-even {
-    background: var(--white);
-}
-
-.section-header p {
-    font-size: 1.1rem;
-    color: var(--gokwik-text-gray);
-}
-
 /* Animations */
 @keyframes fadeInUp {
     from {
