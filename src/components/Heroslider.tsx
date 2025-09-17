@@ -3,9 +3,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const images = [
-  "https://picsum.photos/id/1018/1920/1080",
-  "https://picsum.photos/id/1015/1920/1080",
-  "https://picsum.photos/id/1016/1920/1080",
+  "/home2.jpg",
+  "/team.jpg",
+  "/Homehero.jpg",
 ];
 
 const HeroSlider: React.FC = () => {

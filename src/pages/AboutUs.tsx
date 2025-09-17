@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
 
 const AboutUs: React.FC = () => {
   /* ------------ DATA ------------ */
-  const heroImages = ["/about1.jpg", "/about4.jpg"];
+  const heroImages = ["/office-desktop-with-laptop-analytics.jpg"];
 
   const values = [
     {
@@ -86,12 +86,11 @@ const AboutUs: React.FC = () => {
   return (
     <div className="bg-white text-gray-800 overflow-x-hidden">
       {/* -------- HERO -------- */}
-      <section className="relative h-[420px] sm:h-[500px] md:h-[400px] overflow-hidden">
+      <section className="relative h-[420px] sm:h-[500px] md:h-[500px] overflow-hidden">
         {heroImages.map((img, i) => (
           <div
             key={i}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${i === currentImage ? "opacity-100 z-10" : "opacity-0"
-              }`}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 "opacity-100 z-10" : "opacity-0"`}
             style={{ backgroundImage: `url(${img})` }}
           />
         ))}

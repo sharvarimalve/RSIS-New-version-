@@ -155,39 +155,39 @@ const Portfolio: React.FC = () => {
     return (
         <div className="overflow-x-hidden">
             {/* Hero */}
-            <section
-                className="relative bg-gradient-to-r from-blue-900/80 to-cyan-700/80 py-24 text-white text-center bg-cover bg-center bg-no-repeat bg-blend-overlay"
-                style={{ backgroundImage: "url('public/portfolio9.jfif')" }}
-            >
-                <div className="container mx-auto px-4">
-                    <h1
-                        className="text-4xl md:text-5xl font-bold mb-6"
-                        data-aos="fade-up"
-                        data-aos-duration="800"
-                    >
-                        Our Portfolio
-                    </h1>
-                    <p
-                        className="text-lg font-bold max-w-2xl mx-auto mb-12 text-white"
-                        data-aos="fade-up"
-                        data-aos-duration="800"
-                    >
-                        Showcasing our successful projects and the impact we've made for our
-                        clients across various industries
-                    </p>
+        <section
+  className="relative h-[500px] flex items-center text-white text-center bg-gradient-to-r from-blue-900/80 to-cyan-700/80 bg-cover bg-center bg-no-repeat bg-blend-overlay"
+  style={{ backgroundImage: "url('/portfoliohero.jpg')" }}
+>
+  <div className="container mx-auto px-4">
+    <h1
+      className="text-4xl md:text-5xl font-bold mb-6"
+      data-aos="fade-up"
+      data-aos-duration="800"
+    >
+      Our Portfolio
+    </h1>
+    <p
+      className="text-lg font-bold max-w-2xl mx-auto mb-12 text-white"
+      data-aos="fade-up"
+      data-aos-duration="800"
+    >
+      Showcasing our successful projects and the impact we've made for our
+      clients across various industries
+    </p>
 
-                    {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
-                        {stats.map((stat) => (
-                            <div key={stat.label} className="text-center">
-                                <p className="text-3xl font-bold text-[#001F54]">
-                                    {stat.number}
-                                </p>
-                                <p className="text-sm text-[#001F54]">{stat.label}</p>
-                            </div>
-                        ))}
-                    </div> */}
-                </div>
-            </section>
+    {/* Stats block if needed later */}
+    {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+      {stats.map((stat) => (
+        <div key={stat.label} className="text-center">
+          <p className="text-3xl font-bold text-[#001F54]">{stat.number}</p>
+          <p className="text-sm text-[#001F54]">{stat.label}</p>
+        </div>
+      ))}
+    </div> */}
+  </div>
+</section>
+
 
             {/* Filter */}
             <section className="py-16 bg-gray-100">

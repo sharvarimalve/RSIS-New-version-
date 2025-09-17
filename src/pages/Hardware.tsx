@@ -68,38 +68,39 @@ const Hardware: React.FC = () => {
     return (
         <div className="overflow-x-hidden">
             {/* === Hero Section === */}
-            <section
-                className="relative min-h-[90vh] bg-cover bg-center text-white flex flex-col justify-center items-center px-4"
-                style={{ backgroundImage: "url('/hardware5.jfif')" }}
-            >
-                <div className="absolute inset-0 bg-black/60"></div>
-                <div className="relative z-10 text-center">
-                    <h1 className="text-3xl md:text-5xl font-bold mb-6" data-aos="fade-up">
-                        Hardware Solutions & Services
-                    </h1>
-                    <p
-                        className="text-lg md:text-xl max-w-2xl mx-auto mb-10"
-                        data-aos="fade-up"
-                        data-aos-delay="150"
-                    >
-                        Comprehensive hardware solutions designed to power your business with
-                        reliability, performance, and scalability.
-                    </p>
+          <section
+  className="relative h-[500px] bg-cover bg-center text-white flex flex-col justify-center items-center px-4"
+  style={{ backgroundImage: "url('/Hardwarehero.jpg')" }}
+>
+  <div className="absolute inset-0 bg-black/60"></div>
+  <div className="relative z-10 text-center">
+    <h1 className="text-3xl md:text-5xl font-bold mb-6" data-aos="fade-up">
+      Hardware Solutions & Services
+    </h1>
+    <p
+      className="text-lg md:text-xl max-w-2xl mx-auto mb-10"
+      data-aos="fade-up"
+      data-aos-delay="150"
+    >
+      Comprehensive hardware solutions designed to power your business with
+      reliability, performance, and scalability.
+    </p>
 
-                    <div
-                        className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
-                        data-aos="fade-up"
-                        data-aos-delay="300"
-                    >
-                        {stats.map((stat, i) => (
-                            <div key={i} className="text-center">
-                                <p className="text-3xl font-bold">{stat.number}</p>
-                                <p className="text-sm">{stat.label}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+    <div
+      className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
+      data-aos="fade-up"
+      data-aos-delay="300"
+    >
+      {stats.map((stat, i) => (
+        <div key={i} className="text-center">
+          <p className="text-3xl font-bold">{stat.number}</p>
+          <p className="text-sm">{stat.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
             {/* === Services === */}
             <section className="py-20 bg-gray-50">
