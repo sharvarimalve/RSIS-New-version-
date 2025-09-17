@@ -36,7 +36,11 @@
 
 body {
     font-family: "Overpass", sans-serif;
-    ;
+}
+
+html,
+body {
+    overflow-x: hidden;
 }
 
 /* Chrome, Edge, Safari */
@@ -65,6 +69,32 @@ body {
     /* slim scrollbar */
     scrollbar-color: #002147 #f1f1f1;
     /* thumb color | track color */
+}
+
+/*  Mobile & tablet screens (<= 1024px) */
+@media (max-width: 1024px) {
+    .nav {
+        color: #17385b !important;
+        border-color: transparent;
+    }
+
+
+    .nav {
+        background: rgba(23, 56, 91, 0.95);
+        z-index: 50;
+        color: #fff;
+    }
+
+    @media (max-width: 1024px) {
+        .mobile-nav-fix {
+            background: rgba(23, 56, 91, 0.95);
+            /* Navy blue semi-transparent */
+            z-index: 9999;
+            /* Image ke upar rahe */
+            color: #fff;
+            /* Text clearly visible */
+        }
+    }
 }
 
 /* ================aboutus===================== */
