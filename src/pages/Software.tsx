@@ -104,40 +104,40 @@ const Software: React.FC = () => {
     return (
         <div className="overflow-x-hidden">
             {/* === Hero Section === */}
-            <section
-                className="relative min-h-[90vh] flex flex-col justify-center items-center text-center text-white bg-cover bg-center"
-                style={{ backgroundImage: "url('/career1.jpg')" }}
-            >
-                <div className="absolute inset-0 bg-black/60" />
-                <div className="relative z-10 px-4">
-                    <h1
-                        className="text-3xl md:text-5xl font-bold mb-6"
-                        data-aos="fade-up"
-                    >
-                        Software Development Services
-                    </h1>
-                    <p
-                        className="max-w-2xl mx-auto text-lg md:text-xl text-cyan-100 mb-10"
-                        data-aos="fade-up"
-                        data-aos-delay="150"
-                    >
-                        Transform your ideas into powerful software solutions with
-                        cutting-edge technology and expert development.
-                    </p>
-                    <div
-                        className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
-                        data-aos="fade-up"
-                        data-aos-delay="300"
-                    >
-                        {stats.map((s, i) => (
-                            <div key={i} className="text-center">
-                                <p className="text-3xl font-bold text-cyan-400">{s.number}</p>
-                                <p className="text-sm text-cyan-100">{s.label}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+           <section
+  className="relative h-[500px] flex flex-col justify-center items-center text-center text-white bg-cover bg-center"
+  style={{ backgroundImage: "url('/career1.jpg')" }}
+>
+  <div className="absolute inset-0 bg-black/60" />
+  <div className="relative z-10 px-4">
+    <h1
+      className="text-3xl md:text-5xl font-bold mb-2"
+      data-aos="fade-up"
+    >
+      Software Development Services
+    </h1>
+    <p
+      className="max-w-2xl mx-auto text-lg md:text-xl text-cyan-100 mb-10"
+      data-aos="fade-up"
+      data-aos-delay="150"
+    >
+      Transform your ideas into powerful software solutions with
+      cutting-edge technology and expert development.
+    </p>
+    <div
+      className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
+      data-aos="fade-up"
+      data-aos-delay="300"
+    >
+      {stats.map((s, i) => (
+        <div key={i} className="text-center">
+          <p className="text-3xl font-bold text-cyan-400">{s.number}</p>
+          <p className="text-sm text-cyan-100">{s.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
             {/* === Services === */}
             <section className="py-20 bg-gray-50">

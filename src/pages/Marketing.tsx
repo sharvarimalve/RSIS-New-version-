@@ -140,34 +140,33 @@ const Marketing: React.FC = () => {
     return (
         <div className="overflow-x-hidden">
             {/* Hero */}
-            <section
-                className="relative bg-center bg-cover text-white py-28 px-4"
-                style={{
-                    backgroundImage:
-                        "url('https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1600')",
-                }}
-            >
-                <div className="absolute inset-0 bg-[rgba(0,0,50,0.6)]" />
-                <div className="relative z-10 max-w-5xl mx-auto text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                        Digital Marketing Services
-                    </h1>
-                    <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-cyan-100">
-                        Transform your ideas into powerful Marketing solutions with
-                        cutting-edge technology and expert development
-                    </p>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-xl mx-auto">
-                        {stats.map((s, i) => (
-                            <div key={i} className="text-center">
-                                <div className="text-3xl font-bold text-cyan-400">
-                                    {s.number}
-                                </div>
-                                <div className="text-sm text-cyan-100">{s.label}</div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+          <section
+  className="relative h-[500px] flex items-center justify-center bg-center bg-cover text-white px-4"
+  style={{
+    backgroundImage:
+      "url('/DigitalMarketing.jpg')",
+  }}
+>
+  <div className="absolute inset-0 bg-[rgba(0,0,50,0.6)]" />
+  <div className="relative z-10 max-w-5xl mx-auto text-center">
+    <h1 className="text-4xl md:text-5xl font-bold mb-6">
+      Digital Marketing Services
+    </h1>
+    <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-cyan-100">
+      Transform your ideas into powerful Marketing solutions with
+      cutting-edge technology and expert development
+    </p>
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-xl mx-auto">
+      {stats.map((s, i) => (
+        <div key={i} className="text-center">
+          <div className="text-3xl font-bold text-cyan-400">{s.number}</div>
+          <div className="text-sm text-cyan-100">{s.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
             {/* Services */}
             <section className="py-20 px-4">
