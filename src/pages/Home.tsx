@@ -1,35 +1,51 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeroSlider from "../components/Heroslider";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import TestimonialsSection from "../components/TestimonialsSection";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const Home: React.FC = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   return (
     <div className="min-h-screen bg-White">
 
       <HeroSlider />
-
-
       {/* About Section */}
       <section className="bg-white py-10 md:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
-          {/* Text */}
-          <div className="order-1 md:order-1">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+          {/* Text – left se aaye */}
+          <div
+            className="order-1 md:order-1"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#002147] mb-6">
               About Us
             </h2>
             <p className="text-gray-600 mb-6 leading-relaxed text-justify font-semibold text-base sm:text-lg">
-              Right Serve Infotech Systems Private Limited is a leading provider
-              of comprehensive software and hardware solutions, dedicated to
-              empowering businesses across diverse industries. We've grown into a
-              trusted name, offering both custom-tailored and product-based
-              solutions to meet the unique needs of our clients.
+              Right Serve Infotech Systems Private Limited is a leading provider of
+              comprehensive software and hardware solutions, dedicated to empowering
+              businesses across diverse industries. We've grown into a trusted name,
+              offering both custom-tailored and product-based solutions to meet the
+              unique needs of our clients.
             </p>
-            <button className="px-6 sm:px-8 py-2 sm:py-3 bg-blue-900 text-white text-base sm:text-lg rounded-lg shadow-md hover:bg-blue-800 transition">
+            <button className="px-6 sm:px-8 py-2 sm:py-3 bg-[#002147] text-white text-base sm:text-lg rounded-lg shadow-md hover:bg-[#002147] transition">
               Read More
             </button>
           </div>
 
-          {/* Image */}
-          <div className="flex justify-center order-2 md:order-2">
+          {/* Image – right se aaye */}
+          <div
+            className="flex justify-center order-2 md:order-2"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
             <img
               src="https://www.cyberoptik.net/wp-content/uploads/2023/08/design-marketing.svg"
               alt="SEO Strategy"
@@ -40,25 +56,28 @@ const Home: React.FC = () => {
       </section>
 
 
-      {/* Services / Cards Section */}
-      <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-40 text-center">
-        Technology and industry expertise.
-      </h2>
-      <section className="bg-blue-950 py-20 rounded-tl-[80px] rounded-tr-[80px] ml-20 mr-20">
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-60">
+      {/* Services / Cards Section */}
+      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] mb-12 sm:mb-20 md:mb-40 text-center">
+        Technology and industry expertise.
+      </h3>
+
+      <section className="bg-[#002147] py-10 sm:py-16 md:py-20 rounded-tl-[40px] sm:rounded-tl-[60px] md:rounded-tl-[80px] rounded-tr-[40px] sm:rounded-tr-[60px] md:rounded-tr-[80px] mx-4 sm:mx-10 md:mx-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 -mt-28 sm:-mt-40 md:-mt-60">
             {/* Card 1 */}
             <div className="rounded-2xl shadow-lg p-6 bg-white text-center">
               <div className="flex justify-center mb-4">
                 <img
                   src="/software.jpg"
                   alt="Paid Search"
-                  className="w-[40] h-[40]  object-cover"
+                  className="w-[40] h-[40] object-cover"
                 />
               </div>
-              <h3 className="text-xl font-bold text-blue-900 mb-3">Software</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg sm:text-xl font-bold text-[#002147] mb-3">
+                Software
+              </h3>
+              <p className="text-gray-600 text-sm sm:text-base">
                 We prioritize your satisfaction by delivering exceptional software
                 development services tailored to your unique needs.
               </p>
@@ -73,8 +92,10 @@ const Home: React.FC = () => {
                   className="w-[40] h-[40]"
                 />
               </div>
-              <h3 className="text-xl font-bold text-blue-900 mb-3">Hardware</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg sm:text-xl font-bold text-[#002147] mb-3">
+                Hardware
+              </h3>
+              <p className="text-gray-600 text-sm sm:text-base">
                 We offer reliable hardware solutions designed to support your IT
                 infrastructure and enhance operational efficiency.
               </p>
@@ -89,8 +110,10 @@ const Home: React.FC = () => {
                   className="w-[40] h-[40]"
                 />
               </div>
-              <h3 className="text-xl font-bold text-blue-900 mb-3">Marketing</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg sm:text-xl font-bold text-[#002147] mb-3">
+                Marketing
+              </h3>
+              <p className="text-gray-600 text-sm sm:text-base">
                 From SEO and content marketing to social media management and online
                 advertising, our expert team will help you drive traffic, increase
               </p>
@@ -99,68 +122,92 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+
       {/* Industry Section (like screenshot) */}
-      <section className="bg-blue-950 rounded-bl-[80px] rounded-br-[80px] ml-20 mr-20 ">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="bg-[#002147] rounded-bl-[40px] sm:rounded-bl-[60px] md:rounded-bl-[80px] rounded-br-[40px] sm:rounded-br-[60px] md:rounded-br-[80px] mx-4 sm:mx-10 md:mx-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-10 sm:py-14 md:py-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
             Web Design for Every Industry
           </h2>
-          <p className="text-gray-300 mb-12 max-w-3xl mx-auto">
+          <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-8 sm:mb-12 max-w-3xl mx-auto">
             We understand what it takes to make your website stand out,
             regardless of which industry you’re in.
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 text-center ">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10 text-center fade-right">
             {/* Industry Cards */}
             <div>
               <img
                 src="/lowfirm.jpg"
                 alt="Attorneys"
-                className="mx-auto mb-4 w-50 h-30"
+                data-aos="zoom-in-up"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                className="mx-auto mb-4 w-24 h-20 sm:w-32 sm:h-24 md:w-40 md:h-30 object-cover"
               />
-              <p className="text-white font-semibold">Attorneys & Law Firms</p>
+              <p className="text-white font-semibold text-xs sm:text-sm md:text-base">
+                Attorneys & Law Firms
+              </p>
             </div>
 
             <div>
               <img
                 src="/construction.jpg"
                 alt="Construction"
-                className="mx-auto mb-4 w-50 h-30"
+                data-aos="zoom-in-up"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                className="mx-auto mb-4 w-24 h-20 sm:w-32 sm:h-24 md:w-40 md:h-30 object-cover"
               />
-              <p className="text-white font-semibold">Construction</p>
+              <p className="text-white font-semibold text-xs sm:text-sm md:text-base">
+                Construction
+              </p>
             </div>
 
             <div>
               <img
                 src="/IT .jpg"
                 alt="IT MSP"
-                className="mx-auto mb-4 w-50 h-30"
+                data-aos="zoom-in-up"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                className="mx-auto mb-4 w-24 h-20 sm:w-32 sm:h-24 md:w-40 md:h-30 object-cover"
               />
-              <p className="text-white font-semibold">IT & MSP</p>
+              <p className="text-white font-semibold text-xs sm:text-sm md:text-base">
+                IT & MSP
+              </p>
             </div>
 
             <div>
               <img
                 src="/library.jpg"
                 alt="Libraries"
-                className="mx-auto mb-4 w-50 h-30"
+                data-aos="zoom-in-up"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                className="mx-auto mb-4 w-24 h-20 sm:w-32 sm:h-24 md:w-40 md:h-30 object-cover"
               />
-              <p className="text-white font-semibold">Libraries</p>
+              <p className="text-white font-semibold text-xs sm:text-sm md:text-base">
+                Libraries
+              </p>
             </div>
 
             <div>
               <img
                 src="/Manufacturing.jpg"
                 alt="Manufacturers"
-                className="mx-auto mb-4 w-50 h-30"
+                data-aos="zoom-in-up"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                className="mx-auto mb-4 w-24 h-20 sm:w-32 sm:h-24 md:w-40 md:h-30 object-cover"
               />
-              <p className="text-white font-semibold">Manufacturers</p>
+              <p className="text-white font-semibold text-xs sm:text-sm md:text-base">
+                Manufacturers
+              </p>
             </div>
 
-
-
-            <div>
-              <button className="px-5 py-2  mb-14  border border-[#e5e7eb] text-[#e5e7eb] rounded-lg hover:bg-green-500 hover:text-white transition">
+            <div className="col-span-2 sm:col-span-3 lg:col-span-1 flex justify-center items-center">
+              <button className="px-5 py-2 mb-6 sm:mb-10 md:mb-14 border border-[#e5e7eb] text-[#e5e7eb] rounded-lg hover:bg-gray-500 hover:text-white transition text-sm sm:text-base">
                 All Industries
               </button>
             </div>
@@ -168,10 +215,11 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#002147] mb-4">
             Where are you in the website process?
           </h2>
           <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -189,7 +237,7 @@ const Home: React.FC = () => {
                 className="w-12 h-12 text-green-600 rounded-full"
               />
               <div>
-                <h3 className="text-lg font-bold text-blue-900 mb-2">Getting Started</h3>
+                <h3 className="text-lg font-bold text-[#002147] mb-2">Getting Started</h3>
                 <p className="text-gray-600 mb-2">
                   I need help with the entire website process.
                 </p>
@@ -205,7 +253,7 @@ const Home: React.FC = () => {
                 className="w-12 h-12 text-green-600 rounded-full"
               />
               <div>
-                <h3 className="text-lg font-bold text-blue-900 mb-2">Have a Design</h3>
+                <h3 className="text-lg font-bold text-[#002147] mb-2">Have a Design</h3>
                 <p className="text-gray-600 mb-2">
                   I have a design and need to bring it to life.
                 </p>
@@ -221,7 +269,7 @@ const Home: React.FC = () => {
                 className="w-12 h-12 text-green-600 rounded-full"
               />
               <div>
-                <h3 className="text-lg font-bold text-blue-900 mb-2">Need Changes</h3>
+                <h3 className="text-lg font-bold text-[#002147] mb-2">Need Changes</h3>
                 <p className="text-gray-600 mb-2">
                   My existing website needs some help.
                 </p>
@@ -237,7 +285,7 @@ const Home: React.FC = () => {
                 className="w-12 h-12 text-blue-900 rounded-full"
               />
               <div>
-                <h3 className="text-lg font-bold text-blue-900 mb-2">Ongoing Support</h3>
+                <h3 className="text-lg font-bold text-[#002147] mb-2">Ongoing Support</h3>
                 <p className="text-gray-600 mb-2">
                   My site is good but I need monthly upkeep.
                 </p>
@@ -249,20 +297,38 @@ const Home: React.FC = () => {
       </section>
       <section className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#002147] mb-8">
             Provided Technology
           </h2>
 
           {/* Right → Left */}
-          <div className="overflow-hidden relative mb-10">
+          <div className="overflow-hidden  relative mb-10">
             <div className="flex w-max animate-marquee space-x-12">
               {/* group A */}
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
+
+
 
               {/* duplicate group B */}
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
@@ -278,8 +344,28 @@ const Home: React.FC = () => {
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
 
               {/* duplicate group B */}
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
@@ -291,77 +377,7 @@ const Home: React.FC = () => {
 
 
       {/* Testimonial Section */}
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-            Testimonials
-          </h2>
-          <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-            Don’t just take our word for it – here’s what our clients have to say
-            about working with us.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Testimonial 1 */}
-            <div className="bg-gray-50 rounded-2xl shadow-lg p-6">
-              <p className="text-gray-700 mb-4 italic">
-                "Right Serve Infotech transformed our business with their custom
-                software solutions. The team was professional and delivered on
-                time."
-              </p>
-              <div className="flex items-center justify-center gap-3">
-                <img
-                  src="https://randomuser.me/api/portraits/men/32.jpg"
-                  alt="Client 1"
-                  className="w-12 h-12 rounded-full border"
-                />
-                <div className="text-left">
-                  <h4 className="font-semibold text-blue-900">Rahul Sharma</h4>
-                  <p className="text-gray-500 text-sm">CEO, TechWorld</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div className="bg-gray-50 rounded-2xl shadow-lg p-6">
-              <p className="text-gray-700 mb-4 italic">
-                "Their hardware support is excellent. We were able to upgrade our
-                IT infrastructure seamlessly with their help."
-              </p>
-              <div className="flex items-center justify-center gap-3">
-                <img
-                  src="https://randomuser.me/api/portraits/women/44.jpg"
-                  alt="Client 2"
-                  className="w-12 h-12 rounded-full border"
-                />
-                <div className="text-left">
-                  <h4 className="font-semibold text-blue-900">Priya Verma</h4>
-                  <p className="text-gray-500 text-sm">Manager, BuildCorp</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial 3 */}
-            <div className="bg-gray-50 rounded-2xl shadow-lg p-6">
-              <p className="text-gray-700 mb-4 italic">
-                "Our online presence improved drastically with their marketing
-                strategies. Highly recommend their services!"
-              </p>
-              <div className="flex items-center justify-center gap-3">
-                <img
-                  src="https://randomuser.me/api/portraits/men/12.jpg"
-                  alt="Client 3"
-                  className="w-12 h-12 rounded-full border"
-                />
-                <div className="text-left">
-                  <h4 className="font-semibold text-blue-900">Amit Patel</h4>
-                  <p className="text-gray-500 text-sm">Founder, TravelX</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <TestimonialsSection />
 
     </div>
   );
