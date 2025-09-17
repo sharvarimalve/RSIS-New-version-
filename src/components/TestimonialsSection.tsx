@@ -21,20 +21,20 @@ const TestimonialsSection: React.FC = () => {
         {
             text: `Right Serve Infotech transformed our business with their custom software solutions. Their team is professional, responsive, and truly understands client needs.`,
             name: "Rahul Sharma",
-            role: "CEO, TechWorld",
+            role: "CEO",
             img: "https://randomuser.me/api/portraits/men/32.jpg",
         },
         {
             text: `The hardware support from Right Serve is top-notch. They handled our entire setup with precision and offered great after-sales service.`,
             name: "Priya Verma",
-            role: "Manager, BuildCorp",
+            role: "Manager",
             img: "https://randomuser.me/api/portraits/women/44.jpg",
         },
         {
             text: `Their marketing strategies elevated our online presence and brought measurable growth. A reliable partner for any business.`,
             name: "Amit Patel",
-            role: "Founder, TravelX",
-            img: "https://randomuser.me/api/portraits/men/12.jpg",
+            role: "Founder",
+            img: "https://randomuser.me/api/portraits/men/13.jpg",
         },
     ];
 

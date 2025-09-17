@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
+import Marketing from './../pages/Marketing';
 
 interface HeaderProps {
   currentPage: string;
@@ -26,9 +27,11 @@ const Header: React.FC<HeaderProps> = ({
   // Active / inactive link style
   const linkClass = (page: string) =>
     `block text-base font-semibold px-2 py-1 transition-colors border-b-4 rounded-b-md
-    ${currentPage === page
+  ${currentPage === page
       ? "border-[#17385b] text-[#17385b] font-bold"
-      : `border-transparent hover:border-[#17385b] ${isScrolled ? "text-gray-800" : "text-white"
+      : `border-transparent hover:border-[#17385b] ${isScrolled
+        ? "text-[#17385b]"
+        : "text-[#17385b] sm:text-[#17385b] lg:text-white"
       }`
     }`;
 
@@ -82,7 +85,7 @@ const Header: React.FC<HeaderProps> = ({
           </div>
 
           {/* Desktop nav (large & above) */}
-          <nav className="hidden lg:flex items-center space-x-6 lg:space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6 lg:space-x-8   mobile-nav-fix ">
             <button
               onClick={() => handlePageChange("home")}
               className={linkClass("home")}
@@ -144,19 +147,19 @@ const Header: React.FC<HeaderProps> = ({
                     onClick={() => handlePageChange("software")}
                     className="block w-full text-left px-3 py-1 hover:text-[#17385b]"
                   >
-                    Software Development
+                    Software
                   </button>
                   <button
                     onClick={() => handlePageChange("hardware")}
                     className="block w-full text-left px-3 py-1 hover:text-[#17385b]"
                   >
-                    Hardware Solutions
+                    Hardware
                   </button>
                   <button
                     onClick={() => handlePageChange("marketing")}
                     className="block w-full text-left px-3 py-1 hover:text-[#17385b]"
                   >
-                    Digital Marketing
+                    Marketing
                   </button>
                 </div>
               )}
@@ -273,19 +276,19 @@ const Header: React.FC<HeaderProps> = ({
                     onClick={() => handlePageChange("software")}
                     className={linkClass("software")}
                   >
-                    Software Development
+                    Software
                   </button>
                   <button
                     onClick={() => handlePageChange("hardware")}
                     className={linkClass("hardware")}
                   >
-                    Hardware Solutions
+                    Hardware
                   </button>
                   <button
                     onClick={() => handlePageChange("marketing")}
                     className={linkClass("marketing")}
                   >
-                    Digital Marketing
+                    Marketing
                   </button>
                 </div>
               )}
