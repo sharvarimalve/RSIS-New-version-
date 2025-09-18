@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
 
 const AboutUs: React.FC = () => {
   /* ------------ DATA ------------ */
-  const heroImages = ["/office-desktop-with-laptop-analytics.jpg"];
+  const heroImages = ["/heroabout.jpg"];
 
   const values = [
     {

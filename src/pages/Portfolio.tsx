@@ -157,7 +157,7 @@ const Portfolio: React.FC = () => {
             {/* Hero */}
         <section
   className="relative h-[500px] flex items-center text-white text-center bg-gradient-to-r from-blue-900/80 to-cyan-700/80 bg-cover bg-center bg-no-repeat bg-blend-overlay"
-  style={{ backgroundImage: "url('/portfoliohero.jpg')" }}
+  style={{ backgroundImage: "url('/heroportfolio.jpg')" }}
 >
   <div className="container mx-auto px-4">
     <h1
