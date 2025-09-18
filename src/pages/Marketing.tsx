@@ -144,7 +144,7 @@ const Marketing: React.FC = () => {
   className="relative h-[500px] flex items-center justify-center bg-center bg-cover text-white px-4"
   style={{
     backgroundImage:
-      "url('/DigitalMarketing.jpg')",
+      "url('/marketinghero.jpg')",
   }}
 >
   <div className="absolute inset-0 bg-[rgba(0,0,50,0.6)]" />
