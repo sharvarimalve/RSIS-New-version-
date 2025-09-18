@@ -298,18 +298,12 @@ const Portfolio: React.FC = () => {
                         data-aos-duration="800"
                     >
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                            Need a reliable website partner for your business?
+                            “Let’s Build Something Amazing Together 🚀”
                         </h2>
                         <p className="mb-6">
-                            For the very best in web design, branding, and digital marketing, call{" "}
+                             Have an idea or project in mind? Share it with us and our experts will craft the perfect solution tailored for your business.
                             <strong>Right Serve Infotech System</strong> at{" "}
-                            <a
-                                href="tel:6302966932"
-                                className="text-cyan-300 hover:text-cyan-200 font-semibold"
-                            >
-                                (630) 296-6932
-                            </a>
-                            .
+                           
                         </p>
                         <a href="/contact">
                             <button className="px-6 py-3 bg-white text-[#001F54] font-semibold rounded-full hover:bg-cyan-100 transition">

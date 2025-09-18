@@ -10,9 +10,9 @@ const Hardware: React.FC = () => {
 
     const stats = [
         { number: "150+", label: "Projects" },
-        { number: "98%", label: "Client Satisfaction" },
+        { number: "100%", label: "Client Satisfaction" },
         { number: "24/7", label: "Technical Support" },
-        { number: "5+", label: "Years Experience" },
+        { number: "7+", label: "Years Experience" },
     ];
 
     const services = [
