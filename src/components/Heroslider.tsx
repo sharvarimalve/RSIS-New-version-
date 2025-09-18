@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 const images = [
   "/home2.jpg",
   "/team.jpg",
-  "/Homehero.jpg",
+  "/herohome.jpg",
   "/home2.jpg",
 ];
 

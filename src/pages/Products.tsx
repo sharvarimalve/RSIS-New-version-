@@ -175,7 +175,7 @@ const Products: React.FC = () => {
             {/* HERO */}
          <section
   className="relative h-[500px] flex items-center justify-center bg-cover bg-center text-white"
-  style={{ backgroundImage: "url('/producthero.jpg')" }}
+  style={{ backgroundImage: "url('/heroproduct.jpg')" }}
 >
   <div className="absolute inset-0 bg-black/40" />
   <div className="relative z-10 text-center px-4">

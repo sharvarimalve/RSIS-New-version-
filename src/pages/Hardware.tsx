@@ -70,7 +70,7 @@ const Hardware: React.FC = () => {
             {/* === Hero Section === */}
           <section
   className="relative h-[500px] bg-cover bg-center text-white flex flex-col justify-center items-center px-4"
-  style={{ backgroundImage: "url('/Hardwarehero.jpg')" }}
+  style={{ backgroundImage: "url('/herohardware.jpg')" }}
 >
   <div className="absolute inset-0 bg-black/60"></div>
   <div className="relative z-10 text-center">
