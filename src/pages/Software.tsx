@@ -18,12 +18,76 @@ const Software: React.FC = () => {
 
     const stats = [
         { number: "150+", label: "Software Projects" },
-        { number: "98%", label: "Client Satisfaction" },
+        { number: "100%", label: "Client Satisfaction" },
         { number: "24/7", label: "Technical Support" },
-        { number: "5+", label: "Years Experience" },
+        { number: "7+", label: "Years Experience" },
     ];
 
     const services = [
+        {
+            icon: <Code size={40} />,
+            title: "Android App Development",
+            description:
+                "Tailored web applications built with modern frameworks for optimal performance and user experience.",
+            image:
+                "/android-app-development-500x500.webp",
+        },
+        {
+            icon: <Code size={40} />,
+            title: "E-Commerce Web designing Services ",
+            description:
+                "We create engaging, user-friendly, and conversion-focused e-commerce websites that help businesses sell online with ease. ",
+            image:
+                "/ecommerce-web-designing-services-500x500.webp",
+        },
+        {
+            icon: <Code size={40} />,
+            title: "Dynamic Website Development",
+            description:
+                "Tailored web applications built with modern frameworks for optimal performance and user experience.",
+            image:
+                "/dynamic-website-development-services-500x500 (1).webp",
+        },
+        {
+            icon: <Code size={40} />,
+            title: "Web Hosting And Domain Registration Services",
+            description:
+                "Tailored web applications built with modern frameworks for optimal performance and user experience.",
+            image:
+                "/web-hosting-and-domain-registration-services-500x500.webp",
+        },
+        {
+            icon: <Code size={40} />,
+            title: "Website Development Services",
+            description:
+                "Tailored web applications built with modern frameworks for optimal performance and user experience.",
+            image:
+                "/website-development-services-500x500.webp",
+        },
+        {
+            icon: <Code size={40} />,
+            title: "Mobile App Development Services",
+            description:
+                "Tailored web applications built with modern frameworks for optimal performance and user experience.",
+            image:
+                "/mobile-app-development-services-500x500.webp",
+        },
+        {
+            icon: <Code size={40} />,
+            title: "Software Development Services",
+            description:
+                "Tailored web applications built with modern frameworks for optimal performance and user experience.",
+            image:
+                "/software-development-services-500x500.webp",
+        },
+        {
+            icon: <Code size={40} />,
+            title: "Web Development & Marketing",
+            description:
+                "Tailored web applications built with modern frameworks for optimal performance and user experience.",
+            image:
+                "/Web-development-Marketing-500x500.webp",
+        },
         {
             icon: <Code size={40} />,
             title: "Custom Web Development",
@@ -89,7 +153,7 @@ const Software: React.FC = () => {
         },
         {
             name: "Electron JS",
-            logo: "https://images.pexels.com/photos/160107/coffee-cup-and-saucer-black-coffee-loose-coffee-beans-160107.jpeg?auto=compress&cs=tinysrgb&w=100",
+            logo: "/electron-js.jpg",
         },
         {
             name: "AWS",
@@ -104,40 +168,40 @@ const Software: React.FC = () => {
     return (
         <div className="overflow-x-hidden">
             {/* === Hero Section === */}
-           <section
-  className="relative h-[500px] flex flex-col justify-center items-center text-center text-white bg-cover bg-center"
-  style={{ backgroundImage: "url('/career1.jpg')" }}
->
-  <div className="absolute inset-0 bg-black/60" />
-  <div className="relative z-10 px-4">
-    <h1
-      className="text-3xl md:text-5xl font-bold mb-2"
-      data-aos="fade-up"
-    >
-      Software Development Services
-    </h1>
-    <p
-      className="max-w-2xl mx-auto text-lg md:text-xl text-cyan-100 mb-10"
-      data-aos="fade-up"
-      data-aos-delay="150"
-    >
-      Transform your ideas into powerful software solutions with
-      cutting-edge technology and expert development.
-    </p>
-    <div
-      className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
-      data-aos="fade-up"
-      data-aos-delay="300"
-    >
-      {stats.map((s, i) => (
-        <div key={i} className="text-center">
-          <p className="text-3xl font-bold text-cyan-400">{s.number}</p>
-          <p className="text-sm text-cyan-100">{s.label}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+            <section
+                className="relative h-[500px] flex flex-col justify-center items-center text-center text-white bg-cover bg-center"
+                style={{ backgroundImage: "url('/career1.jpg')" }}
+            >
+                <div className="absolute inset-0 bg-black/60" />
+                <div className="relative z-10 px-4">
+                    <h1
+                        className="text-3xl md:text-5xl font-bold mb-2"
+                        data-aos="fade-up"
+                    >
+                        Software Development Services
+                    </h1>
+                    <p
+                        className="max-w-2xl mx-auto text-lg md:text-xl text-cyan-100 mb-10"
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                    >
+                        Transform your ideas into powerful software solutions with
+                        cutting-edge technology and expert development.
+                    </p>
+                    <div
+                        className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                    >
+                        {stats.map((s, i) => (
+                            <div key={i} className="text-center">
+                                <p className="text-3xl font-bold text-cyan-400">{s.number}</p>
+                                <p className="text-sm text-cyan-100">{s.label}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
             {/* === Services === */}
             <section className="py-20 bg-gray-50">
@@ -159,16 +223,17 @@ const Software: React.FC = () => {
                                 data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
                                 data-aos-delay={idx * 100}
                             >
-                                <div className="relative h-48 overflow-hidden">
+                                <div className="relative h-80 overflow-hidden">
                                     <img
                                         src={srv.image}
                                         alt={srv.title}
-                                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                                        className="w-full h-full object-fill transition-transform duration-500 hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/70 to-cyan-600/70 opacity-0 hover:opacity-100 transition flex items-center justify-center">
                                         <div className="text-white">{srv.icon}</div>
                                     </div>
                                 </div>
+
                                 <div className="p-6">
                                     <h3 className="text-xl font-semibold text-blue-900 mb-2">
                                         {srv.title}
@@ -201,7 +266,7 @@ const Software: React.FC = () => {
                                 data-aos="zoom-in-up"
                                 data-aos-delay={idx * 100}
                             >
-                                <div className="w-16 h-16 mx-auto mb-3">
+                                <div className="w-20 h-20 mx-auto mb-3">
                                     <img
                                         src={tech.logo}
                                         alt={tech.name}

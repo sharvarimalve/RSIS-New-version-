@@ -25,15 +25,24 @@ const Header: React.FC<HeaderProps> = ({
   }, []);
 
   // Active / inactive link style
-  const linkClass = (page: string) =>
-    `block text-base font-semibold px-2 py-1 transition-colors border-b-4 rounded-b-md
-  ${currentPage === page
-      ? "border-[#17385b] text-[#17385b] font-bold"
-      : `border-transparent hover:border-[#17385b] ${isScrolled
-        ? "text-[#17385b]"
-        : "text-[#17385b] sm:text-[#17385b] lg:text-white"
-      }`
-    }`;
+ const linkClass = (page: string) =>
+  `block text-base font-semibold px-2 py-1 transition-colors border-b-4 rounded-b-md
+  ${
+    currentPage === page
+      ? // ✅ Active link
+        isScrolled
+          ? "border-[#17385b] text-[#17385b] font-bold"
+          : "border-[#17385b] text-[#17385b] lg:border-white lg:text-white font-bold"
+      : // ✅ Inactive link
+        `border-transparent hover:border-[#17385b] ${
+          isScrolled
+            ? "text-[#17385b]"
+            : "text-[#17385b] lg:text-white"
+        }`
+  }`;
+
+
+
 
   const handlePageChange = (page: string) => {
     onPageChange(page);
@@ -44,12 +53,21 @@ const Header: React.FC<HeaderProps> = ({
 
   // For About & Services triggers
   const dropdownTriggerClass = (pages: string[]) =>
-    `block text-base font-semibold px-2 py-1 transition-colors border-b-4 rounded-b-md
-    ${pages.includes(currentPage)
-      ? "border-[#17385b] text-[#17385b] font-bold"
-      : `border-transparent hover:border-[#17385b] ${isScrolled ? "text-gray-800" : "text-white"
-      }`
-    }`;
+  `block text-base font-semibold px-2 py-1 transition-colors border-b-4 rounded-b-md
+  ${
+    pages.includes(currentPage)
+      ? // ✅ Active dropdown
+        isScrolled
+          ? "border-[#17385b] text-[#17385b] font-bold"
+          : "border-[#17385b] text-[#17385b] lg:border-white lg:text-white font-bold"
+      : // ✅ Inactive dropdown
+        `border-transparent hover:border-[#17385b] ${
+          isScrolled
+            ? "text-[#17385b]"
+            : "text-[#17385b] lg:text-white"
+        }`
+  }`;
+
 
   return (
     <header
@@ -93,20 +111,23 @@ const Header: React.FC<HeaderProps> = ({
               Home
             </button>
 
-            {/* About dropdown */}
-            <div className="relative">
+            {/* About dropdown (desktop) */}
+            <div
+              className="relative"
+              onMouseEnter={() => {
+                setIsAboutOpen(true);
+                setIsServicesOpen(false); // close other
+              }}
+              onMouseLeave={() => setIsAboutOpen(false)}
+            >
               <button
-                onClick={() => setIsAboutOpen(!isAboutOpen)}
-                className={dropdownTriggerClass([
-                  "about-us",
-                  "career",
-                  "our-team",
-                ])}
+                className={dropdownTriggerClass(["about-us", "career", "our-team"])}
               >
                 About
               </button>
               {isAboutOpen && (
-                <div className="absolute mt-2 w-40 bg-white shadow-md rounded p-2">
+               <div className="absolute top-full left-0 w-40 bg-white shadow-md rounded p-2">
+
                   <button
                     onClick={() => handlePageChange("about-us")}
                     className="block w-full text-left px-3 py-1 hover:text-[#17385b]"
@@ -129,20 +150,22 @@ const Header: React.FC<HeaderProps> = ({
               )}
             </div>
 
-            {/* Services dropdown */}
-            <div className="relative">
+            {/* Services dropdown (desktop) */}
+            <div
+              className="relative"
+              onMouseEnter={() => {
+                setIsServicesOpen(true);
+                setIsAboutOpen(false); // close other
+              }}
+              onMouseLeave={() => setIsServicesOpen(false)}
+            >
               <button
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className={dropdownTriggerClass([
-                  "software",
-                  "hardware",
-                  "marketing",
-                ])}
+                className={dropdownTriggerClass(["software", "hardware", "marketing"])}
               >
                 Services
               </button>
               {isServicesOpen && (
-                <div className="absolute mt-2 w-48 bg-white shadow-md rounded p-2">
+               <div className="absolute top-full left-0 w-48 bg-white shadow-md rounded p-2">
                   <button
                     onClick={() => handlePageChange("software")}
                     className="block w-full text-left px-3 py-1 hover:text-[#17385b]"
@@ -164,6 +187,7 @@ const Header: React.FC<HeaderProps> = ({
                 </div>
               )}
             </div>
+
 
             <button
               onClick={() => handlePageChange("portfolio")}

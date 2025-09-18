@@ -6,8 +6,13 @@ import TestimonialsSection from "../components/TestimonialsSection";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+interface HomeProps {
+  onPageChange: (page: string) => void;
+  onGetConnected: () => void;
+}
 
-const Home: React.FC = () => {
+
+const Home: React.FC<HomeProps> = ({ onPageChange, onGetConnected }) => {
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
@@ -35,7 +40,10 @@ const Home: React.FC = () => {
               offering both custom-tailored and product-based solutions to meet the
               unique needs of our clients.
             </p>
-            <button className="px-6 sm:px-8 py-2 sm:py-3 bg-[#002147] text-white text-base sm:text-lg rounded-lg shadow-md hover:bg-[#002147] transition">
+            <button
+              onClick={() => onPageChange("about-us")}
+              className="px-6 sm:px-8 py-2 sm:py-3 bg-[#002147] text-white text-base sm:text-lg rounded-lg shadow-md hover:bg-[#001530] transition"
+            >
               Read More
             </button>
           </div>
