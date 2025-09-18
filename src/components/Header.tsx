@@ -25,15 +25,24 @@ const Header: React.FC<HeaderProps> = ({
   }, []);
 
   // Active / inactive link style
-  const linkClass = (page: string) =>
-    `block text-base font-semibold px-2 py-1 transition-colors border-b-4 rounded-b-md
-  ${currentPage === page
-      ? "border-[#17385b] text-[#17385b] font-bold"
-      : `border-transparent hover:border-[#17385b] ${isScrolled
-        ? "text-[#17385b]"
-        : "text-[#17385b] sm:text-[#17385b] lg:text-white"
-      }`
-    }`;
+ const linkClass = (page: string) =>
+  `block text-base font-semibold px-2 py-1 transition-colors border-b-4 rounded-b-md
+  ${
+    currentPage === page
+      ? // ✅ Active link
+        isScrolled
+          ? "border-[#17385b] text-[#17385b] font-bold"
+          : "border-[#17385b] text-[#17385b] lg:border-white lg:text-white font-bold"
+      : // ✅ Inactive link
+        `border-transparent hover:border-[#17385b] ${
+          isScrolled
+            ? "text-[#17385b]"
+            : "text-[#17385b] lg:text-white"
+        }`
+  }`;
+
+
+
 
   const handlePageChange = (page: string) => {
     onPageChange(page);
@@ -44,12 +53,21 @@ const Header: React.FC<HeaderProps> = ({
 
   // For About & Services triggers
   const dropdownTriggerClass = (pages: string[]) =>
-    `block text-base font-semibold px-2 py-1 transition-colors border-b-4 rounded-b-md
-    ${pages.includes(currentPage)
-      ? "border-[#17385b] text-[#17385b] font-bold"
-      : `border-transparent hover:border-[#17385b] ${isScrolled ? "text-gray-800" : "text-white"
-      }`
-    }`;
+  `block text-base font-semibold px-2 py-1 transition-colors border-b-4 rounded-b-md
+  ${
+    pages.includes(currentPage)
+      ? // ✅ Active dropdown
+        isScrolled
+          ? "border-[#17385b] text-[#17385b] font-bold"
+          : "border-[#17385b] text-[#17385b] lg:border-white lg:text-white font-bold"
+      : // ✅ Inactive dropdown
+        `border-transparent hover:border-[#17385b] ${
+          isScrolled
+            ? "text-[#17385b]"
+            : "text-[#17385b] lg:text-white"
+        }`
+  }`;
+
 
   return (
     <header

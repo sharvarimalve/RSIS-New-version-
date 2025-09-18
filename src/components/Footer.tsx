@@ -7,8 +7,8 @@ interface MinimalFooterProps {
 
 const MinimalFooter: React.FC<MinimalFooterProps> = ({ onPageChange }) => {
   return (
-    <footer className="bg-gray-100 text-gray-700 text-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gray-100 text-gray-700 text-sm relative">
+     <div className="absolute -top-2 left-0 w-full h-2 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
         {/* Top Row: Links */}
         <div className="flex flex-col items-center gap-3 py-3 sm:flex-row sm:justify-center">
           <button onClick={() => onPageChange("home")} className="hover:text-blue-700">
@@ -46,7 +46,7 @@ const MinimalFooter: React.FC<MinimalFooterProps> = ({ onPageChange }) => {
 
         {/* Bottom Row */}
         <div className="border-t border-gray-300 py-2 text-center text-xs text-gray-500">
-          © {new Date().getFullYear()} Right Serve Infotech Systems Pvt. Ltd. All Rights Reserved. &nbsp; | &nbsp; Customer Service: 1-866-991-9222
+          © {new Date().getFullYear()}Copyright RIGHT SERVE INFOTECH SYSTEMS PVT. LTD. 2025 ; Customer Service: 1-866-991-9222
         </div>
       </div>
     </footer>

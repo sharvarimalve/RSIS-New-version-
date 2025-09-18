@@ -33,7 +33,12 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case "home":
-        return <Home onGetConnected={handleGetConnected} />;
+        return (
+          <Home
+            onPageChange={handlePageChange}
+            onGetConnected={handleGetConnected}
+          />
+        );
       case "about-us":
         return <AboutUs />;
       case "career":
@@ -53,7 +58,12 @@ function App() {
       case "contact":
         return <Contact />;
       default:
-        return <Home onGetConnected={handleGetConnected} />;
+        return (
+          <Home
+            onPageChange={handlePageChange}
+            onGetConnected={handleGetConnected}
+          />
+        );
     }
   };
 
