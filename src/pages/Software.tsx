@@ -89,7 +89,7 @@ const Software: React.FC = () => {
         },
         {
             name: "Electron JS",
-            logo: "https://images.pexels.com/photos/160107/coffee-cup-and-saucer-black-coffee-loose-coffee-beans-160107.jpeg?auto=compress&cs=tinysrgb&w=100",
+            logo: "/electron-js.jpg",
         },
         {
             name: "AWS",
@@ -201,7 +201,7 @@ const Software: React.FC = () => {
                                 data-aos="zoom-in-up"
                                 data-aos-delay={idx * 100}
                             >
-                                <div className="w-16 h-16 mx-auto mb-3">
+                                <div className="w-20 h-20 mx-auto mb-3">
                                     <img
                                         src={tech.logo}
                                         alt={tech.name}
