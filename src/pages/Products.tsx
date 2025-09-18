@@ -35,7 +35,7 @@ const Products: React.FC = () => {
         },
         {
             id: 2,
-            name: "Trajecctoryfy",
+            name: "Trajectoryfy",
             category: "Business Software",
             price: "₹2,999",
             rating: 4.6,
@@ -72,7 +72,7 @@ const Products: React.FC = () => {
         },
         {
             id: 4,
-            name: "TubeMonitise",
+            name: "TubeMonitize",
             category: "Business Software",
             price: "₹5,499",
             rating: 4.5,
@@ -90,7 +90,7 @@ const Products: React.FC = () => {
         },
         {
             id: 5,
-            name: "Shikhya Sutra",
+            name: "Shiksha Sutra",
             category: "Business Software",
             price: "₹1,999",
             rating: 4.3,
@@ -262,11 +262,8 @@ const Products: React.FC = () => {
                                         ))}
                                     </div>
 
-                                    {/* Price */}
-                                    <p className="text-xl font-bold text-gray-800">
-                                        {product.price}
-                                        <span className="ml-1 text-sm text-gray-500">/month</span>
-                                    </p>
+                                  
+                                   
                                 </div>
                             </div>
                         ))}
