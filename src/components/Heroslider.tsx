@@ -6,6 +6,7 @@ const images = [
   "/home2.jpg",
   "/team.jpg",
   "/Homehero.jpg",
+  "/home2.jpg",
 ];
 
 const HeroSlider: React.FC = () => {
