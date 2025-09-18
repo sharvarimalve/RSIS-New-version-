@@ -164,30 +164,6 @@ const Portfolio: React.FC = () => {
 
     return (
         <div className="overflow-x-hidden">
-<<<<<<< HEAD
-            {/* Hero */}
-            <section
-                className="relative h-[500px] flex items-center text-white text-center bg-gradient-to-r from-blue-900/80 to-cyan-700/80 bg-cover bg-center bg-no-repeat bg-blend-overlay"
-                style={{ backgroundImage: "url('/heroportfolio.jpg')" }}
-            >
-                <div className="container mx-auto px-4">
-                    <h1
-                        className="text-4xl md:text-5xl font-bold mb-6"
-                        data-aos="fade-up"
-                        data-aos-duration="800"
-                    >
-                        Our Portfolio
-                    </h1>
-                    <p
-                        className="text-lg font-bold max-w-2xl mx-auto mb-12 text-white"
-                        data-aos="fade-up"
-                        data-aos-duration="800"
-                    >
-                        Showcasing our successful projects and the impact we've made for our
-                        clients across various industries
-                    </p>
-
-=======
 
 
             {/* Hero */}
@@ -212,7 +188,6 @@ const Portfolio: React.FC = () => {
                         clients across various industries
                     </p>
 
->>>>>>> ea6374a398a9aa1ece88c3792477162e09d352f7
                 </div>
             </section>
 
