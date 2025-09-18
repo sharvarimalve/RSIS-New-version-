@@ -40,7 +40,9 @@ function App() {
           />
         );
       case "about-us":
-        return <AboutUs />;
+        return <AboutUs
+            onPageChange={handlePageChange}
+        />;
       case "career":
         return <Career />;
       case "our-team":
