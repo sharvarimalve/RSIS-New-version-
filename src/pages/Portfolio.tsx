@@ -13,13 +13,15 @@ const Portfolio: React.FC = () => {
 
     // ✅ Projects (your full list kept)
     const projects = [
+
+        // Software Development
         {
             id: 1,
             title: "MDR Management Software",
             category: "Software Development",
             description: "Financing software highlights bank-specified MDR rates and is used by large enterprises, including multinational companies, for financial management.",
             image: "public/software-porfolio.png",
-            technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+            technologies: ["React", "Node.js", "MongoDB"],
             client: "RetailMax Solutions",
             date: "2024",
             link: "#",
@@ -27,10 +29,10 @@ const Portfolio: React.FC = () => {
         {
             id: 2,
             title: "NSM & Association",
-            category: "Web Development",
+            category: "Software Development",
             description: "Web and mobile CRM solutions give field executives real-time access to customer data, enhancing lead tracking, scheduling, and communication.",
             image: "public/nsm3 (1)app.png",
-            technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+            technologies: ["React", "Node.js", "MongoDB"],
             client: "RetailMax Solutions",
             date: "2024",
             link: "#",
@@ -41,99 +43,107 @@ const Portfolio: React.FC = () => {
             category: "Software Development",
             description: "Seasonal billing systems help businesses manage fluctuating sales cycles, maintain cash flow, and enhance efficiency throughout the year.",
             image: "public/sbm3 (1)seanable.png",
-            technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+            technologies: ["React", "Node.js", "MongoDB",],
             client: "RetailMax Solutions",
             date: "2024",
             link: "#",
         },
+
         {
             id: 4,
-            title: "BluLadder",
-            category: "App Development",
+            title: "Blue Ladder",
+            category: "Software Development",
             description: "Effective project planning uses collaboration tools and resource allocation to enhance communication and align teams for successful outcomes.",
-            image: "public/blue3laddere app.png",
-            technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+            image: "/blue3laddere app.png",
+            technologies: ["React", "Node.js", "MongoDB",],
             client: "RetailMax Solutions",
             date: "2024",
             link: "#",
         },
         {
             id: 5,
-            title: "Secure Build",
-            category: "App Development",
-            description: "Secure Build embeds security into the development process, performing vulnerability scans and assessments to ensure compliance with industry standards.",
-            image: "public/app.png",
-            technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+            title: "Inventory Management System",
+            category: "Software Development",
+            description: "Efficient inventory tracking provides real-time stock visibility, reduces excess and stockouts, and enables informed purchasing for enhanced productivity.",
+            image: "/Inventory.png",
+            technologies: ["React", "Node.js", "MongoDB"],
+            client: "RetailMax Solutions",
+            date: "2024",
+            link: "#",
+        },
+        {
+            id: 5,
+            title: "Shikshasutra",
+            category: "Software Development",
+            description: "A School ERP system streamlines and manages academic processes, enhancing efficiency and organization within educational institutions.",
+            image: "/shikshasutr.png",
+            technologies: ["React", "Node.js", "MongoDB",],
             client: "RetailMax Solutions",
             date: "2024",
             link: "#",
         },
         {
             id: 6,
-            title: "Secure Build",
-            category: "Digital Marketing",
-            description: "Secure Build embeds security into the development process, performing vulnerability scans and assessments to ensure compliance with industry standards.",
-            image: "public/app.png",
-            technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+            title: "Virtual Pointer Software",
+            category: "Software Development",
+            description: "The Virtual Painter lets users customize 3D models, changing colors and structure elements for real-time design visualization.",
+            image: "/Virtual-pointer-system.png",
+            technologies: ["React", "Node.js", "MongoDB",],
             client: "RetailMax Solutions",
             date: "2024",
             link: "#",
         },
+
+
+
+        // App Development
         {
             id: 7,
-            title: "Secure Build",
-            category: "Hardware Solutions",
-            description: "Secure Build embeds security into the development process, performing vulnerability scans and assessments to ensure compliance with industry standards.",
-            image: "public/hardware4.png",
-            technologies: ["IOT", "Ardino"],
+            title: "BluLadder",
+            category: "App Development",
+            description: "Effective project planning uses collaboration tools and resource allocation to enhance communication and align teams for successful outcomes.",
+            image: "/blueladderapp.jpg",
+            technologies: ["React", "Node.js", "MongoDB", "React Native"],
             client: "RetailMax Solutions",
             date: "2024",
             link: "#",
         },
         {
             id: 8,
-            title: "Infrastructure Build",
-            category: "Hardware Solutions",
+            title: "Dose Care",
+            category: "App Development",
             description: "Secure Build embeds security into the development process, performing vulnerability scans and assessments to ensure compliance with industry standards.",
-            image: "public/hardware3.jpg",
-            technologies: ["IOT", "Ardino"],
-            client: "RetailMax Solutions",
-            date: "2024",
-            link: "#",
-        },
-        {
-            id: 8,
-            title: "Infrastructure Build",
-            category: "Digital Marketing",
-            description: "Secure Build embeds security into the development process, performing vulnerability scans and assessments to ensure compliance with industry standards.",
-            image: "public/marketing.jpg",
-            technologies: ["communication"],
+            image: "/DoseCare.jpg",
+            technologies: ["React", "Node.js", "MongoDB", "React Native"],
             client: "RetailMax Solutions",
             date: "2024",
             link: "#",
         },
         {
             id: 9,
-            title: "Social Media Management",
-            category: "Digital Marketing",
-            description: "Engage your audience on Instagram, LinkedIn, TikTok, and other channels with strategic content.",
-            image: "public/marketing1.jpg",
-            technologies: ["communication"],
+            title: "Citri Hub",
+            category: "App Development",
+            description: "Secure Build embeds security into the development process, performing vulnerability scans and assessments to ensure compliance with industry standards.",
+            image: "/Citrihub.jpg",
+            technologies: ["React", "Node.js", "MongoDB", "React Native"],
             client: "RetailMax Solutions",
             date: "2024",
             link: "#",
         },
         {
             id: 10,
-            title: "Email Marketing",
-            category: "Digital Marketing",
-            description: "Deliver personalized campaigns and automation flows to nurture and convert your leads..",
-            image: "public/marketing2.jpg",
-            technologies: ["communication"],
+            title: "NSM & Associates",
+            category: "App Development",
+            description: "Web and mobile CRM solutions give field executives real-time access to customer data, enhancing lead tracking, scheduling, and communication.",
+            image: "/nsm3 (1)app.png",
+            technologies: ["React", "Node.js", "MongoDB", "React Native"],
             client: "RetailMax Solutions",
             date: "2024",
             link: "#",
         },
+
+
+
 
     ];
 
@@ -154,39 +164,32 @@ const Portfolio: React.FC = () => {
 
     return (
         <div className="overflow-x-hidden">
-            {/* Hero */}
-        <section
-  className="relative h-[500px] flex items-center text-white text-center bg-gradient-to-r from-blue-900/80 to-cyan-700/80 bg-cover bg-center bg-no-repeat bg-blend-overlay"
-  style={{ backgroundImage: "url('/heroportfolio.jpg')" }}
->
-  <div className="container mx-auto px-4">
-    <h1
-      className="text-4xl md:text-5xl font-bold mb-6"
-      data-aos="fade-up"
-      data-aos-duration="800"
-    >
-      Our Portfolio
-    </h1>
-    <p
-      className="text-lg font-bold max-w-2xl mx-auto mb-12 text-white"
-      data-aos="fade-up"
-      data-aos-duration="800"
-    >
-      Showcasing our successful projects and the impact we've made for our
-      clients across various industries
-    </p>
 
-    {/* Stats block if needed later */}
-    {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
-      {stats.map((stat) => (
-        <div key={stat.label} className="text-center">
-          <p className="text-3xl font-bold text-[#001F54]">{stat.number}</p>
-          <p className="text-sm text-[#001F54]">{stat.label}</p>
-        </div>
-      ))}
-    </div> */}
-  </div>
-</section>
+
+            {/* Hero */}
+            <section
+                className="relative h-[500px] flex items-center text-white text-center bg-gradient-to-r from-blue-900/80 to-cyan-700/80 bg-cover bg-center bg-no-repeat bg-blend-overlay"
+                style={{ backgroundImage: "url('/heroportfolio.jpg')" }}
+            >
+                <div className="container mx-auto px-4">
+                    <h1
+                        className="text-4xl md:text-5xl font-bold mb-6"
+                        data-aos="fade-up"
+                        data-aos-duration="800"
+                    >
+                        Our Portfolio
+                    </h1>
+                    <p
+                        className="text-lg font-bold max-w-2xl mx-auto mb-12 text-white"
+                        data-aos="fade-up"
+                        data-aos-duration="800"
+                    >
+                        Showcasing our successful projects and the impact we've made for our
+                        clients across various industries
+                    </p>
+
+                </div>
+            </section>
 
 
             {/* Filter */}
@@ -271,64 +274,7 @@ const Portfolio: React.FC = () => {
             </section>
 
 
-            {/* Testimonials */}
-            {/* <section className="py-20 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-[#001F54] mb-4">
-                            What Our Clients Say
-                        </h2>
-                        <p className="text-gray-600">
-                            Feedback from our satisfied clients about our work and services
-                        </p>
-                    </div>
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {[
-                            {
-                                text: `"Right Serve Infotech delivered an exceptional e-commerce platform that exceeded our expectations."`,
-                                author: "Saurabh Jagthap",
-                                role: "Director",
-                                img: "/saurabh_jagthap.jpg",
-                            },
-                            {
-                                text: `"The healthcare management system they developed has revolutionized our operations."`,
-                                author: "Piyush Pandey",
-                                role: "Director",
-                                img: "/piyush_pandey.jpg",
-                            },
-                            {
-                                text: `"Their digital marketing expertise helped us achieve a 300% increase in website traffic."`,
-                                author: "Rahul Chaudhari",
-                                role: "Marketing Director",
-                                img: "/rahul_chaudhari.jpeg",
-                            },
-                        ].map((t) => (
-                            <div
-                                key={t.author}
-                                className="bg-white p-8 rounded-xl shadow hover:shadow-lg transition"
-                            >
-                                <p className="text-gray-700 italic mb-6">{t.text}</p>
-                                <div className="flex items-center gap-4 mb-4">
-                                    <img
-                                        src={t.img}
-                                        alt={t.author}
-                                        className="w-12 h-12 rounded-full object-cover"
-                                    />
-                                    <div>
-                                        <h5 className="text-[#001F54] font-semibold">{t.author}</h5>
-                                        <span className="text-gray-500 text-sm">{t.role}</span>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-2 text-cyan-600 font-medium">
-                                    <Award size={18} /> 5.0 Rating
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section> */}
-
-
+            {/* Call to Action */}
             <section className="relative py-5 bg-[#001F54] rounded-2xl">
                 <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 px-4">
                     {/* Left Side - Rocket Image */}
@@ -425,6 +371,8 @@ const Portfolio: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Video Section */}
             <section className="relative h-screen flex items-center justify-center text-white text-center overflow-hidden">
                 {/* Video background */}
                 <video
@@ -468,27 +416,6 @@ const Portfolio: React.FC = () => {
                 </div>
             </section>
 
-
-            {/* CTA */}
-            {/* <section className="py-24 bg-gradient-to-r from-blue-900 to-cyan-700 text-white text-center">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                        Ready to Start Your Next Project?
-                    </h2>
-                    <p className="text-cyan-100 mb-8">
-                        Let's discuss how we can help you achieve similar success with your
-                        next project.
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-4">
-                        <button className="px-6 py-3 rounded-full bg-cyan-500 hover:bg-cyan-600 font-semibold text-white">
-                            Start Your Project
-                        </button>
-                        <button className="px-6 py-3 rounded-full bg-white text-blue-900 font-semibold hover:bg-transparent hover:text-white hover:border-white border transition">
-                            View All Services
-                        </button>
-                    </div>
-                </div>
-            </section> */}
         </div>
     );
 };
