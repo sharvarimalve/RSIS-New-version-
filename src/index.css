@@ -40,35 +40,55 @@ body {
 
 html,
 body {
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
+}
+
+.home-hero {
     overflow-x: hidden;
 }
 
 /* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
     width: 10px;
-    /* scrollbar ki width */
+    overscroll-behavior-x: none;
 }
 
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
-    /* track ka background */
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #002147;
-    /* NEAVY BLUE thumb */
     border-radius: 6px;
-    /* rounded corners */
     border: 2px solid #f1f1f1;
-    /* thumb ke aas-paas thoda space */
+    overscroll-behavior-x: none;
+}
+
+/* Disable both horizontal & vertical scrolling and hide scrollbars */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
+    /* stop vertical scroll */
+    /* overscroll-behavior: none; */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    /* display: none; */
+    /* Chrome, Edge, Safari */
 }
 
 /* Firefox */
 * {
     scrollbar-width: thin;
-    /* slim scrollbar */
     scrollbar-color: #002147 #f1f1f1;
-    /* thumb color | track color */
+    overscroll-behavior-x: none;
 }
 
 /*  Mobile & tablet screens (<= 1024px) */
@@ -674,4 +694,41 @@ body {
 
 .animate-marqueeReverse {
     animation: marquee-reverse 20s linear infinite;
+}
+
+/* ==== HeroSlider Fix for 1280px ==== */
+@media (max-width: 1280px) {
+
+    /* Remove any accidental horizontal overflow */
+    body,
+    html {
+        overflow-x: hidden;
+    }
+
+    /* Hero container shouldn’t exceed screen */
+    .home-hero,
+    .hero-slider-wrapper {
+        max-width: 100%;
+    }
+
+    /* Force images to stay inside */
+    .home-hero {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Curved SVG bottom should not stretch beyond viewport */
+    .hero-slider-wrapper svg {
+        width: 100% !important;
+        height: auto;
+        display: block;
+    }
+
+    /* Optional: tighten padding/margins for text */
+    .hero-slider-wrapper .text-center {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
