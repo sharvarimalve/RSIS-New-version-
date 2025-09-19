@@ -266,25 +266,13 @@ const Contact: React.FC = () => {
         <div className="container mx-auto flex flex-col lg:flex-row items-center gap-8">
           <div className="w-full lg:w-1/2 text-center lg:text-left text-white">
             <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-3">
-              Get ahead with smarter solutions
+             "Your Vision, Our Expertise – Let’s Make It Happen!"
             </h2>
             <p className="mb-4 text-sm sm:text-base leading-relaxed">
-              Discover how <span className="font-semibold">RightServe</span> can
-              transform your business with innovative IT solutions. Let’s
-              discuss your project today.{" "}
-              <a
-                href="tel:6302966932"
-                className="text-cyan-300 hover:text-cyan-200 font-semibold"
-              >
-                (630) 296-6932
-              </a>
-              .
+             Have a project in mind? Whether it’s building software, scaling your business,
+              or crafting a digital presence — our team is here to turn your ideas into reality.            
             </p>
-            <a href="/contact">
-              <button className="px-4 sm:px-5 py-2 bg-white text-[#001F54] font-semibold rounded-full hover:bg-cyan-100 transition text-sm sm:text-base">
-                Get A Proposal
-              </button>
-            </a>
+            <p> 📩 Reach out today and let’s start building something amazing together!</p>
           </div>
 
           <div
