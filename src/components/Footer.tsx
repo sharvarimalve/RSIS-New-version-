@@ -7,7 +7,7 @@ interface MinimalFooterProps {
 
 const MinimalFooter: React.FC<MinimalFooterProps> = ({ onPageChange }) => {
   return (
-    <footer className="bg-gray-100 text-gray-700 text-sm relative">
+    <footer className="bg-gray-100 text-gray-700 text-sm relative mt-4">
      <div className="absolute -top-2 left-0 w-full h-2 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
         {/* Top Row: Links */}
         <div className="flex flex-col items-center gap-3 py-3 sm:flex-row sm:justify-center">

@@ -13,6 +13,7 @@ interface HomeProps {
 
 
 const Home: React.FC<HomeProps> = ({ onPageChange, onGetConnected }) => {
+
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
