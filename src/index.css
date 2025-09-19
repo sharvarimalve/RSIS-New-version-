@@ -59,7 +59,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #002147;
+    /* background-color: #002147; */
     border-radius: 6px;
     border: 2px solid #f1f1f1;
     overscroll-behavior-x: none;
@@ -84,11 +84,17 @@ body::-webkit-scrollbar {
     /* Chrome, Edge, Safari */
 }
 
+.getconnect-form {
+    scrollbar-width: none;
+
+}
+
 /* Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: #002147 #f1f1f1;
+    /* scrollbar-color: #002147 #f1f1f1; */
     overscroll-behavior-x: none;
+    scrollbar-width: none;
 }
 
 /*  Mobile & tablet screens (<= 1024px) */
@@ -107,15 +113,38 @@ body::-webkit-scrollbar {
 
     @media (max-width: 1024px) {
         .mobile-nav-fix {
-            background: rgba(23, 56, 91, 0.95);
-            /* Navy blue semi-transparent */
             z-index: 9999;
-            /* Image ke upar rahe */
             color: #fff;
-            /* Text clearly visible */
+        }
+
+        header .company-name {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .mobile-nav-fix {
+            z-index: 9999;
+            color: #fff;
+        }
+
+        header .company-name {
+            display: none !important;
         }
     }
 }
+
+@media (min-width: 1024px) and (max-width: 1086px) {
+    .mobile-nav-fix {
+        z-index: 9999;
+        color: #fff;
+    }
+
+    header .company-name {
+        display: none !important;
+    }
+}
+
 
 /* ================aboutus===================== */
 /* Animations */
@@ -694,41 +723,4 @@ body::-webkit-scrollbar {
 
 .animate-marqueeReverse {
     animation: marquee-reverse 20s linear infinite;
-}
-
-/* ==== HeroSlider Fix for 1280px ==== */
-@media (max-width: 1280px) {
-
-    /* Remove any accidental horizontal overflow */
-    body,
-    html {
-        overflow-x: hidden;
-    }
-
-    /* Hero container shouldn’t exceed screen */
-    .home-hero,
-    .hero-slider-wrapper {
-        max-width: 100%;
-    }
-
-    /* Force images to stay inside */
-    .home-hero {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        display: block;
-    }
-
-    /* Curved SVG bottom should not stretch beyond viewport */
-    .hero-slider-wrapper svg {
-        width: 100% !important;
-        height: auto;
-        display: block;
-    }
-
-    /* Optional: tighten padding/margins for text */
-    .hero-slider-wrapper .text-center {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
 }

@@ -230,7 +230,7 @@ const Portfolio: React.FC = () => {
                                     <img
                                         src={project.image}
                                         alt={project.title}
-                                        className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                                        className="w-full h-full object-fill transition duration-500 group-hover:scale-110"
                                     />
                                 </div>
 
@@ -301,9 +301,9 @@ const Portfolio: React.FC = () => {
                             “Let’s Build Something Amazing Together 🚀”
                         </h2>
                         <p className="mb-6">
-                             Have an idea or project in mind? Share it with us and our experts will craft the perfect solution tailored for your business.
+                            Have an idea or project in mind? Share it with us and our experts will craft the perfect solution tailored for your business.
                             <strong>Right Serve Infotech System</strong> at{" "}
-                           
+
                         </p>
                         <a href="/contact">
                             <button className="px-6 py-3 bg-white text-[#001F54] font-semibold rounded-full hover:bg-cyan-100 transition">
@@ -360,7 +360,7 @@ const Portfolio: React.FC = () => {
                         <img
                             src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=600"
                             alt="Success Metrics"
-                            className="rounded-2xl shadow-lg w-full h-96 object-cover"
+                            className="rounded-2xl shadow-lg w-full h-96 object-fill"
                         />
                     </div>
                 </div>

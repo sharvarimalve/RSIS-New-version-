@@ -3,10 +3,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const images = [
-  "/home2.jpg",
+  "home/team-hero.png",
   "/team.jpg",
-  "/herohome.jpg",
-  "/home2.jpg",
+  // "/herohome.jpg",
+  // "/home2.jpg",
 ];
 
 const HeroSlider: React.FC = () => {

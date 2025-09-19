@@ -25,21 +25,19 @@ const Header: React.FC<HeaderProps> = ({
   }, []);
 
   // Active / inactive link style
- const linkClass = (page: string) =>
-  `block text-base font-semibold px-2 py-1 transition-colors border-b-4 rounded-b-md
-  ${
-    currentPage === page
+  const linkClass = (page: string) =>
+    `block text-base font-semibold px-2 py-1 transition-colors border-b-4 rounded-b-md
+  ${currentPage === page
       ? // ✅ Active link
-        isScrolled
-          ? "border-[#17385b] text-[#17385b] font-bold"
-          : "border-[#17385b] text-[#17385b] lg:border-white lg:text-white font-bold"
+      isScrolled
+        ? "border-[#17385b] text-[#17385b] font-bold"
+        : "border-[#17385b] text-[#17385b] lg:border-white lg:text-white font-bold"
       : // ✅ Inactive link
-        `border-transparent hover:border-[#17385b] ${
-          isScrolled
-            ? "text-[#17385b]"
-            : "text-[#17385b] lg:text-white"
-        }`
-  }`;
+      `border-transparent hover:border-[#17385b] ${isScrolled
+        ? "text-[#17385b]"
+        : "text-[#17385b] lg:text-white"
+      }`
+    }`;
 
 
 
@@ -53,20 +51,18 @@ const Header: React.FC<HeaderProps> = ({
 
   // For About & Services triggers
   const dropdownTriggerClass = (pages: string[]) =>
-  `block text-base font-semibold px-2 py-1 transition-colors border-b-4 rounded-b-md
-  ${
-    pages.includes(currentPage)
+    `block text-base font-semibold px-2 py-1 transition-colors border-b-4 rounded-b-md
+  ${pages.includes(currentPage)
       ? // ✅ Active dropdown
-        isScrolled
-          ? "border-[#17385b] text-[#17385b] font-bold"
-          : "border-[#17385b] text-[#17385b] lg:border-white lg:text-white font-bold"
+      isScrolled
+        ? "border-[#17385b] text-[#17385b] font-bold"
+        : "border-[#17385b] text-[#17385b] lg:border-white lg:text-white font-bold"
       : // ✅ Inactive dropdown
-        `border-transparent hover:border-[#17385b] ${
-          isScrolled
-            ? "text-[#17385b]"
-            : "text-[#17385b] lg:text-white"
-        }`
-  }`;
+      `border-transparent hover:border-[#17385b] ${isScrolled
+        ? "text-[#17385b]"
+        : "text-[#17385b] lg:text-white"
+      }`
+    }`;
 
 
   return (
@@ -86,7 +82,7 @@ const Header: React.FC<HeaderProps> = ({
               alt="Right Serve Infotech Systems"
               className="h-12 w-12 sm:h-14 sm:w-14 rounded-full mr-3"
             />
-            <div className="hidden sm:block">
+            <div className="hidden sm:block company-name">
               <h1
                 className={`text-lg sm:text-xl font-bold ${isScrolled ? "text-[#17385b]" : "text-white"
                   }`}
@@ -103,7 +99,7 @@ const Header: React.FC<HeaderProps> = ({
           </div>
 
           {/* Desktop nav (large & above) */}
-          <nav className="hidden lg:flex items-center space-x-6 lg:space-x-8   mobile-nav-fix ">
+          <nav className="hidden lg:flex items-center space-x-6 lg:space-x-8  md:space-x-4  mobile-nav-fix ">
             <button
               onClick={() => handlePageChange("home")}
               className={linkClass("home")}
@@ -126,7 +122,7 @@ const Header: React.FC<HeaderProps> = ({
                 About
               </button>
               {isAboutOpen && (
-               <div className="absolute top-full left-0 w-40 bg-white shadow-md rounded p-2">
+                <div className="absolute top-full left-0 w-40 bg-white shadow-md rounded p-2">
 
                   <button
                     onClick={() => handlePageChange("about-us")}
@@ -165,7 +161,7 @@ const Header: React.FC<HeaderProps> = ({
                 Services
               </button>
               {isServicesOpen && (
-               <div className="absolute top-full left-0 w-48 bg-white shadow-md rounded p-2">
+                <div className="absolute top-full left-0 w-48 bg-white shadow-md rounded p-2">
                   <button
                     onClick={() => handlePageChange("software")}
                     className="block w-full text-left px-3 py-1 hover:text-[#17385b]"
