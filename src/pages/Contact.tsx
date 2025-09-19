@@ -173,88 +173,88 @@ const Contact: React.FC = () => {
       </section>
 
       {/* ===== Contact Form ===== */}
-      <section className="flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16">
-        <div
-          className="max-w-6xl w-full bg-white rounded-3xl 
+  <section className="flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16">
+  <div
+    className="max-w-6xl w-full bg-white rounded-3xl 
       shadow-[0_10px_25px_rgba(0,0,0,0.15),0_6px_10px_rgba(0,0,0,0.1)] 
       overflow-hidden grid grid-cols-1 md:grid-cols-2 
       transform transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 
       relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-2 
       before:bg-gradient-to-r before:from-[#001F54]/20 before:to-transparent"
-          data-aos="zoom-in"
-        >
-          {/* Left Side - Form */}
-          <div className="p-6 sm:p-12 flex flex-col justify-center relative z-20">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#001F54] mb-6 sm:mb-8">
-              Contact us
-            </h2>
+    data-aos="zoom-in"
+  >
+    {/* Left Side - Form */}
+    <div className="p-6 sm:p-12 flex flex-col justify-center relative z-20">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#001F54] mb-6 sm:mb-8">
+        Contact us
+      </h2>
 
-            <form className="space-y-6 sm:space-y-8" onSubmit={handleSubmit}>
-              {/* Name */}
-              <div className="relative">
-                <User className="absolute left-3 top-1/2 -translate-y-1/2 text-[#001F54]" />
-                <input
-                  name="name"
-                  value={form.name}
-                  onChange={handleChange}
-                  type="text"
-                  placeholder="Name"
-                  className="w-full pl-10 pr-4 py-3 sm:py-4 rounded-lg border border-gray-200 shadow-inner 
+      <form className="space-y-6 sm:space-y-8" onSubmit={handleSubmit}>
+        {/* Name */}
+        <div className="relative">
+          <User className="absolute left-3 top-1/2 -translate-y-1/2 text-[#001F54]" />
+          <input
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            type="text"
+            placeholder="Name"
+            className="w-full pl-10 pr-4 py-3 sm:py-4 rounded-lg border border-gray-200 shadow-inner 
               focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700"
-                />
-                {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
-              </div>
+          />
+          {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+        </div>
 
-              {/* Email */}
-              <div className="relative">
-                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-[#001F54]" />
-                <input
-                  name="email"
-                  value={form.email}
-                  onChange={handleChange}
-                  type="email"
-                  placeholder="Email"
-                  className="w-full pl-10 pr-4 py-3 sm:py-4 rounded-lg border border-gray-200 shadow-inner 
+        {/* Email */}
+        <div className="relative">
+          <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-[#001F54]" />
+          <input
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            type="email"
+            placeholder="Email"
+            className="w-full pl-10 pr-4 py-3 sm:py-4 rounded-lg border border-gray-200 shadow-inner 
               focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700"
-                />
-                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
-              </div>
+          />
+          {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+        </div>
 
-              {/* Message */}
-              <div className="relative">
-                <MessageSquare className="absolute left-3 top-3 text-[#001F54]" />
-                <textarea
-                  name="message"
-                  value={form.message}
-                  onChange={handleChange}
-                  rows={5}
-                  placeholder="Message"
-                  className="w-full pl-10 pr-4 py-3 sm:py-4 rounded-lg border border-gray-200 shadow-inner 
+        {/* Message */}
+        <div className="relative">
+          <MessageSquare className="absolute left-3 top-3 text-[#001F54]" />
+          <textarea
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            rows={5}
+            placeholder="Message"
+            className="w-full pl-10 pr-4 py-3 sm:py-4 rounded-lg border border-gray-200 shadow-inner 
               focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700 resize-none"
-                />
-                {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
-              </div>
+          />
+          {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+        </div>
 
-              <button
-                type="submit"
-                className="w-full bg-[#002147] text-white font-semibold py-3 sm:py-4 rounded-lg 
+        <button
+          type="submit"
+          className="w-full bg-[#001F54] text-white font-semibold py-3 sm:py-4 rounded-lg 
             shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1 
             text-base sm:text-lg"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
 
-          {/* Right Side - Illustration */}
-          <div
-            className="hidden md:flex items-center justify-center bg-gradient-to-tr from-blue-100 to-blue-50 relative"
-            data-aos="fade-left"
-          >
-            <img src="contact-image/contact-form-image.png" alt="Contact Illustration" className="w-full h-full object-cover" />
-          </div>
-        </div>
-      </section>
+    {/* Right Side - Illustration */}
+    <div
+      className="hidden md:flex items-center justify-center bg-gradient-to-tr from-blue-100 to-blue-50 relative"
+      data-aos="fade-left"
+    >
+      <img src="/contact2.jpg" alt="Contact Illustration" className="w-full h-full object-cover" />
+    </div>
+  </div>
+</section>
 
 
 
@@ -266,11 +266,11 @@ const Contact: React.FC = () => {
         <div className="container mx-auto flex flex-col lg:flex-row items-center gap-8">
           <div className="w-full lg:w-1/2 text-center lg:text-left text-white">
             <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-3">
-              "Your Vision, Our Expertise – Let’s Make It Happen!"
+             "Your Vision, Our Expertise – Let’s Make It Happen!"
             </h2>
             <p className="mb-4 text-sm sm:text-base leading-relaxed">
-              Have a project in mind? Whether it’s building software, scaling your business,
-              or crafting a digital presence — our team is here to turn your ideas into reality.
+             Have a project in mind? Whether it’s building software, scaling your business,
+              or crafting a digital presence — our team is here to turn your ideas into reality.            
             </p>
             <p> 📩 Reach out today and let’s start building something amazing together!</p>
           </div>
@@ -296,12 +296,12 @@ const Contact: React.FC = () => {
 
             {/* Left Side (Gray info block) */}
             <div className="bg-[#e5e7eb] rounded-2xl shadow-lg w-full h-full min-h-[400px] pl-6 pr-6 sm:pl-10 sm:pr-24 py-10 sm:py-16">
-              <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#002147] leading-snug">
-                Right Serve Knowledge Hub
+              <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 leading-snug">
+                RightServe Knowledge Hub
               </h4>
-              <p className="text-[#002147] mt-6 text-base sm:text-lg text-justify sm:mr-16">
+              <p className="text-blue-900 mt-6 text-base sm:text-lg text-justify sm:mr-16">
                 Explore our curated insights about website design, development, and support. These answers reflect{" "}
-                <span className="font-semibold">Right Serve’s</span> commitment to clarity, innovation, and building digital solutions that grow with your business.
+                <span className="font-semibold">RightServe’s</span> commitment to clarity, innovation, and building digital solutions that grow with your business.
               </p>
             </div>
 
