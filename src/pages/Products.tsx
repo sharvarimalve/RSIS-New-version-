@@ -266,10 +266,7 @@ const Products: React.FC<ProductsProps> = ({onPageChange}) => {
                                             </div>
                                         ))}
                                     </div>
-
-
-
-                                </div>
+                                </div>  
                             </div>
                         ))}
                     </div>

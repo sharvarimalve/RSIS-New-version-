@@ -77,7 +77,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onPageChange }) => {
             link: "#",
         },
         {
-            id: 5,
+            id: 6,
             title: "Shikshasutra",
             category: "Software Development",
             description: "A School ERP system streamlines and manages academic processes, enhancing efficiency and organization within educational institutions.",
@@ -88,7 +88,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onPageChange }) => {
             link: "#",
         },
         {
-            id: 6,
+            id: 7,
             title: "Virtual Pointer Software",
             category: "Software Development",
             description: "The Virtual Painter lets users customize 3D models, changing colors and structure elements for real-time design visualization.",
@@ -103,7 +103,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onPageChange }) => {
 
         // App Development
         {
-            id: 7,
+            id: 8,
             title: "BluLadder",
             category: "App Development",
             description: "Effective project planning uses collaboration tools and resource allocation to enhance communication and align teams for successful outcomes.",
@@ -114,7 +114,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onPageChange }) => {
             link: "#",
         },
         {
-            id: 8,
+            id: 9,
             title: "Dose Care",
             category: "App Development",
             description: "Secure Build embeds security into the development process, performing vulnerability scans and assessments to ensure compliance with industry standards.",
@@ -125,7 +125,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onPageChange }) => {
             link: "#",
         },
         {
-            id: 9,
+            id: 10,
             title: "Citri Hub",
             category: "App Development",
             description: "Secure Build embeds security into the development process, performing vulnerability scans and assessments to ensure compliance with industry standards.",
@@ -136,11 +136,11 @@ const Portfolio: React.FC<PortfolioProps> = ({ onPageChange }) => {
             link: "#",
         },
         {
-            id: 10,
+            id: 11,
             title: "NSM & Associates",
             category: "App Development",
             description: "Web and mobile CRM solutions give field executives real-time access to customer data, enhancing lead tracking, scheduling, and communication.",
-            image: "/nsm3 (1)app.png",
+            image: "/nsmapp.jpg",
             technologies: ["React", "Node.js", "MongoDB", "React Native"],
             client: "RetailMax Solutions",
             date: "2024",
