@@ -54,11 +54,17 @@ function App() {
       case "marketing":
         return <Marketing />;
       case "portfolio":
-        return <Portfolio />;
+        return <Portfolio 
+            onPageChange={handlePageChange}
+        />;
       case "products":
-        return <Products />;
+        return <Products 
+         onPageChange={handlePageChange}
+        />;
       case "contact":
-        return <Contact />;
+        return <Contact 
+              
+        />;
       default:
         return (
           <Home

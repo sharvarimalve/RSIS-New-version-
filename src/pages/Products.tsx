@@ -4,7 +4,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { motion } from "framer-motion";
 
-const Products: React.FC = () => {
+interface ProductsProps {
+  onPageChange: (page: string) => void;
+}
+
+
+const Products: React.FC<ProductsProps> = ({onPageChange}) => {
     const [activeCategory, setActiveCategory] = useState("All");
 
     useEffect(() => {
@@ -151,19 +156,19 @@ const Products: React.FC = () => {
     const testimonials = [
         {
             text: `"Our partnership with RSIS has been incredible. Their cloud solutions helped us migrate seamlessly and scale faster than ever."`,
-            author: "Ananya Mehta",
+            author: "Ananya patel",
             role: "CTO, CloudSphere Technologies",
             avatar: "/anaya.png",
         },
         {
             text: `"The cybersecurity services from RSIS have strengthened our infrastructure. We now feel confident handling sensitive client data."`,
-            author: "Rohan Sharma",
+            author: "Rohan Mahajan",
             role: "Head of Security, InfoShield Solutions",
             avatar: "/rohan.jpg",
         },
         {
             text: `"Working with RSIS on our custom SaaS platform has been a game changer. Their development team is highly skilled and reliable."`,
-            author: "Priya Kapoor",
+            author: "Priya wadkar",
             role: "Product Manager, InnovateSoft",
             avatar: "/priya.png",
         },
@@ -173,29 +178,29 @@ const Products: React.FC = () => {
     return (
         <div className="overflow-x-hidden">
             {/* HERO */}
-         <section
-  className="relative h-[500px] flex items-center justify-center bg-cover bg-center text-white"
-  style={{ backgroundImage: "url('/heroproduct.jpg')" }}
->
-  <div className="absolute inset-0 bg-black/40" />
-  <div className="relative z-10 text-center px-4">
-    <h1
-      className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6"
-      data-aos="fade-up"
-      data-aos-duration="800"
-    >
-      Our Products
-    </h1>
-    <p
-      className="max-w-md sm:max-w-xl md:max-w-2xl mx-auto mb-6 md:mb-10 text-sm sm:text-base md:text-lg"
-      data-aos="fade-up"
-      data-aos-duration="800"
-    >
-      Powerful, reliable, and user-friendly software solutions designed to
-      streamline your business operations.
-    </p>
-  </div>
-</section>
+            <section
+                className="relative h-[500px] flex items-center justify-center bg-cover bg-center text-white"
+                style={{ backgroundImage: "url('/heroproduct.jpg')" }}
+            >
+                <div className="absolute inset-0 bg-black/40" />
+                <div className="relative z-10 text-center px-4">
+                    <h1
+                        className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6"
+                        data-aos="fade-up"
+                        data-aos-duration="800"
+                    >
+                        Our Products
+                    </h1>
+                    <p
+                        className="max-w-md sm:max-w-xl md:max-w-2xl mx-auto mb-6 md:mb-10 text-sm sm:text-base md:text-lg"
+                        data-aos="fade-up"
+                        data-aos-duration="800"
+                    >
+                        Powerful, reliable, and user-friendly software solutions designed to
+                        streamline your business operations.
+                    </p>
+                </div>
+            </section>
 
 
 
@@ -262,8 +267,8 @@ const Products: React.FC = () => {
                                         ))}
                                     </div>
 
-                                  
-                                   
+
+
                                 </div>
                             </div>
                         ))}
@@ -359,8 +364,12 @@ const Products: React.FC = () => {
                         Explore our products and find the perfect solution for your business needs.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="/products" className="bg-[#001f4d] text-white font-semibold px-6 py-3 rounded-full border border-white transition">Browse All Products</a>
-                        <a href="/Contact" className="bg-[#001f4d] text-white border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-[#001f4d] transition"> Contact Sales Team </a>
+
+                        <button className="px-5 sm:px-6 py-2 sm:py-3 bg-[#001F54] text-white font-semibold rounded-full hover:bg-[#001F54] transition text-sm sm:text-base"
+                            onClick={() => onPageChange("our-team")}
+                        >
+                           Connect with Our Team
+                        </button>
                     </div>
 
                 </div>
