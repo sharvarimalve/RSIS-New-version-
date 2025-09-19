@@ -24,7 +24,7 @@ const HeroSlider: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[50vh] sm:h-[70vh] md:h-[80vh] lg:h-screen overflow-hidden flex items-center justify-center">
+    <div className=" hero-slider-wrapper relative w-full h-[50vh] sm:h-[70vh] md:h-[80vh] lg:h-screen overflow-hidden flex items-center justify-center">
       {/* Slides */}
       {images.map((img, index) => (
         <div
@@ -35,7 +35,7 @@ const HeroSlider: React.FC = () => {
           <img
             src={img}
             alt={`Slide ${index}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover home-hero"
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
