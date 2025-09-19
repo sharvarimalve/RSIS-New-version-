@@ -74,7 +74,7 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-5 getconnect-form">
           {/* Name */}
           <div>
             <input
