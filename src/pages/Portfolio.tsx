@@ -2,16 +2,21 @@ import React from "react";
 import { Calendar, Users, Award } from "lucide-react";
 import { motion } from "framer-motion";
 
-const Portfolio: React.FC = () => {
-    // ✅ Stats for hero section
+interface PortfolioProps {
+    onPageChange: (page: string) => void;
+}
+
+const Portfolio: React.FC<PortfolioProps> = ({ onPageChange }) => {
+    // Stats for hero section
     const stats = [
         { number: "150+", label: "Projects Completed" },
         { number: "120+", label: "Happy Clients" },
-        { number: "12+", label: "Years Experience" },
+        { number: "7+", label: "Years Experience" },
         { number: "24/7", label: "Support" },
     ];
 
-    // ✅ Projects (your full list kept)
+
+    //  Projects (your full list kept)
     const projects = [
 
         // Software Development
@@ -305,11 +310,13 @@ const Portfolio: React.FC = () => {
                             <strong>Right Serve Infotech System</strong> at{" "}
 
                         </p>
-                        <a href="/contact">
-                            <button className="px-6 py-3 bg-white text-[#001F54] font-semibold rounded-full hover:bg-cyan-100 transition">
-                                Get A Proposal
-                            </button>
-                        </a>
+                        <button
+                            className="px-5 sm:px-6 py-2 sm:py-3 bg-white text-[#001F54] font-semibold rounded-full hover:bg-cyan-100 transition text-sm sm:text-base"
+                            onClick={() => onPageChange("contact")}
+                        >
+                            Get A Proposal
+                        </button>
+
                     </div>
                 </div>
             </section>
