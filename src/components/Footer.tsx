@@ -182,7 +182,7 @@ const Footer: React.FC<FooterProps> = ({ currentPage, onPageChange }) => {
                 <MailIcon size={16} className="text-gray-400 flex-shrink-0" />
                 <a
                   href="mailto:rightserveinfotechsystems@gmail.com"
-                  className="text-gray-300 text-xs sm:text-sm flex-1 break-all"
+                  className="text-gray-300 text-xs sm:text-sm flex-1 "
                 >
                   rightserveinfotechsystems@gmail.com
                 </a>
@@ -192,7 +192,7 @@ const Footer: React.FC<FooterProps> = ({ currentPage, onPageChange }) => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-6 pt-3 text-center text-xs text-gray-400">
+        <div className="border-t border-gray-800 mt-6 pt-3 text-center text-xs text-gray-400 cursor-pointer">
           © {new Date().getFullYear()} RIGHT SERVE INFOTECH SYSTEMS PVT. LTD. All
           rights reserved.
         </div>
