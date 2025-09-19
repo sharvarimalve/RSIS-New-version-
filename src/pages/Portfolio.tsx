@@ -367,7 +367,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onPageChange }) => {
                         <img
                             src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=600"
                             alt="Success Metrics"
-                            className="rounded-2xl shadow-lg w-full h-96 object-cover"
+                            className="rounded-2xl shadow-lg w-full h-96 object-fill"
                         />
                     </div>
                 </div>

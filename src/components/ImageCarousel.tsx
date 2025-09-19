@@ -26,9 +26,8 @@ const ImageCarousel: React.FC = () => {
           key={img}
           src={img}
           alt={`Slide ${idx + 1}`}
-          className={`absolute transition-opacity duration-700 w-full h-full object-cover ${
-            idx === current ? "opacity-100 z-10" : "opacity-0 z-0"
-          }`}
+          className={`absolute transition-opacity duration-700 w-full h-full object-cover ${idx === current ? "opacity-100 z-10" : "opacity-0 z-0"
+            }`}
         />
       ))}
 
@@ -53,9 +52,8 @@ const ImageCarousel: React.FC = () => {
           <button
             key={idx}
             onClick={() => setCurrent(idx)}
-            className={`w-3 h-3 rounded-full ${
-              idx === current ? "bg-green-500" : "bg-gray-300"
-            }`}
+            className={`w-3 h-3 rounded-full ${idx === current ? "bg-green-500" : "bg-gray-300"
+              }`}
             aria-label={`Go to slide ${idx + 1}`}
           />
         ))}
