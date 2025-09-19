@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { X } from "lucide-react";
+import toast from "react-hot-toast";   
 
 interface GetConnectedModalProps {
   isOpen: boolean;
@@ -17,6 +18,7 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({
   });
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [loading, setLoading] = useState(false);
 
   const validate = () => {
     const newErrors: { [key: string]: string } = {};
@@ -35,11 +37,34 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) {
-      alert("Message sent successfully!");
+    if (!validate()) return;
+
+    try {
+      setLoading(true);
+
+      const response = await fetch("https://your-api-url.com/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) throw new Error("Something went wrong!");
+
+      const result = await response.json();
+      console.log("API Response:", result);
+
+      toast.success("Message sent successfully ✅");  
+      setFormData({ name: "", email: "", message: "" });
       onClose();
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to send message ❌");       
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -112,13 +137,11 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({
               value={formData.message}
               onChange={handleChange}
               placeholder="Write your message..."
-              rows={3}                // 👈 sirf 3 rows
+              rows={3}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
              focus:outline-none focus:ring-2 focus:ring-[#17385b]
-             resize-none overflow-hidden"  // 👈 resize band + scroll band
+             resize-none overflow-hidden"
             />
-
-
             {errors.message && (
               <p className="text-red-500 text-xs mt-1">{errors.message}</p>
             )}
@@ -128,9 +151,10 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({
           <div className="flex justify-center pt-4">
             <button
               type="submit"
-              className="px-10 py-3 bg-[#17385b] text-white hover:bg-[#112a45] rounded-[30px] text-sm sm:text-base"
+              disabled={loading}
+              className="px-10 py-3 bg-[#17385b] text-white hover:bg-[#112a45] rounded-[30px] text-sm sm:text-base disabled:opacity-50"
             >
-              SEND
+              {loading ? "Sending..." : "SEND"}
             </button>
           </div>
         </form>
