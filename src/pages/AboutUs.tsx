@@ -16,7 +16,7 @@ interface AboutProps {
 
 const AboutUs: React.FC<AboutProps> = ({ onPageChange }) => {
   /* ------------ DATA ------------ */
-  const heroImages = ["/heroabout.jpg"];
+  const heroImages = ["/about-image/about-hero.jpg"];
 
   const values = [
     {

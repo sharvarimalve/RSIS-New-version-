@@ -314,34 +314,41 @@ const Home: React.FC<HomeProps> = ({ onPageChange, onGetConnected }) => {
           <div className="overflow-hidden  relative mb-10">
             <div className="flex w-max animate-marquee space-x-12">
               {/* group A */}
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+
+              <img src="technology-icon/Amazon_Web_.png" alt="Amazon_Web" className="h-24" />
+              <img src="technology-icon/postgresql-removebg.png" alt="postgresql" className="h-24" />
+              <img src="technology-icon/html.png" alt="Html" className="h-24" />
+              <img src="technology-icon/app-develop-removebg.png" alt="app-develop" className="h-24" />
+              <img src="technology-icon/flutter-removebg.png" alt="flutter" className="h-24" />
+              <img src="technology-icon/Node.js_logo.svg.png" alt="Node.js" className="h-24" />
+              <img src="technology-icon/mongodb-.png" alt="MongoDB" className="h-24" />
+              <img src="technology-icon/postgresql-removebg.png" alt="MongoDB" className="h-24" />
+              <img src="technology-icon/git-removebg.png" alt="Git" className="h-24" />
+              <img src="technology-icon/app-develop-removebg.png" alt="app-develop" className="h-24" />
+              <img src="technology-icon/Bootstrap_logo.svg-removebg.png" alt="Bootstarp" className="h-24" />
+              <img src="technology-icon/git-removebg.png" alt="Git" className="h-24" />
+              <img src="technology-icon/react.png" alt="React" className="h-24" />
+              <img src="technology-icon/css.jfif" alt="Css" className="h-24" />
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
 
 
 
               {/* duplicate group B */}
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+              <img src="technology-icon/Amazon_Web_.png" alt="Amazon_Web" className="h-24" />
+              <img src="technology-icon/postgresql-removebg.png" alt="postgresql" className="h-24" />
+              <img src="technology-icon/html.png" alt="Html" className="h-24" />
+              <img src="technology-icon/app-develop-removebg.png" alt="app-develop" className="h-24" />
+              <img src="technology-icon/flutter-removebg.png" alt="flutter" className="h-24" />
+              <img src="technology-icon/Node.js_logo.svg.png" alt="Node.js" className="h-24" />
+              <img src="technology-icon/mongodb-.png" alt="MongoDB" className="h-24" />
+              <img src="technology-icon/postgresql-removebg.png" alt="MongoDB" className="h-24" />
+              <img src="technology-icon/git-removebg.png" alt="Git" className="h-24" />
+              <img src="technology-icon/app-develop-removebg.png" alt="app-develop" className="h-24" />
+              <img src="technology-icon/Bootstrap_logo.svg-removebg.png" alt="Bootstarp" className="h-24" />
+              <img src="technology-icon/git-removebg.png" alt="Git" className="h-24" />
+              <img src="technology-icon/react.png" alt="React" className="h-24" />
+              <img src="technology-icon/css.jfif" alt="Css" className="h-24" />
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
             </div>
           </div>
 
@@ -349,36 +356,38 @@ const Home: React.FC<HomeProps> = ({ onPageChange, onGetConnected }) => {
           <div className="overflow-hidden relative">
             <div className="flex w-max animate-marqueeReverse space-x-12">
               {/* group A */}
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+              <img src="technology-icon/Amazon_Web_.png" alt="Amazon_Web" className="h-24" />
+              <img src="technology-icon/postgresql-removebg.png" alt="postgresql" className="h-24" />
+              <img src="technology-icon/html.png" alt="Html" className="h-24" />
+              <img src="technology-icon/app-develop-removebg.png" alt="app-develop" className="h-24" />
+              <img src="technology-icon/flutter-removebg.png" alt="flutter" className="h-24" />
+              <img src="technology-icon/Node.js_logo.svg.png" alt="Node.js" className="h-24" />
+              <img src="technology-icon/mongodb-.png" alt="MongoDB" className="h-24" />
+              <img src="technology-icon/postgresql-removebg.png" alt="MongoDB" className="h-24" />
+              <img src="technology-icon/git-removebg.png" alt="Git" className="h-24" />
+              <img src="technology-icon/app-develop-removebg.png" alt="app-develop" className="h-24" />
+              <img src="technology-icon/Bootstrap_logo.svg-removebg.png" alt="Bootstarp" className="h-24" />
+              <img src="technology-icon/git-removebg.png" alt="Git" className="h-24" />
+              <img src="technology-icon/react.png" alt="React" className="h-24" />
+              <img src="technology-icon/css.jfif" alt="Css" className="h-24" />
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
-
               {/* duplicate group B */}
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
+              <img src="technology-icon/Amazon_Web_.png" alt="Amazon_Web" className="h-24" />
+              <img src="technology-icon/postgresql-removebg.png" alt="postgresql" className="h-24" />
+              <img src="technology-icon/html.png" alt="Html" className="h-24" />
+              <img src="technology-icon/app-develop-removebg.png" alt="app-develop" className="h-24" />
+              <img src="technology-icon/flutter-removebg.png" alt="flutter" className="h-24" />
+              <img src="technology-icon/Node.js_logo.svg.png" alt="Node.js" className="h-24" />
+              <img src="technology-icon/mongodb-.png" alt="MongoDB" className="h-24" />
+              <img src="technology-icon/postgresql-removebg.png" alt="MongoDB" className="h-24" />
+              <img src="technology-icon/git-removebg.png" alt="Git" className="h-24" />
+              <img src="technology-icon/app-develop-removebg.png" alt="app-develop" className="h-24" />
+              <img src="technology-icon/Bootstrap_logo.svg-removebg.png" alt="Bootstarp" className="h-24" />
+              <img src="technology-icon/git-removebg.png" alt="Git" className="h-24" />
+              <img src="technology-icon/react.png" alt="React" className="h-24" />
+              <img src="technology-icon/css.jfif" alt="Css" className="h-24" />
+              <img src="technology-icon/postgresql.jpg" alt="postgresql" className="h-24" />
               <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" className="h-24" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" className="h-24" />
             </div>
           </div>
         </div>
