@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const images = [
-  "home/team-hero.png",
+  "/home/team-hero.png",
   "/team.jpg",
   // "/herohome.jpg",
   // "/home2.jpg",
