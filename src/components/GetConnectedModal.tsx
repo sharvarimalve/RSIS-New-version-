@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { X } from "lucide-react";
-import toast from "react-hot-toast";   
+import axios from "axios";
+import { toast } from "react-toastify";
 
 interface GetConnectedModalProps {
   isOpen: boolean;
@@ -44,25 +45,27 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({
     try {
       setLoading(true);
 
-      const response = await fetch("https://your-api-url.com/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const res = await axios.post(
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/rsis/add-contact`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
 
-      if (!response.ok) throw new Error("Something went wrong!");
-
-      const result = await response.json();
-      console.log("API Response:", result);
-
-      toast.success("Message sent successfully ✅");  
-      setFormData({ name: "", email: "", message: "" });
-      onClose();
+      if (res.data.status === "SUCCESS") {
+        toast.success("Message sent successfully ✅");
+        setFormData({ name: "", email: "", message: "" });
+        onClose();
+      } else {
+        toast.warn(res.data.message || "Failed to send message ❌");
+      }
     } catch (error) {
       console.error(error);
-      toast.error("Failed to send message ❌");       
+      toast.error("Error while sending message ❌");
     } finally {
       setLoading(false);
     }

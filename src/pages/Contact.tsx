@@ -9,12 +9,15 @@ import {
 } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Contact: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({});
+  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
@@ -32,19 +35,51 @@ const Contact: React.FC = () => {
     return e;
   };
 
+  const handleSendMessage = async (formData: typeof form, onSuccess?: () => void, onError?: () => void) => {
+    try {
+      setLoader(true);
+      const res = await axios.post(
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/rsis/add-contact`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
+
+      if (res.data.status === "SUCCESS") {
+        toast.success("Message sent successfully ✅");
+        onSuccess?.();
+      } else {
+        toast.warn(res.data.message || "Failed to send message");
+        onError?.();
+      }
+    } catch (error) {
+      toast.error("Error while sending message ❌");
+      onError?.();
+    } finally {
+      setLoader(false);
+    }
+  };
+
+
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const eObj = validate();
-    setErrors(eObj);
-    if (Object.keys(eObj).length === 0) {
-      console.log("Form data:", form);
-      alert("Form submitted!");
-      setForm({ name: "", email: "", message: "" });
-    }
-  };
+  e.preventDefault();
+  const eObj = validate();
+  setErrors(eObj);
+
+  if (Object.keys(eObj).length === 0) {
+    handleSendMessage(form, () => {
+      setForm({ name: "", email: "", message: "" }); 
+    });
+  }
+};
 
   const contactInfo = [
     {
@@ -237,11 +272,13 @@ const Contact: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full bg-[#002147] text-white font-semibold py-3 sm:py-4 rounded-lg 
-            shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1 
-            text-base sm:text-lg"
+                disabled={loader}
+                className={`w-full ${loader
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-[#002147] hover:shadow-2xl hover:-translate-y-1"
+                  } text-white font-semibold py-3 sm:py-4 rounded-lg shadow-lg transition-transform text-base sm:text-lg`}
               >
-                Send Message
+                {loader ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
