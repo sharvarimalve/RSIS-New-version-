@@ -12,13 +12,13 @@ import Marketing from "./pages/Marketing";
 import Products from "./pages/Products";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-
+import { ToastContainer } from "react-toastify"; // Import ToastContainer
+import "react-toastify/dist/ReactToastify.css"; // Import default CSS
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // 👉 whenever currentPage changes, scroll to the top
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
   }, [currentPage]);
@@ -41,9 +41,7 @@ function App() {
           />
         );
       case "about-us":
-        return <AboutUs
-          onPageChange={handlePageChange}
-        />;
+        return <AboutUs onPageChange={handlePageChange} />;
       case "career":
         return <Career />;
       case "our-team":
@@ -55,17 +53,11 @@ function App() {
       case "marketing":
         return <Marketing />;
       case "portfolio":
-        return <Portfolio
-          onPageChange={handlePageChange}
-        />;
+        return <Portfolio onPageChange={handlePageChange} />;
       case "products":
-        return <Products
-          onPageChange={handlePageChange}
-        />;
+        return <Products onPageChange={handlePageChange} />;
       case "contact":
-        return <Contact
-
-        />;
+        return <Contact />;
       default:
         return (
           <Home
@@ -88,6 +80,19 @@ function App() {
       <GetConnectedModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
+      />
+
+      {/* ✅ ToastContainer added at top-level */}
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
       />
     </div>
   );
