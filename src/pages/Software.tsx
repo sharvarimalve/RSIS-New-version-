@@ -170,7 +170,7 @@ const Software: React.FC = () => {
             {/* === Hero Section === */}
             <section
                 className="relative h-[500px] flex flex-col justify-center items-center text-center text-white bg-cover bg-center"
-                style={{ backgroundImage: "url('/career1.jpg')" }}
+                style={{ backgroundImage: "url('software-image/software-hero.jpg')" }}
             >
                 <div className="absolute inset-0 bg-black/60" />
                 <div className="relative z-10 px-4">

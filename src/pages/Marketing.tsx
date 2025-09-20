@@ -140,32 +140,32 @@ const Marketing: React.FC = () => {
     return (
         <div className="overflow-x-hidden">
             {/* Hero */}
-          <section
-  className="relative h-[500px] flex items-center justify-center bg-center bg-cover text-white px-4"
-  style={{
-    backgroundImage:
-      "url('/marketinghero.jpg')",
-  }}
->
-  <div className="absolute inset-0 bg-[rgba(0,0,50,0.6)]" />
-  <div className="relative z-10 max-w-5xl mx-auto text-center">
-    <h1 className="text-4xl md:text-5xl font-bold mb-6">
-      Digital Marketing Services
-    </h1>
-    <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-cyan-100">
-      Transform your ideas into powerful Marketing solutions with
-      cutting-edge technology and expert development
-    </p>
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-xl mx-auto">
-      {stats.map((s, i) => (
-        <div key={i} className="text-center">
-          <div className="text-3xl font-bold text-cyan-400">{s.number}</div>
-          <div className="text-sm text-cyan-100">{s.label}</div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+            <section
+                className="relative h-[500px] flex items-center justify-center bg-center bg-cover text-white px-4"
+                style={{
+                    backgroundImage:
+                        "url('marketing-image/heros.jpg')",
+                }}
+            >
+                <div className="absolute inset-0 bg-[rgba(0,0,50,0.6)]" />
+                <div className="relative z-10 max-w-5xl mx-auto text-center">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                        Digital Marketing Services
+                    </h1>
+                    <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-cyan-100">
+                        Transform your ideas into powerful Marketing solutions with
+                        cutting-edge technology and expert development
+                    </p>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-xl mx-auto">
+                        {stats.map((s, i) => (
+                            <div key={i} className="text-center">
+                                <div className="text-3xl font-bold text-cyan-400">{s.number}</div>
+                                <div className="text-sm text-cyan-100">{s.label}</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
 
             {/* Services */}
@@ -178,34 +178,39 @@ const Marketing: React.FC = () => {
                         Comprehensive solutions to meet all your software development needs
                     </p>
                 </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {services.map((srv, i) => (
-                        <div
-                            key={i}
-                            className="bg-white rounded-xl shadow hover:shadow-xl overflow-hidden transition"
-                            data-aos={i % 2 === 0 ? "fade-left" : "fade-right"}
-                            data-aos-delay={i * 100}
-                        >
-                            <div className="relative h-44 overflow-hidden">
-                                <img
-                                    src={srv.image}
-                                    alt={srv.title}
-                                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/80 to-cyan-600/60 opacity-0 hover:opacity-80 flex items-center justify-center transition">
-                                    <div className="text-white">{srv.icon}</div>
+
+                {/* Added wrapper: keeps your original grid inside a container */}
+                <div className="container mx-auto">
+                    <div className="grid gap-8  gap-x-2 sm:grid-cols-2 lg:grid-cols-3">
+                        {services.map((srv, idx) => (
+                            <div
+                                key={idx}
+                                className="bg-white rounded-xl shadow hover:shadow-xl overflow-hidden transition max-w-sm mx-auto"
+                                data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
+                                data-aos-delay={idx * 100}
+                            >
+                                <div className="relative h-44 overflow-hidden">
+                                    <img
+                                        src={srv.image}
+                                        alt={srv.title}
+                                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/80 to-cyan-600/60 opacity-0 hover:opacity-80 flex items-center justify-center transition">
+                                        <div className="text-white">{srv.icon}</div>
+                                    </div>
+                                </div>
+                                <div className="p-6">
+                                    <h3 className="text-xl font-semibold text-slate-800 mb-3">
+                                        {srv.title}
+                                    </h3>
+                                    <p className="text-gray-600">{srv.description}</p>
                                 </div>
                             </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold text-slate-800 mb-3">
-                                    {srv.title}
-                                </h3>
-                                <p className="text-gray-600">{srv.description}</p>
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </section>
+
 
             {/* Tools */}
             <section className="relative bg-[#040f36] text-white py-16 px-4 rounded-t-[40px]">

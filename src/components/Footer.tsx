@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Mail as MailIcon,
-  Phone,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-} from "lucide-react";
+import { Mail as MailIcon, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, ChevronRight } from "lucide-react";
 
 interface FooterProps {
   currentPage?: string;
@@ -102,28 +94,32 @@ const Footer: React.FC<FooterProps> = ({ currentPage, onPageChange }) => {
             <h4 className="text-lg font-semibold mb-3 border-b border-gray-700 pb-1">
               Quick Links
             </h4>
+
             <div className="flex gap-x-6 sm:gap-x-8">
               <ul className="space-y-2">
                 {quickLinks.slice(0, Math.ceil(quickLinks.length / 2)).map((link) => (
                   <li key={link.page}>
                     <button
                       type="button"
-                      className={linkClass(link.page)}
+                      className={`${linkClass(link.page)} flex items-center gap-2`}
                       onClick={() => onPageChange && onPageChange(link.page)}
                     >
+                      <ChevronRight size={16} className="text-gray-400" />
                       {link.label}
                     </button>
                   </li>
                 ))}
               </ul>
+
               <ul className="space-y-2">
                 {quickLinks.slice(Math.ceil(quickLinks.length / 2)).map((link) => (
                   <li key={link.page}>
                     <button
                       type="button"
-                      className={linkClass(link.page)}
+                      className={`${linkClass(link.page)} flex items-center gap-2`}
                       onClick={() => onPageChange && onPageChange(link.page)}
                     >
+                      <ChevronRight size={16} className="text-gray-400" />
                       {link.label}
                     </button>
                   </li>
@@ -132,25 +128,28 @@ const Footer: React.FC<FooterProps> = ({ currentPage, onPageChange }) => {
             </div>
           </div>
 
-          {/* ===== Our Services ===== */}
+          {/* ==== Our Services ==== */}
           <div className="sm:mt-6 md:mt-0">
             <h4 className="text-lg font-semibold mb-3 border-b border-gray-700 pb-1">
               Our Services
             </h4>
+
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.page}>
                   <button
                     type="button"
-                    className={linkClass(service.page)}
+                    className={`${linkClass(service.page)} flex items-center gap-2`}
                     onClick={() => onPageChange && onPageChange(service.page)}
                   >
+                    <ChevronRight size={16} className="text-gray-400" />
                     {service.label}
                   </button>
                 </li>
               ))}
             </ul>
           </div>
+
 
           {/* ===== Contact Info ===== */}
           <div className="sm:mt-6 md:mt-0">
@@ -164,7 +163,7 @@ const Footer: React.FC<FooterProps> = ({ currentPage, onPageChange }) => {
                   href="https://www.google.com/maps?q=10,+Saurabh+Nagar-2,+Besa+Rd,+near+Hanuman+Mandir,+Saubhagya+Nagar,+Ghogali,+Nagpur,+Maharashtra+440034"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 text-xs sm:text-sm"
+                  className="text-gray-300 text-xs sm:text-sm text-justify"
                 >
                   10, Saurabh Nagar-2, Besa Rd, near Hanuman Mandir,
                   Saubhagya Nagar, Ghogali, Nagpur, Maharashtra 440034

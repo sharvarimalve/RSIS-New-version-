@@ -5,11 +5,11 @@ import "aos/dist/aos.css";
 import { motion } from "framer-motion";
 
 interface ProductsProps {
-  onPageChange: (page: string) => void;
+    onPageChange: (page: string) => void;
 }
 
 
-const Products: React.FC<ProductsProps> = ({onPageChange}) => {
+const Products: React.FC<ProductsProps> = ({ onPageChange }) => {
     const [activeCategory, setActiveCategory] = useState("All");
 
     useEffect(() => {
@@ -180,7 +180,7 @@ const Products: React.FC<ProductsProps> = ({onPageChange}) => {
             {/* HERO */}
             <section
                 className="relative h-[500px] flex items-center justify-center bg-cover bg-center text-white"
-                style={{ backgroundImage: "url('/heroproduct.jpg')" }}
+                style={{ backgroundImage: "url('product-image/product-hero.jpg')" }}
             >
                 <div className="absolute inset-0 bg-black/40" />
                 <div className="relative z-10 text-center px-4">
@@ -266,7 +266,7 @@ const Products: React.FC<ProductsProps> = ({onPageChange}) => {
                                             </div>
                                         ))}
                                     </div>
-                                </div>  
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -365,7 +365,7 @@ const Products: React.FC<ProductsProps> = ({onPageChange}) => {
                         <button className="px-5 sm:px-6 py-2 sm:py-3 bg-[#001F54] text-white font-semibold rounded-full hover:bg-[#001F54] transition text-sm sm:text-base"
                             onClick={() => onPageChange("our-team")}
                         >
-                           Connect with Our Team
+                            Connect with Our Team
                         </button>
                     </div>
 

@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
       {/* ===== Hero ===== */}
       <section
         className="relative bg-cover bg-center h-[50vh] sm:h-[60vh] flex items-center justify-center"
-        style={{ backgroundImage: "url('/HeroContact.jpg')" }}
+        style={{ backgroundImage: "url('contact-image/heros.jpg')", height: 500 }}
       >
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center text-white max-w-2xl px-4">
