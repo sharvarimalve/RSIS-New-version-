@@ -1,3 +1,4 @@
+const API_URL = "http://192.168.0.118:3025";
 import React, { useState, useEffect } from "react";
 import {
   MapPin,
@@ -38,8 +39,9 @@ const Contact: React.FC = () => {
   const handleSendMessage = async (formData: typeof form, onSuccess?: () => void, onError?: () => void) => {
     try {
       setLoader(true);
+      console.log("process.env.NEXT_PUBLIC_SERVER_URL :", `${API_URL}`);
       const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/rsis/add-contact`,
+        `${API_URL}/rsis/add-contact`,
         formData,
         {
           headers: {
@@ -70,16 +72,16 @@ const Contact: React.FC = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault();
-  const eObj = validate();
-  setErrors(eObj);
+    e.preventDefault();
+    const eObj = validate();
+    setErrors(eObj);
 
-  if (Object.keys(eObj).length === 0) {
-    handleSendMessage(form, () => {
-      setForm({ name: "", email: "", message: "" }); 
-    });
-  }
-};
+    if (Object.keys(eObj).length === 0) {
+      handleSendMessage(form, () => {
+        setForm({ name: "", email: "", message: "" });
+      });
+    }
+  };
 
   const contactInfo = [
     {
@@ -134,7 +136,7 @@ const Contact: React.FC = () => {
       {/* ===== Hero ===== */}
       <section
         className="relative bg-cover bg-center h-[50vh] sm:h-[60vh] flex items-center justify-center"
-        style={{ backgroundImage: "url('contact-image/heros.jpg')", height: 500 }}
+        style={{ backgroundImage: "url('contact-image/hero.jpg')", height: 500 }}
       >
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center text-white max-w-2xl px-4">
@@ -274,8 +276,8 @@ const Contact: React.FC = () => {
                 type="submit"
                 disabled={loader}
                 className={`w-full ${loader
-                    ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-[#002147] hover:shadow-2xl hover:-translate-y-1"
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-[#002147] hover:shadow-2xl hover:-translate-y-1"
                   } text-white font-semibold py-3 sm:py-4 rounded-lg shadow-lg transition-transform text-base sm:text-lg`}
               >
                 {loader ? "Sending..." : "Send Message"}
