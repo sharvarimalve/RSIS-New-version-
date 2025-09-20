@@ -14,7 +14,7 @@ interface AboutProps {
   onPageChange: (page: string) => void;
 }
 
-const AboutUs: React.FC<AboutProps> = ({onPageChange}) => {
+const AboutUs: React.FC<AboutProps> = ({ onPageChange }) => {
   /* ------------ DATA ------------ */
   const heroImages = ["/heroabout.jpg"];
 
@@ -247,13 +247,13 @@ const AboutUs: React.FC<AboutProps> = ({onPageChange}) => {
           <div className="w-full lg:w-1/2 text-center lg:text-left text-white">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">“Let’s Build Something Amazing Together 🚀”</h2>
             <p className="mb-6 text-sm sm:text-base">
-              Have an idea or project in mind? Share it with us and our experts will craft the perfect solution tailored for your business. <strong>Right Serve Infotech System</strong> 
+              Have an idea or project in mind? Share it with us and our experts will craft the perfect solution tailored for your business. <strong>Right Serve Infotech System</strong>
             </p>
-              <button className="px-5 sm:px-6 py-2 sm:py-3 bg-white text-[#001F54] font-semibold rounded-full hover:bg-cyan-100 transition text-sm sm:text-base"
-                      onClick={() => onPageChange("contact")}
-              >
-                Get A Proposal
-              </button>
+            <button className="px-5 sm:px-6 py-2 sm:py-3 bg-white text-[#001F54] font-semibold rounded-full hover:bg-cyan-100 transition text-sm sm:text-base"
+              onClick={() => onPageChange("contact")}
+            >
+              Get A Proposal
+            </button>
           </div>
         </div>
       </section>

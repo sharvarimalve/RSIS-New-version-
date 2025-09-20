@@ -13,6 +13,7 @@ import Products from "./pages/Products";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 
+
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -41,7 +42,7 @@ function App() {
         );
       case "about-us":
         return <AboutUs
-            onPageChange={handlePageChange}
+          onPageChange={handlePageChange}
         />;
       case "career":
         return <Career />;
@@ -54,16 +55,16 @@ function App() {
       case "marketing":
         return <Marketing />;
       case "portfolio":
-        return <Portfolio 
-            onPageChange={handlePageChange}
+        return <Portfolio
+          onPageChange={handlePageChange}
         />;
       case "products":
-        return <Products 
-         onPageChange={handlePageChange}
+        return <Products
+          onPageChange={handlePageChange}
         />;
       case "contact":
-        return <Contact 
-              
+        return <Contact
+
         />;
       default:
         return (

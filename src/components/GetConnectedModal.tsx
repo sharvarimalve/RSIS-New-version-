@@ -1,7 +1,10 @@
+const API_URL = "http://192.168.0.118:3025";
 import React, { useState } from "react";
 import { X } from "lucide-react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 interface GetConnectedModalProps {
   isOpen: boolean;
@@ -44,9 +47,10 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({
 
     try {
       setLoading(true);
+      console.log("process.env.NEXT_PUBLIC_SERVER_URL :", `${API_URL}`);
 
       const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/rsis/add-contact`,
+        `${API_URL}/rsis/add-contact`,
         formData,
         {
           headers: {
@@ -81,7 +85,9 @@ const GetConnectedModal: React.FC<GetConnectedModalProps> = ({
   if (!isOpen) return null;
 
   return (
+
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+
       <div className="bg-[#fff] rounded-2xl shadow-2xl ring-1 ring-gray-200 w-full max-w-lg p-6 sm:p-8 relative transition-all duration-300 overflow-y-auto max-h-[90vh]">
         {/* Close */}
         <button
