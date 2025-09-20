@@ -1,17 +1,11 @@
 const API_URL = "http://192.168.0.118:3025";
 import React, { useState, useEffect } from "react";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  MessageSquare,
-  User,
-} from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageSquare, User, } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import axios from "axios";
 import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
